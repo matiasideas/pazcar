@@ -54,31 +54,6 @@ const QuienesSomos = () => {
           </p>
         </div>
 
-        {/* Características - Versión compacta en línea */}
-        <div className="flex flex-wrap justify-center gap-6 mb-12">
-          <div className="flex items-center gap-3 px-5 py-3 bg-card rounded-lg border border-border/50">
-            <span className="text-2xl">🏆</span>
-            <div>
-              <h3 className="font-semibold text-foreground text-sm">Experiencia</h3>
-              <p className="text-muted-foreground text-xs">Años en el mercado</p>
-            </div>
-          </div>
-          <div className="flex items-center gap-3 px-5 py-3 bg-card rounded-lg border border-border/50">
-            <span className="text-2xl">✨</span>
-            <div>
-              <h3 className="font-semibold text-foreground text-sm">Calidad</h3>
-              <p className="text-muted-foreground text-xs">Vehículos revisados</p>
-            </div>
-          </div>
-          <div className="flex items-center gap-3 px-5 py-3 bg-card rounded-lg border border-border/50">
-            <span className="text-2xl">🤝</span>
-            <div>
-              <h3 className="font-semibold text-foreground text-sm">Confianza</h3>
-              <p className="text-muted-foreground text-xs">Atención transparente</p>
-            </div>
-          </div>
-        </div>
-
         {/* Galería de fotos */}
         <div className="text-center mb-8">
           <h3 className="text-2xl font-semibold text-foreground mb-2">Nuestro Showroom</h3>
