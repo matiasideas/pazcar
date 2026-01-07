@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Car, MessageCircle } from 'lucide-react';
 import StarField from './StarField';
+import logo from '@/assets/logo-pazcar.png';
 
 const Hero = () => {
   const scrollToCatalog = () => {
@@ -20,9 +21,8 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Logo/Brand */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card/50 backdrop-blur-sm mb-4">
-            <Car className="w-5 h-5 text-primary" />
-            <span className="font-display font-semibold text-sm tracking-wide">PAZCAR</span>
+          <div className="inline-block mb-4">
+            <img src={logo} alt="PazCar" className="h-12 sm:h-16 w-auto mx-auto" />
           </div>
           
           {/* Main heading */}

@@ -1,4 +1,5 @@
-import { Car, MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react';
+import { MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react';
+import logo from '@/assets/logo-pazcar.png';
 
 const Footer = () => {
   return (
@@ -7,12 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="p-2 rounded-lg bg-gradient-neon">
-                <Car className="w-6 h-6 text-primary-foreground" />
-              </div>
-              <span className="font-display text-2xl font-bold">PazCar</span>
-            </div>
+            <img src={logo} alt="PazCar" className="h-8 w-auto" />
             <p className="text-muted-foreground">
               Tu concesionaria de confianza. Vehículos de calidad con la mejor atención.
             </p>
