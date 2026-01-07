@@ -7,29 +7,29 @@ import EtiquetaComponente from './EtiquetaComponente';
 
 const datosVehiculos: Vehiculo[] = [
   // Compactos
-  { id: '1', marca: 'Toyota', modelo: 'Yaris', año: 2023, precio: 18500, imagen: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&h=400&fit=crop', categoria: 'Compactos' },
-  { id: '2', marca: 'Volkswagen', modelo: 'Polo', año: 2022, precio: 17800, imagen: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600&h=400&fit=crop', categoria: 'Compactos' },
-  { id: '3', marca: 'Ford', modelo: 'Fiesta', año: 2023, precio: 16500, imagen: 'https://images.unsplash.com/photo-1619682817481-e994891cd1f5?w=600&h=400&fit=crop', categoria: 'Compactos', destacado: true },
+  { id: '1', marca: 'Toyota', modelo: 'Yaris', año: 2023, precio: 18500, imagen: 'https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Compactos' },
+  { id: '2', marca: 'Volkswagen', modelo: 'Polo', año: 2022, precio: 17800, imagen: 'https://images.pexels.com/photos/1149137/pexels-photo-1149137.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Compactos' },
+  { id: '3', marca: 'Ford', modelo: 'Fiesta', año: 2023, precio: 16500, imagen: 'https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Compactos', destacado: true },
   
   // SUV
-  { id: '4', marca: 'Toyota', modelo: 'RAV4', año: 2024, precio: 45000, imagen: 'https://images.unsplash.com/photo-1568844293986-8c0b3e7f8d7c?w=600&h=400&fit=crop', categoria: 'SUV', destacado: true },
-  { id: '5', marca: 'Honda', modelo: 'CR-V', año: 2023, precio: 42000, imagen: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=600&h=400&fit=crop', categoria: 'SUV' },
-  { id: '6', marca: 'Jeep', modelo: 'Compass', año: 2023, precio: 38000, imagen: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=600&h=400&fit=crop', categoria: 'SUV' },
+  { id: '4', marca: 'Toyota', modelo: 'RAV4', año: 2024, precio: 45000, imagen: 'https://images.pexels.com/photos/3729464/pexels-photo-3729464.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'SUV', destacado: true },
+  { id: '5', marca: 'Honda', modelo: 'CR-V', año: 2023, precio: 42000, imagen: 'https://images.pexels.com/photos/3786091/pexels-photo-3786091.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'SUV' },
+  { id: '6', marca: 'Jeep', modelo: 'Compass', año: 2023, precio: 38000, imagen: 'https://images.pexels.com/photos/1638459/pexels-photo-1638459.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'SUV' },
   
   // Camionetas
-  { id: '7', marca: 'Toyota', modelo: 'Hilux', año: 2024, precio: 52000, imagen: 'https://images.unsplash.com/photo-1559416523-140ddc3d238c?w=600&h=400&fit=crop', categoria: 'Camionetas', destacado: true },
-  { id: '8', marca: 'Ford', modelo: 'Ranger', año: 2023, precio: 48000, imagen: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop', categoria: 'Camionetas' },
-  { id: '9', marca: 'Volkswagen', modelo: 'Amarok', año: 2023, precio: 55000, imagen: 'https://images.unsplash.com/photo-1612544448445-b8232cff3b4c?w=600&h=400&fit=crop', categoria: 'Camionetas' },
+  { id: '7', marca: 'Toyota', modelo: 'Hilux', año: 2024, precio: 52000, imagen: 'https://images.pexels.com/photos/2533092/pexels-photo-2533092.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Camionetas', destacado: true },
+  { id: '8', marca: 'Ford', modelo: 'Ranger', año: 2023, precio: 48000, imagen: 'https://images.pexels.com/photos/1007410/pexels-photo-1007410.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Camionetas' },
+  { id: '9', marca: 'Volkswagen', modelo: 'Amarok', año: 2023, precio: 55000, imagen: 'https://images.pexels.com/photos/2676096/pexels-photo-2676096.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Camionetas' },
   
   // Sedanes
-  { id: '10', marca: 'Toyota', modelo: 'Corolla', año: 2024, precio: 28000, imagen: 'https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=600&h=400&fit=crop', categoria: 'Sedanes' },
-  { id: '11', marca: 'Honda', modelo: 'Civic', año: 2023, precio: 32000, imagen: 'https://images.unsplash.com/photo-1590362891991-f776e747a588?w=600&h=400&fit=crop', categoria: 'Sedanes', destacado: true },
-  { id: '12', marca: 'Volkswagen', modelo: 'Vento', año: 2023, precio: 26000, imagen: 'https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=600&h=400&fit=crop', categoria: 'Sedanes' },
+  { id: '10', marca: 'Toyota', modelo: 'Corolla', año: 2024, precio: 28000, imagen: 'https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Sedanes' },
+  { id: '11', marca: 'Honda', modelo: 'Civic', año: 2023, precio: 32000, imagen: 'https://images.pexels.com/photos/3752169/pexels-photo-3752169.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Sedanes', destacado: true },
+  { id: '12', marca: 'Volkswagen', modelo: 'Vento', año: 2023, precio: 26000, imagen: 'https://images.pexels.com/photos/1035108/pexels-photo-1035108.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Sedanes' },
   
   // Motos
-  { id: '13', marca: 'Honda', modelo: 'CB500', año: 2024, precio: 8500, imagen: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop', categoria: 'Motos' },
-  { id: '14', marca: 'Yamaha', modelo: 'MT-07', año: 2023, precio: 9200, imagen: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=600&h=400&fit=crop', categoria: 'Motos' },
-  { id: '15', marca: 'Kawasaki', modelo: 'Z650', año: 2024, precio: 9800, imagen: 'https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?w=600&h=400&fit=crop', categoria: 'Motos', destacado: true },
+  { id: '13', marca: 'Honda', modelo: 'CB500', año: 2024, precio: 8500, imagen: 'https://images.pexels.com/photos/2519374/pexels-photo-2519374.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Motos' },
+  { id: '14', marca: 'Yamaha', modelo: 'MT-07', año: 2023, precio: 9200, imagen: 'https://images.pexels.com/photos/2611686/pexels-photo-2611686.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Motos' },
+  { id: '15', marca: 'Kawasaki', modelo: 'Z650', año: 2024, precio: 9800, imagen: 'https://images.pexels.com/photos/1413412/pexels-photo-1413412.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Motos', destacado: true },
 ];
 
 const categorias = ['Todos', 'Compactos', 'SUV', 'Camionetas', 'Sedanes', 'Motos'];
