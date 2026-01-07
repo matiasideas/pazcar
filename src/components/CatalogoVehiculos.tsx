@@ -59,9 +59,6 @@ const CatalogoVehiculos = () => {
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Nuestro <span className="gradient-text">Catálogo</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Explorá nuestra selección de vehículos. Tenemos opciones para todos los gustos y presupuestos.
-          </p>
         </div>
 
         {/* Search */}
