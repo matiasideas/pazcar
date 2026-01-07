@@ -8,6 +8,7 @@ const enlacesNav = [
   { label: 'Inicio', href: '#' },
   { label: 'Catálogo', href: '#catalogo' },
   { label: 'Destacados', href: '#destacados' },
+  { label: 'Quiénes Somos', href: '#quienes-somos' },
   { label: 'Contacto', href: '#footer' },
 ];
 
