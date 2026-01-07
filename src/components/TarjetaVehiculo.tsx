@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { MessageCircle, Eye, Calendar, Gauge } from 'lucide-react';
+import { MessageCircle, Eye, Calendar, Gauge, Fuel } from 'lucide-react';
 
 export interface Vehiculo {
   id: string;
@@ -9,6 +9,7 @@ export interface Vehiculo {
   modelo: string;
   año: number;
   kilometraje: number;
+  combustible: string;
   precio: number;
   imagen: string;
   categoria: string;
@@ -69,7 +70,7 @@ const TarjetaVehiculo = ({ vehiculo }: TarjetaVehiculoProps) => {
           <h3 className="font-display text-xl font-semibold text-foreground">
             {vehiculo.marca} {vehiculo.modelo}
           </h3>
-          <div className="flex items-center gap-4 text-muted-foreground text-sm mt-1">
+          <div className="flex flex-wrap items-center gap-3 text-muted-foreground text-sm mt-2">
             <span className="flex items-center gap-1">
               <Calendar className="w-4 h-4" />
               {vehiculo.año}
@@ -77,6 +78,10 @@ const TarjetaVehiculo = ({ vehiculo }: TarjetaVehiculoProps) => {
             <span className="flex items-center gap-1">
               <Gauge className="w-4 h-4" />
               {kilometrajeFormateado} km
+            </span>
+            <span className="flex items-center gap-1">
+              <Fuel className="w-4 h-4" />
+              {vehiculo.combustible}
             </span>
           </div>
         </div>
