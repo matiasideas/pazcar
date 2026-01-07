@@ -1,11 +1,15 @@
 import { Button } from '@/components/ui/button';
-import { Car, MessageCircle } from 'lucide-react';
+import { Car, MessageCircle, Users } from 'lucide-react';
 import CampoEstrellas from './CampoEstrellas';
 import EtiquetaComponente from './EtiquetaComponente';
 
 const SeccionPrincipal = () => {
   const scrollACatalogo = () => {
     document.getElementById('catalogo')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollAQuienesSomos = () => {
+    document.getElementById('quienes-somos')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -47,6 +51,15 @@ const SeccionPrincipal = () => {
               Ver Autos
             </Button>
             <Button 
+              size="lg" 
+              variant="outline"
+              onClick={scrollAQuienesSomos}
+              className="w-full sm:w-auto text-lg px-8 py-6 border-primary/50 hover:bg-primary/10 hover:border-primary"
+            >
+              <Users className="w-5 h-5 mr-2" />
+              Quiénes Somos
+            </Button>
+            <Button
               size="lg" 
               variant="outline"
               className="w-full sm:w-auto text-lg px-8 py-6 border-primary/50 hover:bg-primary/10 hover:border-primary"
