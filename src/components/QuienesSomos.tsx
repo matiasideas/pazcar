@@ -56,28 +56,28 @@ const QuienesSomos = () => {
           </p>
         </div>
 
-        {/* Características */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div className="text-center p-6 bg-card rounded-xl border border-border/50">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-3xl">🏆</span>
+        {/* Características - Versión compacta en línea */}
+        <div className="flex flex-wrap justify-center gap-6 mb-12">
+          <div className="flex items-center gap-3 px-5 py-3 bg-card rounded-lg border border-border/50">
+            <span className="text-2xl">🏆</span>
+            <div>
+              <h3 className="font-semibold text-foreground text-sm">Experiencia</h3>
+              <p className="text-muted-foreground text-xs">Años en el mercado</p>
             </div>
-            <h3 className="text-xl font-semibold text-foreground mb-2">Experiencia</h3>
-            <p className="text-muted-foreground">Años de trayectoria nos respaldan en el mercado automotriz.</p>
           </div>
-          <div className="text-center p-6 bg-card rounded-xl border border-border/50">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-3xl">✨</span>
+          <div className="flex items-center gap-3 px-5 py-3 bg-card rounded-lg border border-border/50">
+            <span className="text-2xl">✨</span>
+            <div>
+              <h3 className="font-semibold text-foreground text-sm">Calidad</h3>
+              <p className="text-muted-foreground text-xs">Vehículos revisados</p>
             </div>
-            <h3 className="text-xl font-semibold text-foreground mb-2">Calidad</h3>
-            <p className="text-muted-foreground">Vehículos seleccionados y revisados para tu tranquilidad.</p>
           </div>
-          <div className="text-center p-6 bg-card rounded-xl border border-border/50">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-3xl">🤝</span>
+          <div className="flex items-center gap-3 px-5 py-3 bg-card rounded-lg border border-border/50">
+            <span className="text-2xl">🤝</span>
+            <div>
+              <h3 className="font-semibold text-foreground text-sm">Confianza</h3>
+              <p className="text-muted-foreground text-xs">Atención transparente</p>
             </div>
-            <h3 className="text-xl font-semibold text-foreground mb-2">Confianza</h3>
-            <p className="text-muted-foreground">Atención personalizada y transparente en cada operación.</p>
           </div>
         </div>
 
