@@ -1,7 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Car, MessageCircle } from 'lucide-react';
 import CampoEstrellas from './CampoEstrellas';
-import logo from '@/assets/logo-pazcar.png';
 import EtiquetaComponente from './EtiquetaComponente';
 
 const SeccionPrincipal = () => {
@@ -23,10 +22,6 @@ const SeccionPrincipal = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto space-y-8">
-          {/* Logo/Brand */}
-          <div className="inline-block mb-4">
-            <img src={logo} alt="PazCar" className="h-12 sm:h-16 w-auto mx-auto" />
-          </div>
           
           {/* Main heading */}
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
