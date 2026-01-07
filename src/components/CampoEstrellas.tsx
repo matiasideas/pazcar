@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-const StarField = () => {
+const CampoEstrellas = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -43,4 +43,4 @@ const StarField = () => {
   );
 };
 
-export default StarField;
+export default CampoEstrellas;

@@ -3,7 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { MessageCircle, Eye } from 'lucide-react';
 
-export interface Vehicle {
+export interface Vehiculo {
   id: string;
   marca: string;
   modelo: string;
@@ -14,38 +14,38 @@ export interface Vehicle {
   destacado?: boolean;
 }
 
-interface VehicleCardProps {
-  vehicle: Vehicle;
+interface TarjetaVehiculoProps {
+  vehiculo: Vehiculo;
 }
 
-const VehicleCard = ({ vehicle }: VehicleCardProps) => {
-  const formattedPrice = new Intl.NumberFormat('es-AR', {
+const TarjetaVehiculo = ({ vehiculo }: TarjetaVehiculoProps) => {
+  const precioFormateado = new Intl.NumberFormat('es-AR', {
     style: 'currency',
     currency: 'USD',
     maximumFractionDigits: 0,
-  }).format(vehicle.precio);
+  }).format(vehiculo.precio);
 
-  const whatsappMessage = encodeURIComponent(
-    `Hola! Me interesa el ${vehicle.marca} ${vehicle.modelo} ${vehicle.año}. ¿Podrían darme más información?`
+  const mensajeWhatsapp = encodeURIComponent(
+    `Hola! Me interesa el ${vehiculo.marca} ${vehiculo.modelo} ${vehiculo.año}. ¿Podrían darme más información?`
   );
 
   return (
     <Card 
       className={`group overflow-hidden bg-gradient-card border-border/50 card-hover ${
-        vehicle.destacado ? 'featured-glow neon-border' : ''
+        vehiculo.destacado ? 'featured-glow neon-border' : ''
       }`}
     >
       {/* Image container */}
       <div className="relative aspect-[16/10] overflow-hidden">
         <img
-          src={vehicle.imagen}
-          alt={`${vehicle.marca} ${vehicle.modelo}`}
+          src={vehiculo.imagen}
+          alt={`${vehiculo.marca} ${vehiculo.modelo}`}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
         
         {/* Badge */}
-        {vehicle.destacado && (
+        {vehiculo.destacado && (
           <Badge className="absolute top-3 right-3 bg-gradient-neon text-primary-foreground border-0">
             Destacado
           </Badge>
@@ -56,7 +56,7 @@ const VehicleCard = ({ vehicle }: VehicleCardProps) => {
           variant="secondary" 
           className="absolute top-3 left-3 bg-background/80 backdrop-blur-sm"
         >
-          {vehicle.categoria}
+          {vehiculo.categoria}
         </Badge>
       </div>
       
@@ -64,14 +64,14 @@ const VehicleCard = ({ vehicle }: VehicleCardProps) => {
       <CardContent className="p-5 space-y-4">
         <div>
           <h3 className="font-display text-xl font-semibold text-foreground">
-            {vehicle.marca} {vehicle.modelo}
+            {vehiculo.marca} {vehiculo.modelo}
           </h3>
-          <p className="text-muted-foreground text-sm">{vehicle.año}</p>
+          <p className="text-muted-foreground text-sm">{vehiculo.año}</p>
         </div>
         
         <div className="flex items-baseline gap-1">
           <span className="text-2xl font-display font-bold gradient-text">
-            {formattedPrice}
+            {precioFormateado}
           </span>
         </div>
         
@@ -91,7 +91,7 @@ const VehicleCard = ({ vehicle }: VehicleCardProps) => {
             asChild
           >
             <a 
-              href={`https://wa.me/5491112345678?text=${whatsappMessage}`}
+              href={`https://wa.me/5491112345678?text=${mensajeWhatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -105,4 +105,4 @@ const VehicleCard = ({ vehicle }: VehicleCardProps) => {
   );
 };
 
-export default VehicleCard;
+export default TarjetaVehiculo;

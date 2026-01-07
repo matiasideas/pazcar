@@ -1,23 +1,23 @@
-import Header from '@/components/Header';
-import Hero from '@/components/Hero';
-import VehicleCatalog from '@/components/VehicleCatalog';
-import FeaturedVehicles from '@/components/FeaturedVehicles';
-import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
+import Encabezado from '@/components/Encabezado';
+import SeccionPrincipal from '@/components/SeccionPrincipal';
+import CatalogoVehiculos from '@/components/CatalogoVehiculos';
+import VehiculosDestacados from '@/components/VehiculosDestacados';
+import PiePagina from '@/components/PiePagina';
+import BotonWhatsApp from '@/components/BotonWhatsApp';
 
 const Index = () => {
   return (
     <main className="min-h-screen bg-background">
-      <Header />
-      <Hero />
+      <Encabezado />
+      <SeccionPrincipal />
       <div id="destacados">
-        <FeaturedVehicles />
+        <VehiculosDestacados />
       </div>
-      <VehicleCatalog />
+      <CatalogoVehiculos />
       <div id="footer">
-        <Footer />
+        <PiePagina />
       </div>
-      <WhatsAppButton />
+      <BotonWhatsApp />
     </main>
   );
 };
