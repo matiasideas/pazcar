@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Car, Menu, X, MessageCircle } from 'lucide-react';
+import { Menu, X, MessageCircle } from 'lucide-react';
+import logo from '@/assets/logo-pazcar.png';
 
 const navLinks = [
   { label: 'Inicio', href: '#' },
@@ -30,12 +31,13 @@ const Header = () => {
           <a 
             href="#" 
             onClick={(e) => { e.preventDefault(); scrollToSection('#'); }}
-            className="flex items-center gap-2 group"
+            className="flex items-center group"
           >
-            <div className="p-1.5 rounded-lg bg-gradient-neon transition-transform group-hover:scale-105">
-              <Car className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <span className="font-display text-xl font-bold">PazCar</span>
+            <img 
+              src={logo} 
+              alt="PazCar" 
+              className="h-8 w-auto transition-transform group-hover:scale-105"
+            />
           </a>
 
           {/* Desktop nav */}
