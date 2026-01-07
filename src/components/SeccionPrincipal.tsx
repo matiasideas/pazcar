@@ -62,6 +62,31 @@ const SeccionPrincipal = () => {
               </a>
             </Button>
           </div>
+
+          {/* Características */}
+          <div className="flex flex-wrap justify-center gap-4 pt-6">
+            <div className="flex items-center gap-3 px-4 py-2 bg-card/80 backdrop-blur-sm rounded-lg border border-border/50">
+              <span className="text-xl">🏆</span>
+              <div className="text-left">
+                <h3 className="font-semibold text-foreground text-sm">Experiencia</h3>
+                <p className="text-muted-foreground text-xs">Años en el mercado</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3 px-4 py-2 bg-card/80 backdrop-blur-sm rounded-lg border border-border/50">
+              <span className="text-xl">✨</span>
+              <div className="text-left">
+                <h3 className="font-semibold text-foreground text-sm">Calidad</h3>
+                <p className="text-muted-foreground text-xs">Vehículos revisados</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3 px-4 py-2 bg-card/80 backdrop-blur-sm rounded-lg border border-border/50">
+              <span className="text-xl">🤝</span>
+              <div className="text-left">
+                <h3 className="font-semibold text-foreground text-sm">Confianza</h3>
+                <p className="text-muted-foreground text-xs">Atención transparente</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
