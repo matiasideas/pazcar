@@ -56,8 +56,7 @@ const QuienesSomos = () => {
 
         {/* Galería de fotos */}
         <div className="text-center mb-8">
-          <h3 className="text-2xl font-semibold text-foreground mb-2">Nuestro Showroom</h3>
-          <p className="text-muted-foreground">Conocé nuestras instalaciones</p>
+          <h3 className="text-2xl font-semibold text-foreground">Nuestro Showroom</h3>
         </div>
         
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
