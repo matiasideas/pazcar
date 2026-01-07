@@ -3,9 +3,9 @@ import { Sparkles } from 'lucide-react';
 import EtiquetaComponente from './EtiquetaComponente';
 
 const vehiculosDestacados: Vehiculo[] = [
-  { id: 'f1', marca: 'Toyota', modelo: 'RAV4', año: 2024, precio: 45000, imagen: 'https://images.pexels.com/photos/3729464/pexels-photo-3729464.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'SUV', destacado: true },
-  { id: 'f2', marca: 'Toyota', modelo: 'Hilux', año: 2024, precio: 52000, imagen: 'https://images.pexels.com/photos/2533092/pexels-photo-2533092.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Camionetas', destacado: true },
-  { id: 'f3', marca: 'Honda', modelo: 'Civic', año: 2023, precio: 32000, imagen: 'https://images.pexels.com/photos/3752169/pexels-photo-3752169.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Sedanes', destacado: true },
+  { id: 'f1', marca: 'Toyota', modelo: 'RAV4', año: 2024, kilometraje: 5000, precio: 45000, imagen: 'https://images.pexels.com/photos/3729464/pexels-photo-3729464.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'SUV', destacado: true },
+  { id: 'f2', marca: 'Toyota', modelo: 'Hilux', año: 2024, kilometraje: 3000, precio: 52000, imagen: 'https://images.pexels.com/photos/2533092/pexels-photo-2533092.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Camionetas', destacado: true },
+  { id: 'f3', marca: 'Honda', modelo: 'Civic', año: 2023, kilometraje: 12000, precio: 32000, imagen: 'https://images.pexels.com/photos/3752169/pexels-photo-3752169.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Sedanes', destacado: true },
 ];
 
 const VehiculosDestacados = () => {
