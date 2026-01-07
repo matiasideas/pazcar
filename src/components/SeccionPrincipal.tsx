@@ -31,8 +31,9 @@ const SeccionPrincipal = () => {
           
           {/* Subtitle */}
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Catálogo completo, precios justos y atención personalizada. 
-            Tu vehículo ideal te está esperando.
+            Catálogo completo, precios justos y atención personalizada.
+            <br />
+            Tu vehículo ideal te está esperando!
           </p>
           
           {/* CTA Buttons */}
