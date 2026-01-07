@@ -2,9 +2,10 @@ import { useState, useMemo } from 'react';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Input } from '@/components/ui/input';
 import { Search } from 'lucide-react';
-import VehicleCard, { Vehicle } from './VehicleCard';
+import TarjetaVehiculo, { Vehiculo } from './TarjetaVehiculo';
+import EtiquetaComponente from './EtiquetaComponente';
 
-const vehicleData: Vehicle[] = [
+const datosVehiculos: Vehiculo[] = [
   // Compactos
   { id: '1', marca: 'Toyota', modelo: 'Yaris', año: 2023, precio: 18500, imagen: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&h=400&fit=crop', categoria: 'Compactos' },
   { id: '2', marca: 'Volkswagen', modelo: 'Polo', año: 2022, precio: 17800, imagen: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600&h=400&fit=crop', categoria: 'Compactos' },
@@ -31,26 +32,27 @@ const vehicleData: Vehicle[] = [
   { id: '15', marca: 'Kawasaki', modelo: 'Z650', año: 2024, precio: 9800, imagen: 'https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?w=600&h=400&fit=crop', categoria: 'Motos', destacado: true },
 ];
 
-const categories = ['Todos', 'Compactos', 'SUV', 'Camionetas', 'Sedanes', 'Motos'];
+const categorias = ['Todos', 'Compactos', 'SUV', 'Camionetas', 'Sedanes', 'Motos'];
 
-const VehicleCatalog = () => {
-  const [activeCategory, setActiveCategory] = useState('Todos');
-  const [searchQuery, setSearchQuery] = useState('');
+const CatalogoVehiculos = () => {
+  const [categoriaActiva, setCategoriaActiva] = useState('Todos');
+  const [busqueda, setBusqueda] = useState('');
 
-  const filteredVehicles = useMemo(() => {
-    return vehicleData.filter((vehicle) => {
-      const matchesCategory = activeCategory === 'Todos' || vehicle.categoria === activeCategory;
-      const matchesSearch = 
-        vehicle.marca.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        vehicle.modelo.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        vehicle.año.toString().includes(searchQuery);
+  const vehiculosFiltrados = useMemo(() => {
+    return datosVehiculos.filter((vehiculo) => {
+      const coincideCategoria = categoriaActiva === 'Todos' || vehiculo.categoria === categoriaActiva;
+      const coincideBusqueda = 
+        vehiculo.marca.toLowerCase().includes(busqueda.toLowerCase()) ||
+        vehiculo.modelo.toLowerCase().includes(busqueda.toLowerCase()) ||
+        vehiculo.año.toString().includes(busqueda);
       
-      return matchesCategory && matchesSearch;
+      return coincideCategoria && coincideBusqueda;
     });
-  }, [activeCategory, searchQuery]);
+  }, [categoriaActiva, busqueda]);
 
   return (
-    <section id="catalogo" className="py-20 px-4">
+    <section id="catalogo" className="relative py-20 px-4">
+      <EtiquetaComponente nombre="CatalogoVehiculos" />
       <div className="container mx-auto max-w-7xl">
         {/* Section header */}
         <div className="text-center mb-12">
@@ -68,37 +70,37 @@ const VehicleCatalog = () => {
           <Input
             type="text"
             placeholder="Buscar por marca, modelo o año..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
+            value={busqueda}
+            onChange={(e) => setBusqueda(e.target.value)}
             className="pl-10 bg-card border-border/50 focus:border-primary h-12"
           />
         </div>
 
         {/* Tabs */}
-        <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
+        <Tabs value={categoriaActiva} onValueChange={setCategoriaActiva} className="w-full">
           <TabsList className="flex flex-wrap justify-center gap-2 h-auto p-2 bg-card/50 backdrop-blur-sm mb-10">
-            {categories.map((category) => (
+            {categorias.map((categoria) => (
               <TabsTrigger
-                key={category}
-                value={category}
+                key={categoria}
+                value={categoria}
                 className="px-4 py-2 data-[state=active]:bg-gradient-neon data-[state=active]:text-primary-foreground transition-all"
               >
-                {category}
+                {categoria}
               </TabsTrigger>
             ))}
           </TabsList>
 
-          {categories.map((category) => (
-            <TabsContent key={category} value={category} className="mt-0">
-              {filteredVehicles.length > 0 ? (
+          {categorias.map((categoria) => (
+            <TabsContent key={categoria} value={categoria} className="mt-0">
+              {vehiculosFiltrados.length > 0 ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {filteredVehicles.map((vehicle, index) => (
+                  {vehiculosFiltrados.map((vehiculo, index) => (
                     <div
-                      key={vehicle.id}
+                      key={vehiculo.id}
                       className="animate-fade-in"
                       style={{ animationDelay: `${index * 0.1}s` }}
                     >
-                      <VehicleCard vehicle={vehicle} />
+                      <TarjetaVehiculo vehiculo={vehiculo} />
                     </div>
                   ))}
                 </div>
@@ -117,4 +119,4 @@ const VehicleCatalog = () => {
   );
 };
 
-export default VehicleCatalog;
+export default CatalogoVehiculos;

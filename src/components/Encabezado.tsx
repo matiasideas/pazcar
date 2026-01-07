@@ -2,19 +2,20 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, MessageCircle } from 'lucide-react';
 import logo from '@/assets/logo-pazcar.png';
+import EtiquetaComponente from './EtiquetaComponente';
 
-const navLinks = [
+const enlacesNav = [
   { label: 'Inicio', href: '#' },
   { label: 'Catálogo', href: '#catalogo' },
   { label: 'Destacados', href: '#destacados' },
   { label: 'Contacto', href: '#footer' },
 ];
 
-const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const Encabezado = () => {
+  const [menuAbierto, setMenuAbierto] = useState(false);
 
-  const scrollToSection = (href: string) => {
-    setIsMenuOpen(false);
+  const scrollASeccion = (href: string) => {
+    setMenuAbierto(false);
     if (href === '#') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
@@ -25,12 +26,13 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
+      <EtiquetaComponente nombre="Encabezado" posicion="derecha" />
       <div className="container mx-auto max-w-7xl px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a 
             href="#" 
-            onClick={(e) => { e.preventDefault(); scrollToSection('#'); }}
+            onClick={(e) => { e.preventDefault(); scrollASeccion('#'); }}
             className="flex items-center group"
           >
             <img 
@@ -42,11 +44,11 @@ const Header = () => {
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-1">
-            {navLinks.map((link) => (
+            {enlacesNav.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                onClick={(e) => { e.preventDefault(); scrollToSection(link.href); }}
+                onClick={(e) => { e.preventDefault(); scrollASeccion(link.href); }}
                 className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-muted/50"
               >
                 {link.label}
@@ -74,24 +76,24 @@ const Header = () => {
 
           {/* Mobile menu button */}
           <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={() => setMenuAbierto(!menuAbierto)}
             className="md:hidden p-2 rounded-lg hover:bg-muted/50 transition-colors"
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {menuAbierto ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
 
       {/* Mobile menu */}
-      {isMenuOpen && (
+      {menuAbierto && (
         <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-border/50 animate-fade-in">
           <nav className="container mx-auto px-4 py-4 flex flex-col gap-2">
-            {navLinks.map((link) => (
+            {enlacesNav.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                onClick={(e) => { e.preventDefault(); scrollToSection(link.href); }}
+                onClick={(e) => { e.preventDefault(); scrollASeccion(link.href); }}
                 className="px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-muted/50"
               >
                 {link.label}
@@ -118,4 +120,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Encabezado;

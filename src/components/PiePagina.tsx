@@ -1,9 +1,11 @@
 import { MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react';
 import logo from '@/assets/logo-pazcar.png';
+import EtiquetaComponente from './EtiquetaComponente';
 
-const Footer = () => {
+const PiePagina = () => {
   return (
-    <footer className="bg-card/50 border-t border-border/50 py-12 px-4">
+    <footer className="relative bg-card/50 border-t border-border/50 py-12 px-4">
+      <EtiquetaComponente nombre="PiePagina" />
       <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
@@ -72,4 +74,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default PiePagina;

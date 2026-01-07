@@ -1,17 +1,20 @@
 import { Button } from '@/components/ui/button';
 import { Car, MessageCircle } from 'lucide-react';
-import StarField from './StarField';
+import CampoEstrellas from './CampoEstrellas';
 import logo from '@/assets/logo-pazcar.png';
+import EtiquetaComponente from './EtiquetaComponente';
 
-const Hero = () => {
-  const scrollToCatalog = () => {
+const SeccionPrincipal = () => {
+  const scrollACatalogo = () => {
     document.getElementById('catalogo')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <EtiquetaComponente nombre="SeccionPrincipal" />
+      
       {/* Starfield background */}
-      <StarField />
+      <CampoEstrellas />
       
       {/* Gradient overlays */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background pointer-events-none" />
@@ -41,7 +44,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <Button 
               size="lg" 
-              onClick={scrollToCatalog}
+              onClick={scrollACatalogo}
               className="w-full sm:w-auto text-lg px-8 py-6 bg-gradient-neon hover:opacity-90 transition-opacity"
             >
               <Car className="w-5 h-5 mr-2" />
@@ -76,4 +79,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default SeccionPrincipal;
