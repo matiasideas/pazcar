@@ -49,10 +49,8 @@ const QuienesSomos = () => {
             Quiénes Somos
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6" />
-          <p className="text-muted-foreground max-w-3xl mx-auto text-lg leading-relaxed">
-            En <span className="text-primary font-semibold">PAZCAR</span> somos más que una concesionaria, 
-            somos tu aliado en la búsqueda del vehículo perfecto. Con años de experiencia en el mercado automotriz, 
-            nos especializamos en ofrecer vehículos de calidad con la mejor atención personalizada.
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+            Tu aliado en la búsqueda del vehículo perfecto. Calidad, experiencia y atención personalizada.
           </p>
         </div>
 
