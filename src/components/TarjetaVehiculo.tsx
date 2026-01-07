@@ -1,13 +1,14 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { MessageCircle, Eye } from 'lucide-react';
+import { MessageCircle, Eye, Calendar, Gauge } from 'lucide-react';
 
 export interface Vehiculo {
   id: string;
   marca: string;
   modelo: string;
   año: number;
+  kilometraje: number;
   precio: number;
   imagen: string;
   categoria: string;
@@ -24,6 +25,8 @@ const TarjetaVehiculo = ({ vehiculo }: TarjetaVehiculoProps) => {
     currency: 'USD',
     maximumFractionDigits: 0,
   }).format(vehiculo.precio);
+
+  const kilometrajeFormateado = new Intl.NumberFormat('es-AR').format(vehiculo.kilometraje);
 
   const mensajeWhatsapp = encodeURIComponent(
     `Hola! Me interesa el ${vehiculo.marca} ${vehiculo.modelo} ${vehiculo.año}. ¿Podrían darme más información?`
@@ -66,7 +69,16 @@ const TarjetaVehiculo = ({ vehiculo }: TarjetaVehiculoProps) => {
           <h3 className="font-display text-xl font-semibold text-foreground">
             {vehiculo.marca} {vehiculo.modelo}
           </h3>
-          <p className="text-muted-foreground text-sm">{vehiculo.año}</p>
+          <div className="flex items-center gap-4 text-muted-foreground text-sm mt-1">
+            <span className="flex items-center gap-1">
+              <Calendar className="w-4 h-4" />
+              {vehiculo.año}
+            </span>
+            <span className="flex items-center gap-1">
+              <Gauge className="w-4 h-4" />
+              {kilometrajeFormateado} km
+            </span>
+          </div>
         </div>
         
         <div className="flex items-baseline gap-1">
