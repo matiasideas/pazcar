@@ -34,6 +34,16 @@ import nissanKicks16 from '@/assets/nissan-kicks-16.webp';
 import nissanKicks17 from '@/assets/nissan-kicks-17.webp';
 import nissanKicks18 from '@/assets/nissan-kicks-18.webp';
 import nissanKicks19 from '@/assets/nissan-kicks-19.webp';
+import fordRaptor1 from '@/assets/ford-raptor-1.webp';
+import fordRaptor2 from '@/assets/ford-raptor-2.webp';
+import fordRaptor3 from '@/assets/ford-raptor-3.webp';
+import fordRaptor4 from '@/assets/ford-raptor-4.webp';
+import fordRaptor5 from '@/assets/ford-raptor-5.webp';
+import fordRaptor6 from '@/assets/ford-raptor-6.webp';
+import fordRaptor7 from '@/assets/ford-raptor-7.webp';
+import fordRaptor8 from '@/assets/ford-raptor-8.webp';
+import fordRaptor9 from '@/assets/ford-raptor-9.webp';
+import fordRaptor10 from '@/assets/ford-raptor-10.webp';
 
 const ramImagenes = [
   ram1500Image1,
@@ -71,6 +81,19 @@ const nissanImagenes = [
   nissanKicks19,
 ];
 
+const fordRaptorImagenes = [
+  fordRaptor1,
+  fordRaptor2,
+  fordRaptor3,
+  fordRaptor4,
+  fordRaptor5,
+  fordRaptor6,
+  fordRaptor7,
+  fordRaptor8,
+  fordRaptor9,
+  fordRaptor10,
+];
+
 const datosVehiculos: Vehiculo[] = [
   // Compactos
   { id: '1', marca: 'Toyota', modelo: 'Yaris', año: 2023, kilometraje: 15000, combustible: 'Nafta', precio: 18500, imagen: 'https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Compactos' },
@@ -84,12 +107,12 @@ const datosVehiculos: Vehiculo[] = [
   
   // Camionetas
   { id: '4', marca: 'RAM', modelo: '1500 5.7 Laramie Atx V8', año: 2015, kilometraje: 152000, combustible: 'Nafta', precio: 35200, imagen: ram1500Image1, imagenes: ramImagenes, categoria: 'Camionetas', destacado: true },
+  { id: '17', marca: 'Ford', modelo: 'F-150 Raptor 3.5l Bi-turbo', año: 2023, kilometraje: 51000, combustible: 'Nafta', precio: 117000, imagen: fordRaptor1, imagenes: fordRaptorImagenes, categoria: 'Camionetas', destacado: true },
   { id: '8', marca: 'Ford', modelo: 'Ranger', año: 2023, kilometraje: 35000, combustible: 'Diesel', precio: 48000, imagen: 'https://images.pexels.com/photos/1007410/pexels-photo-1007410.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Camionetas' },
   { id: '9', marca: 'Volkswagen', modelo: 'Amarok', año: 2023, kilometraje: 42000, combustible: 'Diesel', precio: 55000, imagen: 'https://images.pexels.com/photos/2676096/pexels-photo-2676096.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Camionetas' },
   
   // Sedanes
   { id: '10', marca: 'Toyota', modelo: 'Corolla', año: 2024, kilometraje: 8000, combustible: 'Híbrido', precio: 28000, imagen: 'https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Sedanes' },
-  { id: '11', marca: 'Honda', modelo: 'Civic', año: 2023, kilometraje: 12000, combustible: 'Nafta', precio: 32000, imagen: 'https://images.pexels.com/photos/3752169/pexels-photo-3752169.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Sedanes', destacado: true },
   { id: '12', marca: 'Volkswagen', modelo: 'Vento', año: 2023, kilometraje: 25000, combustible: 'Nafta', precio: 26000, imagen: 'https://images.pexels.com/photos/1035108/pexels-photo-1035108.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Sedanes' },
   
   // Motos
