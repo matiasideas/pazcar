@@ -29,10 +29,16 @@ const SeccionPrincipal = () => {
           
           {/* Main heading */}
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            Encontrá tu próximo auto en{' '}
+            <span className="gradient-text">PazCar</span>
+          </h1>
+          
+          {/* Subtitle */}
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             Catálogo interactivo, autos seleccionados y atención personalizada.
             <br />
-            <span className="gradient-text">Tu vehículo ideal te está esperando!</span>
-          </h1>
+            Tu vehículo ideal te está esperando!
+          </p>
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
