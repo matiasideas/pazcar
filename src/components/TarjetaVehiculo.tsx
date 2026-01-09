@@ -74,17 +74,17 @@ const TarjetaVehiculo = ({ vehiculo }: TarjetaVehiculoProps) => {
           <>
             <button
               onClick={anteriorImagen}
-              className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-gradient-neon flex items-center justify-center animate-pulse shadow-lg shadow-primary/30"
+              className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center animate-pulse border border-border/50"
               aria-label="Imagen anterior"
             >
-              <ChevronLeft className="w-5 h-5 text-primary-foreground" />
+              <ChevronLeft className="w-5 h-5 text-foreground" />
             </button>
             <button
               onClick={siguienteImagen}
-              className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-gradient-neon flex items-center justify-center animate-pulse shadow-lg shadow-primary/30"
+              className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center animate-pulse border border-border/50"
               aria-label="Imagen siguiente"
             >
-              <ChevronRight className="w-5 h-5 text-primary-foreground" />
+              <ChevronRight className="w-5 h-5 text-foreground" />
             </button>
             
             {/* Dot indicators */}
