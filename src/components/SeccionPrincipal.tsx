@@ -29,8 +29,9 @@ const SeccionPrincipal = () => {
           
           {/* Main heading */}
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-            Encontrá tu próximo auto en{' '}
-            <span className="gradient-text">PazCar</span>
+            Encontrá tu próximo
+            <br />
+            auto en <span className="gradient-text">PazCar</span>
           </h1>
           
           {/* Subtitle */}
