@@ -12,6 +12,16 @@ import ram1500Image8 from '@/assets/ram-1500-8.webp';
 import ram1500Image9 from '@/assets/ram-1500-9.webp';
 import ram1500Image10 from '@/assets/ram-1500-10.webp';
 import ram1500Image11 from '@/assets/ram-1500-11.webp';
+import nissanKicks1 from '@/assets/nissan-kicks-1.webp';
+import nissanKicks2 from '@/assets/nissan-kicks-2.webp';
+import nissanKicks3 from '@/assets/nissan-kicks-3.webp';
+import nissanKicks4 from '@/assets/nissan-kicks-4.webp';
+import nissanKicks5 from '@/assets/nissan-kicks-5.webp';
+import nissanKicks6 from '@/assets/nissan-kicks-6.webp';
+import nissanKicks7 from '@/assets/nissan-kicks-7.webp';
+import nissanKicks8 from '@/assets/nissan-kicks-8.webp';
+import nissanKicks9 from '@/assets/nissan-kicks-9.webp';
+import nissanKicks10 from '@/assets/nissan-kicks-10.webp';
 
 const ramImagenes = [
   ram1500Image1,
@@ -27,9 +37,22 @@ const ramImagenes = [
   ram1500Image11,
 ];
 
+const nissanImagenes = [
+  nissanKicks1,
+  nissanKicks2,
+  nissanKicks3,
+  nissanKicks4,
+  nissanKicks5,
+  nissanKicks6,
+  nissanKicks7,
+  nissanKicks8,
+  nissanKicks9,
+  nissanKicks10,
+];
+
 const vehiculosDestacados: Vehiculo[] = [
   { id: 'f1', marca: 'RAM', modelo: '1500 5.7 Laramie Atx V8', año: 2015, kilometraje: 152000, combustible: 'Nafta', precio: 35200, imagen: ram1500Image1, imagenes: ramImagenes, categoria: 'Camionetas', destacado: true },
-  { id: 'f2', marca: 'Nissan', modelo: 'Kicks 1.6 Advance Cvt', año: 2021, kilometraje: 67000, combustible: 'Nafta', precio: 52000, imagen: 'https://images.pexels.com/photos/3729464/pexels-photo-3729464.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'SUV', destacado: true },
+  { id: 'f2', marca: 'Nissan', modelo: 'Kicks 1.6 Advance Cvt', año: 2021, kilometraje: 67000, combustible: 'Nafta', precio: 52000, imagen: nissanKicks1, imagenes: nissanImagenes, categoria: 'SUV', destacado: true },
   { id: 'f3', marca: 'Honda', modelo: 'Civic', año: 2023, kilometraje: 12000, combustible: 'Nafta', precio: 32000, imagen: 'https://images.pexels.com/photos/3752169/pexels-photo-3752169.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Sedanes', destacado: true },
 ];
 
