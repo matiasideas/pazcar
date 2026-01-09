@@ -44,6 +44,16 @@ import fordRaptor7 from '@/assets/ford-raptor-7.webp';
 import fordRaptor8 from '@/assets/ford-raptor-8.webp';
 import fordRaptor9 from '@/assets/ford-raptor-9.webp';
 import fordRaptor10 from '@/assets/ford-raptor-10.webp';
+import fordRaptor11 from '@/assets/ford-raptor-11.webp';
+import fordRaptor12 from '@/assets/ford-raptor-12.webp';
+import fordRaptor13 from '@/assets/ford-raptor-13.webp';
+import fordRaptor14 from '@/assets/ford-raptor-14.webp';
+import fordRaptor15 from '@/assets/ford-raptor-15.webp';
+import fordRaptor16 from '@/assets/ford-raptor-16.webp';
+import fordRaptor17 from '@/assets/ford-raptor-17.webp';
+import fordRaptor18 from '@/assets/ford-raptor-18.webp';
+import fordRaptor19 from '@/assets/ford-raptor-19.webp';
+import fordRaptor20 from '@/assets/ford-raptor-20.webp';
 
 const ramImagenes = [
   ram1500Image1,
@@ -92,6 +102,16 @@ const fordRaptorImagenes = [
   fordRaptor8,
   fordRaptor9,
   fordRaptor10,
+  fordRaptor11,
+  fordRaptor12,
+  fordRaptor13,
+  fordRaptor14,
+  fordRaptor15,
+  fordRaptor16,
+  fordRaptor17,
+  fordRaptor18,
+  fordRaptor19,
+  fordRaptor20,
 ];
 
 const datosVehiculos: Vehiculo[] = [
