@@ -31,6 +31,16 @@ import nissanKicks16 from '@/assets/nissan-kicks-16.webp';
 import nissanKicks17 from '@/assets/nissan-kicks-17.webp';
 import nissanKicks18 from '@/assets/nissan-kicks-18.webp';
 import nissanKicks19 from '@/assets/nissan-kicks-19.webp';
+import fordRaptor1 from '@/assets/ford-raptor-1.webp';
+import fordRaptor2 from '@/assets/ford-raptor-2.webp';
+import fordRaptor3 from '@/assets/ford-raptor-3.webp';
+import fordRaptor4 from '@/assets/ford-raptor-4.webp';
+import fordRaptor5 from '@/assets/ford-raptor-5.webp';
+import fordRaptor6 from '@/assets/ford-raptor-6.webp';
+import fordRaptor7 from '@/assets/ford-raptor-7.webp';
+import fordRaptor8 from '@/assets/ford-raptor-8.webp';
+import fordRaptor9 from '@/assets/ford-raptor-9.webp';
+import fordRaptor10 from '@/assets/ford-raptor-10.webp';
 
 const ramImagenes = [
   ram1500Image1,
@@ -68,10 +78,23 @@ const nissanImagenes = [
   nissanKicks19,
 ];
 
+const fordRaptorImagenes = [
+  fordRaptor1,
+  fordRaptor2,
+  fordRaptor3,
+  fordRaptor4,
+  fordRaptor5,
+  fordRaptor6,
+  fordRaptor7,
+  fordRaptor8,
+  fordRaptor9,
+  fordRaptor10,
+];
+
 const vehiculosDestacados: Vehiculo[] = [
   { id: 'f1', marca: 'RAM', modelo: '1500 5.7 Laramie Atx V8', año: 2015, kilometraje: 152000, combustible: 'Nafta', precio: 35200, imagen: ram1500Image1, imagenes: ramImagenes, categoria: 'Camionetas', destacado: true },
   { id: 'f2', marca: 'Nissan', modelo: 'Kicks 1.6 Advance Cvt', año: 2021, kilometraje: 67000, combustible: 'Nafta', precio: 19990, imagen: nissanKicks1, imagenes: nissanImagenes, categoria: 'SUV', destacado: true },
-  { id: 'f3', marca: 'Honda', modelo: 'Civic', año: 2023, kilometraje: 12000, combustible: 'Nafta', precio: 32000, imagen: 'https://images.pexels.com/photos/3752169/pexels-photo-3752169.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Sedanes', destacado: true },
+  { id: 'f3', marca: 'Ford', modelo: 'F-150 Raptor 3.5l Bi-turbo', año: 2023, kilometraje: 51000, combustible: 'Nafta', precio: 117000, imagen: fordRaptor1, imagenes: fordRaptorImagenes, categoria: 'Camionetas', destacado: true },
 ];
 
 const VehiculosDestacados = () => {
