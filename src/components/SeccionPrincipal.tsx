@@ -27,12 +27,12 @@ const SeccionPrincipal = () => {
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto space-y-8">
           
-          {/* Subtitle */}
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
+          {/* Main heading */}
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
             Catálogo interactivo, autos seleccionados y atención personalizada.
             <br />
-            Tu vehículo ideal te está esperando!
-          </p>
+            <span className="gradient-text">Tu vehículo ideal te está esperando!</span>
+          </h1>
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
