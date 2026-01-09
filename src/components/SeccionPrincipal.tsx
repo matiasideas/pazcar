@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Car, MessageCircle, Users } from 'lucide-react';
-import CampoEstrellas from './CampoEstrellas';
 import EtiquetaComponente from './EtiquetaComponente';
+import fondoShowroom from '@/assets/fondo-showroom.jpeg';
 
 const SeccionPrincipal = () => {
   const scrollACatalogo = () => {
@@ -16,11 +16,17 @@ const SeccionPrincipal = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <EtiquetaComponente nombre="SeccionPrincipal" />
       
-      {/* Starfield background */}
-      <CampoEstrellas />
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${fondoShowroom})` }}
+      />
+      
+      {/* Dark overlay for text readability */}
+      <div className="absolute inset-0 bg-background/70" />
       
       {/* Gradient overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/30 to-background pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-r from-neon-cyan/5 via-transparent to-neon-purple/5 pointer-events-none" />
       
       {/* Content */}
