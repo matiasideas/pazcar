@@ -25,6 +25,15 @@ import nissanKicks7 from '@/assets/nissan-kicks-7.webp';
 import nissanKicks8 from '@/assets/nissan-kicks-8.webp';
 import nissanKicks9 from '@/assets/nissan-kicks-9.webp';
 import nissanKicks10 from '@/assets/nissan-kicks-10.webp';
+import nissanKicks11 from '@/assets/nissan-kicks-11.webp';
+import nissanKicks12 from '@/assets/nissan-kicks-12.webp';
+import nissanKicks13 from '@/assets/nissan-kicks-13.webp';
+import nissanKicks14 from '@/assets/nissan-kicks-14.webp';
+import nissanKicks15 from '@/assets/nissan-kicks-15.webp';
+import nissanKicks16 from '@/assets/nissan-kicks-16.webp';
+import nissanKicks17 from '@/assets/nissan-kicks-17.webp';
+import nissanKicks18 from '@/assets/nissan-kicks-18.webp';
+import nissanKicks19 from '@/assets/nissan-kicks-19.webp';
 
 const ramImagenes = [
   ram1500Image1,
@@ -51,6 +60,15 @@ const nissanImagenes = [
   nissanKicks8,
   nissanKicks9,
   nissanKicks10,
+  nissanKicks11,
+  nissanKicks12,
+  nissanKicks13,
+  nissanKicks14,
+  nissanKicks15,
+  nissanKicks16,
+  nissanKicks17,
+  nissanKicks18,
+  nissanKicks19,
 ];
 
 const datosVehiculos: Vehiculo[] = [
@@ -62,7 +80,7 @@ const datosVehiculos: Vehiculo[] = [
   // SUV
   { id: '5', marca: 'Honda', modelo: 'CR-V', año: 2023, kilometraje: 22000, combustible: 'Nafta', precio: 42000, imagen: 'https://images.pexels.com/photos/3786091/pexels-photo-3786091.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'SUV' },
   { id: '6', marca: 'Jeep', modelo: 'Compass', año: 2023, kilometraje: 18000, combustible: 'Diesel', precio: 38000, imagen: 'https://images.pexels.com/photos/1638459/pexels-photo-1638459.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'SUV' },
-  { id: '16', marca: 'Nissan', modelo: 'Kicks 1.6 Advance Cvt', año: 2021, kilometraje: 67000, combustible: 'Nafta', precio: 52000, imagen: nissanKicks1, imagenes: nissanImagenes, categoria: 'SUV', destacado: true },
+  { id: '16', marca: 'Nissan', modelo: 'Kicks 1.6 Advance Cvt', año: 2021, kilometraje: 67000, combustible: 'Nafta', precio: 19990, imagen: nissanKicks1, imagenes: nissanImagenes, categoria: 'SUV', destacado: true },
   
   // Camionetas
   { id: '4', marca: 'RAM', modelo: '1500 5.7 Laramie Atx V8', año: 2015, kilometraje: 152000, combustible: 'Nafta', precio: 35200, imagen: ram1500Image1, imagenes: ramImagenes, categoria: 'Camionetas', destacado: true },
