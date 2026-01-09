@@ -27,15 +27,9 @@ const SeccionPrincipal = () => {
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto space-y-8">
           
-          {/* Main heading */}
-          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-            Encontrá tu próximo auto en{' '}
-            <span className="gradient-text">PazCar</span>
-          </h1>
-          
           {/* Subtitle */}
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Catálogo completo, precios justos y atención personalizada.
+            Catálogo interactivo, autos seleccionados y atención personalizada.
             <br />
             Tu vehículo ideal te está esperando!
           </p>
