@@ -2,153 +2,16 @@ import { useState, useMemo } from 'react';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Input } from '@/components/ui/input';
 import { Search } from 'lucide-react';
-import TarjetaVehiculo, { Vehiculo } from './TarjetaVehiculo';
+import TarjetaVehiculo from './TarjetaVehiculo';
 import EtiquetaComponente from './EtiquetaComponente';
-import ram1500Image1 from '@/assets/ram-1500.webp';
-import ram1500Image2 from '@/assets/ram-1500-2.webp';
-import ram1500Image3 from '@/assets/ram-1500-3.webp';
-import ram1500Image4 from '@/assets/ram-1500-4.webp';
-import ram1500Image5 from '@/assets/ram-1500-5.webp';
-import ram1500Image6 from '@/assets/ram-1500-6.webp';
-import ram1500Image7 from '@/assets/ram-1500-7.webp';
-import ram1500Image8 from '@/assets/ram-1500-8.webp';
-import ram1500Image9 from '@/assets/ram-1500-9.webp';
-import ram1500Image10 from '@/assets/ram-1500-10.webp';
-import ram1500Image11 from '@/assets/ram-1500-11.webp';
-import nissanKicks1 from '@/assets/nissan-kicks-1.webp';
-import nissanKicks2 from '@/assets/nissan-kicks-2.webp';
-import nissanKicks3 from '@/assets/nissan-kicks-3.webp';
-import nissanKicks4 from '@/assets/nissan-kicks-4.webp';
-import nissanKicks5 from '@/assets/nissan-kicks-5.webp';
-import nissanKicks6 from '@/assets/nissan-kicks-6.webp';
-import nissanKicks7 from '@/assets/nissan-kicks-7.webp';
-import nissanKicks8 from '@/assets/nissan-kicks-8.webp';
-import nissanKicks9 from '@/assets/nissan-kicks-9.webp';
-import nissanKicks10 from '@/assets/nissan-kicks-10.webp';
-import nissanKicks11 from '@/assets/nissan-kicks-11.webp';
-import nissanKicks12 from '@/assets/nissan-kicks-12.webp';
-import nissanKicks13 from '@/assets/nissan-kicks-13.webp';
-import nissanKicks14 from '@/assets/nissan-kicks-14.webp';
-import nissanKicks15 from '@/assets/nissan-kicks-15.webp';
-import nissanKicks16 from '@/assets/nissan-kicks-16.webp';
-import nissanKicks17 from '@/assets/nissan-kicks-17.webp';
-import nissanKicks18 from '@/assets/nissan-kicks-18.webp';
-import nissanKicks19 from '@/assets/nissan-kicks-19.webp';
-import fordRaptor1 from '@/assets/ford-raptor-1.webp';
-import fordRaptor2 from '@/assets/ford-raptor-2.webp';
-import fordRaptor3 from '@/assets/ford-raptor-3.webp';
-import fordRaptor4 from '@/assets/ford-raptor-4.webp';
-import fordRaptor5 from '@/assets/ford-raptor-5.webp';
-import fordRaptor6 from '@/assets/ford-raptor-6.webp';
-import fordRaptor7 from '@/assets/ford-raptor-7.webp';
-import fordRaptor8 from '@/assets/ford-raptor-8.webp';
-import fordRaptor9 from '@/assets/ford-raptor-9.webp';
-import fordRaptor10 from '@/assets/ford-raptor-10.webp';
-import fordRaptor11 from '@/assets/ford-raptor-11.webp';
-import fordRaptor12 from '@/assets/ford-raptor-12.webp';
-import fordRaptor13 from '@/assets/ford-raptor-13.webp';
-import fordRaptor14 from '@/assets/ford-raptor-14.webp';
-import fordRaptor15 from '@/assets/ford-raptor-15.webp';
-import fordRaptor16 from '@/assets/ford-raptor-16.webp';
-import fordRaptor17 from '@/assets/ford-raptor-17.webp';
-import fordRaptor18 from '@/assets/ford-raptor-18.webp';
-import fordRaptor19 from '@/assets/ford-raptor-19.webp';
-import fordRaptor20 from '@/assets/ford-raptor-20.webp';
-
-const ramImagenes = [
-  ram1500Image1,
-  ram1500Image2,
-  ram1500Image3,
-  ram1500Image4,
-  ram1500Image5,
-  ram1500Image6,
-  ram1500Image7,
-  ram1500Image8,
-  ram1500Image9,
-  ram1500Image10,
-  ram1500Image11,
-];
-
-const nissanImagenes = [
-  nissanKicks1,
-  nissanKicks2,
-  nissanKicks3,
-  nissanKicks4,
-  nissanKicks5,
-  nissanKicks6,
-  nissanKicks7,
-  nissanKicks8,
-  nissanKicks9,
-  nissanKicks10,
-  nissanKicks11,
-  nissanKicks12,
-  nissanKicks13,
-  nissanKicks14,
-  nissanKicks15,
-  nissanKicks16,
-  nissanKicks17,
-  nissanKicks18,
-  nissanKicks19,
-];
-
-const fordRaptorImagenes = [
-  fordRaptor1,
-  fordRaptor2,
-  fordRaptor3,
-  fordRaptor4,
-  fordRaptor5,
-  fordRaptor6,
-  fordRaptor7,
-  fordRaptor8,
-  fordRaptor9,
-  fordRaptor10,
-  fordRaptor11,
-  fordRaptor12,
-  fordRaptor13,
-  fordRaptor14,
-  fordRaptor15,
-  fordRaptor16,
-  fordRaptor17,
-  fordRaptor18,
-  fordRaptor19,
-  fordRaptor20,
-];
-
-const datosVehiculos: Vehiculo[] = [
-  // Compactos
-  { id: '1', marca: 'Toyota', modelo: 'Yaris', año: 2023, kilometraje: 15000, combustible: 'Nafta', precio: 18500, imagen: 'https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Compactos' },
-  { id: '2', marca: 'Volkswagen', modelo: 'Polo', año: 2022, kilometraje: 28000, combustible: 'Nafta', precio: 17800, imagen: 'https://images.pexels.com/photos/1149137/pexels-photo-1149137.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Compactos' },
-  { id: '3', marca: 'Ford', modelo: 'Fiesta', año: 2023, kilometraje: 8500, combustible: 'Nafta', precio: 16500, imagen: 'https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Compactos', destacado: true },
-  
-  // SUV
-  { id: '5', marca: 'Honda', modelo: 'CR-V', año: 2023, kilometraje: 22000, combustible: 'Nafta', precio: 42000, imagen: 'https://images.pexels.com/photos/3786091/pexels-photo-3786091.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'SUV' },
-  { id: '6', marca: 'Jeep', modelo: 'Compass', año: 2023, kilometraje: 18000, combustible: 'Diesel', precio: 38000, imagen: 'https://images.pexels.com/photos/1638459/pexels-photo-1638459.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'SUV' },
-  { id: '16', marca: 'Nissan', modelo: 'Kicks 1.6 Advance Cvt', año: 2021, kilometraje: 67000, combustible: 'Nafta', precio: 19990, imagen: nissanKicks1, imagenes: nissanImagenes, categoria: 'SUV', destacado: true },
-  
-  // Camionetas
-  { id: '4', marca: 'RAM', modelo: '1500 5.7 Laramie Atx V8', año: 2015, kilometraje: 152000, combustible: 'Nafta', precio: 35200, imagen: ram1500Image1, imagenes: ramImagenes, categoria: 'Camionetas', destacado: true },
-  { id: '17', marca: 'Ford', modelo: 'F-150 Raptor 3.5l Bi-turbo', año: 2023, kilometraje: 51000, combustible: 'Nafta', precio: 117000, imagen: fordRaptor1, imagenes: fordRaptorImagenes, categoria: 'Camionetas', destacado: true },
-  { id: '8', marca: 'Ford', modelo: 'Ranger', año: 2023, kilometraje: 35000, combustible: 'Diesel', precio: 48000, imagen: 'https://images.pexels.com/photos/1007410/pexels-photo-1007410.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Camionetas' },
-  { id: '9', marca: 'Volkswagen', modelo: 'Amarok', año: 2023, kilometraje: 42000, combustible: 'Diesel', precio: 55000, imagen: 'https://images.pexels.com/photos/2676096/pexels-photo-2676096.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Camionetas' },
-  
-  // Sedanes
-  { id: '10', marca: 'Toyota', modelo: 'Corolla', año: 2024, kilometraje: 8000, combustible: 'Híbrido', precio: 28000, imagen: 'https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Sedanes' },
-  { id: '12', marca: 'Volkswagen', modelo: 'Vento', año: 2023, kilometraje: 25000, combustible: 'Nafta', precio: 26000, imagen: 'https://images.pexels.com/photos/1035108/pexels-photo-1035108.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Sedanes' },
-  
-  // Motos
-  { id: '13', marca: 'Honda', modelo: 'CB500', año: 2024, kilometraje: 2000, combustible: 'Nafta', precio: 8500, imagen: 'https://images.pexels.com/photos/2519374/pexels-photo-2519374.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Motos' },
-  { id: '14', marca: 'Yamaha', modelo: 'MT-07', año: 2023, kilometraje: 8000, combustible: 'Nafta', precio: 9200, imagen: 'https://images.pexels.com/photos/2611686/pexels-photo-2611686.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Motos' },
-  { id: '15', marca: 'Kawasaki', modelo: 'Z650', año: 2024, kilometraje: 1500, combustible: 'Nafta', precio: 9800, imagen: 'https://images.pexels.com/photos/1413412/pexels-photo-1413412.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Motos', destacado: true },
-];
-
-const categorias = ['Todos', 'Compactos', 'SUV', 'Camionetas', 'Sedanes', 'Motos'];
+import { todosLosVehiculos, categorias } from '@/data/vehiculos';
 
 const CatalogoVehiculos = () => {
   const [categoriaActiva, setCategoriaActiva] = useState('Todos');
   const [busqueda, setBusqueda] = useState('');
 
   const vehiculosFiltrados = useMemo(() => {
-    return datosVehiculos.filter((vehiculo) => {
+    return todosLosVehiculos.filter((vehiculo) => {
       const coincideCategoria = categoriaActiva === 'Todos' || vehiculo.categoria === categoriaActiva;
       const coincideBusqueda = 
         vehiculo.marca.toLowerCase().includes(busqueda.toLowerCase()) ||

@@ -4,19 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { MessageCircle, Eye, Calendar, Gauge, Fuel, ChevronLeft, ChevronRight } from 'lucide-react';
 
-export interface Vehiculo {
-  id: string;
-  marca: string;
-  modelo: string;
-  año: number;
-  kilometraje: number;
-  combustible: string;
-  precio: number;
-  imagen: string;
-  imagenes?: string[];
-  categoria: string;
-  destacado?: boolean;
-}
+import { Vehiculo } from '@/data/vehiculos';
 
 interface TarjetaVehiculoProps {
   vehiculo: Vehiculo;
