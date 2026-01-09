@@ -4,7 +4,31 @@ import { Input } from '@/components/ui/input';
 import { Search } from 'lucide-react';
 import TarjetaVehiculo, { Vehiculo } from './TarjetaVehiculo';
 import EtiquetaComponente from './EtiquetaComponente';
-import ram1500Image from '@/assets/ram-1500.webp';
+import ram1500Image1 from '@/assets/ram-1500.webp';
+import ram1500Image2 from '@/assets/ram-1500-2.webp';
+import ram1500Image3 from '@/assets/ram-1500-3.webp';
+import ram1500Image4 from '@/assets/ram-1500-4.webp';
+import ram1500Image5 from '@/assets/ram-1500-5.webp';
+import ram1500Image6 from '@/assets/ram-1500-6.webp';
+import ram1500Image7 from '@/assets/ram-1500-7.webp';
+import ram1500Image8 from '@/assets/ram-1500-8.webp';
+import ram1500Image9 from '@/assets/ram-1500-9.webp';
+import ram1500Image10 from '@/assets/ram-1500-10.webp';
+import ram1500Image11 from '@/assets/ram-1500-11.webp';
+
+const ramImagenes = [
+  ram1500Image1,
+  ram1500Image2,
+  ram1500Image3,
+  ram1500Image4,
+  ram1500Image5,
+  ram1500Image6,
+  ram1500Image7,
+  ram1500Image8,
+  ram1500Image9,
+  ram1500Image10,
+  ram1500Image11,
+];
 
 const datosVehiculos: Vehiculo[] = [
   // Compactos
@@ -13,11 +37,11 @@ const datosVehiculos: Vehiculo[] = [
   { id: '3', marca: 'Ford', modelo: 'Fiesta', año: 2023, kilometraje: 8500, combustible: 'Nafta', precio: 16500, imagen: 'https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Compactos', destacado: true },
   
   // SUV
-  { id: '4', marca: 'RAM', modelo: '1500 5.7 Laramie Atx V8', año: 2015, kilometraje: 152000, combustible: 'Nafta', precio: 35200, imagen: ram1500Image, categoria: 'Camionetas', destacado: true },
   { id: '5', marca: 'Honda', modelo: 'CR-V', año: 2023, kilometraje: 22000, combustible: 'Nafta', precio: 42000, imagen: 'https://images.pexels.com/photos/3786091/pexels-photo-3786091.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'SUV' },
   { id: '6', marca: 'Jeep', modelo: 'Compass', año: 2023, kilometraje: 18000, combustible: 'Diesel', precio: 38000, imagen: 'https://images.pexels.com/photos/1638459/pexels-photo-1638459.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'SUV' },
   
   // Camionetas
+  { id: '4', marca: 'RAM', modelo: '1500 5.7 Laramie Atx V8', año: 2015, kilometraje: 152000, combustible: 'Nafta', precio: 35200, imagen: ram1500Image1, imagenes: ramImagenes, categoria: 'Camionetas', destacado: true },
   { id: '7', marca: 'Toyota', modelo: 'Hilux', año: 2024, kilometraje: 3000, combustible: 'Diesel', precio: 52000, imagen: 'https://images.pexels.com/photos/2533092/pexels-photo-2533092.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Camionetas', destacado: true },
   { id: '8', marca: 'Ford', modelo: 'Ranger', año: 2023, kilometraje: 35000, combustible: 'Diesel', precio: 48000, imagen: 'https://images.pexels.com/photos/1007410/pexels-photo-1007410.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Camionetas' },
   { id: '9', marca: 'Volkswagen', modelo: 'Amarok', año: 2023, kilometraje: 42000, combustible: 'Diesel', precio: 55000, imagen: 'https://images.pexels.com/photos/2676096/pexels-photo-2676096.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Camionetas' },
