@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -24,6 +24,8 @@ interface TarjetaVehiculoProps {
 
 const TarjetaVehiculo = ({ vehiculo }: TarjetaVehiculoProps) => {
   const [imagenActual, setImagenActual] = useState(0);
+  const [isFocused, setIsFocused] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
   
   // Use imagenes array if available, otherwise fallback to single imagen
   const todasLasImagenes = vehiculo.imagenes && vehiculo.imagenes.length > 0 
@@ -44,19 +46,43 @@ const TarjetaVehiculo = ({ vehiculo }: TarjetaVehiculoProps) => {
     `Hola! Me interesa el ${vehiculo.marca} ${vehiculo.modelo} ${vehiculo.año}. ¿Podrían darme más información?`
   );
 
-  const anteriorImagen = (e: React.MouseEvent) => {
-    e.stopPropagation();
+  const anteriorImagen = useCallback((e?: React.MouseEvent | React.KeyboardEvent) => {
+    e?.stopPropagation();
     setImagenActual((prev) => (prev === 0 ? todasLasImagenes.length - 1 : prev - 1));
-  };
+  }, [todasLasImagenes.length]);
 
-  const siguienteImagen = (e: React.MouseEvent) => {
-    e.stopPropagation();
+  const siguienteImagen = useCallback((e?: React.MouseEvent | React.KeyboardEvent) => {
+    e?.stopPropagation();
     setImagenActual((prev) => (prev === todasLasImagenes.length - 1 ? 0 : prev + 1));
-  };
+  }, [todasLasImagenes.length]);
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!isFocused || !tieneMultiplesImagenes) return;
+      
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        anteriorImagen();
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        siguienteImagen();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isFocused, tieneMultiplesImagenes, anteriorImagen, siguienteImagen]);
 
   return (
     <Card 
-      className={`group overflow-hidden bg-gradient-card border-border/50 card-hover ${
+      ref={cardRef}
+      tabIndex={0}
+      onMouseEnter={() => setIsFocused(true)}
+      onMouseLeave={() => setIsFocused(false)}
+      onFocus={() => setIsFocused(true)}
+      onBlur={() => setIsFocused(false)}
+      className={`group overflow-hidden bg-gradient-card border-border/50 card-hover outline-none focus:ring-2 focus:ring-primary/50 ${
         vehiculo.destacado ? 'featured-glow neon-border' : ''
       }`}
     >
