@@ -26,47 +26,22 @@ const SeccionPrincipal = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <EtiquetaComponente nombre="SeccionPrincipal" />
       
-      {/* Background image with Ken Burns animation + Parallax + Blur */}
+      {/* Background image with Blur Elegante style */}
       <div 
-        className="absolute inset-0 scale-110 blur-[2px] animate-ken-burns"
+        className="absolute inset-0 scale-110"
         style={{ 
           backgroundImage: `url(${fondoShowroom})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
+          filter: 'blur(8px)',
           transform: `scale(1.1) translateY(${scrollY * 0.3}px)`,
         }}
       />
       
-      {/* Duotone effect layer */}
-      <div className="absolute inset-0 bg-gradient-to-br from-neon-cyan/20 via-transparent to-neon-purple/20 mix-blend-color" />
-      
       {/* Dark overlay for text readability */}
-      <div className="absolute inset-0 bg-background/60" />
+      <div className="absolute inset-0 bg-black/50" />
       
-      {/* Gradient overlays - brand colors */}
-      <div className="absolute inset-0 bg-gradient-to-b from-neon-cyan/10 via-transparent to-neon-purple/10 pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-r from-neon-purple/10 via-transparent to-neon-cyan/10 pointer-events-none" />
-      
-      {/* Vignette effect */}
-      <div 
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: 'radial-gradient(ellipse at center, transparent 0%, transparent 40%, hsl(var(--background) / 0.8) 100%)'
-        }}
-      />
-      
-      {/* Dot pattern overlay */}
-      <div 
-        className="absolute inset-0 opacity-[0.03] pointer-events-none"
-        style={{
-          backgroundImage: `radial-gradient(circle, hsl(var(--foreground)) 1px, transparent 1px)`,
-          backgroundSize: '20px 20px'
-        }}
-      />
-      
-      {/* Animated gradient border at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-neon-cyan via-neon-purple to-neon-cyan bg-[length:200%_100%] animate-shimmer" />
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
@@ -80,7 +55,7 @@ const SeccionPrincipal = () => {
           </h1>
           
           {/* Subtitle */}
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto drop-shadow-lg">
+          <p className="text-lg sm:text-xl text-white max-w-2xl mx-auto drop-shadow-lg">
             Catálogo interactivo, autos seleccionados y atención personalizada.
             <br />
             Tu vehículo ideal te está esperando!
