@@ -16,18 +16,14 @@ const SeccionPrincipal = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <EtiquetaComponente nombre="SeccionPrincipal" />
       
-      {/* Background image with Blur Elegante style - exactly like /fondo */}
+      {/* Background image - sin efectos */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ 
-          backgroundImage: `url(${fondoShowroom})`,
-          filter: 'blur(8px)',
-          transform: 'scale(1.1)',
-        }}
+        style={{ backgroundImage: `url(${fondoShowroom})` }}
       />
       
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/50" />
+      {/* Dark overlay 70% */}
+      <div className="absolute inset-0 bg-black/70" />
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
