@@ -1,19 +1,9 @@
-import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Car, MessageCircle, Users } from 'lucide-react';
 import EtiquetaComponente from './EtiquetaComponente';
 import fondoShowroom from '@/assets/fondo-showroom.jpeg';
 
 const SeccionPrincipal = () => {
-  const [scrollY, setScrollY] = useState(0);
-
-  // Parallax effect
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   const scrollACatalogo = () => {
     document.getElementById('catalogo')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -26,36 +16,32 @@ const SeccionPrincipal = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <EtiquetaComponente nombre="SeccionPrincipal" />
       
-      {/* Background image with Blur Elegante style */}
+      {/* Background image with Blur Elegante style - exactly like /fondo */}
       <div 
-        className="absolute inset-0 scale-110"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ 
           backgroundImage: `url(${fondoShowroom})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
           filter: 'blur(8px)',
-          transform: `scale(1.1) translateY(${scrollY * 0.3}px)`,
+          transform: 'scale(1.1)',
         }}
       />
       
-      {/* Dark overlay for text readability */}
+      {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/50" />
-      
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto space-y-8">
           
           {/* Main heading */}
-          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight drop-shadow-2xl">
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white drop-shadow-2xl">
             Encontrá tu próximo
             <br />
             auto en <span className="gradient-text">PazCar</span>
           </h1>
           
           {/* Subtitle */}
-          <p className="text-lg sm:text-xl text-white max-w-2xl mx-auto drop-shadow-lg">
+          <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto drop-shadow-lg">
             Catálogo interactivo, autos seleccionados y atención personalizada.
             <br />
             Tu vehículo ideal te está esperando!
@@ -66,7 +52,7 @@ const SeccionPrincipal = () => {
             <Button 
               size="lg" 
               onClick={scrollACatalogo}
-              className="w-full sm:w-auto text-lg px-8 py-6 bg-gradient-neon hover:opacity-90 transition-opacity shadow-lg shadow-primary/25"
+              className="w-full sm:w-auto text-lg px-8 py-6 bg-gradient-neon hover:opacity-90 transition-opacity shadow-lg"
             >
               <Car className="w-5 h-5 mr-2" />
               Ver Autos
@@ -75,7 +61,7 @@ const SeccionPrincipal = () => {
               size="lg" 
               variant="outline"
               onClick={scrollAQuienesSomos}
-              className="w-full sm:w-auto text-lg px-8 py-6 border-primary/50 hover:bg-primary/10 hover:border-primary backdrop-blur-sm"
+              className="w-full sm:w-auto text-lg px-8 py-6 border-white/50 text-white hover:bg-white/10 backdrop-blur-sm"
             >
               <Users className="w-5 h-5 mr-2" />
               Quiénes Somos
@@ -83,7 +69,7 @@ const SeccionPrincipal = () => {
             <Button
               size="lg" 
               variant="outline"
-              className="w-full sm:w-auto text-lg px-8 py-6 border-primary/50 hover:bg-primary/10 hover:border-primary backdrop-blur-sm"
+              className="w-full sm:w-auto text-lg px-8 py-6 border-white/50 text-white hover:bg-white/10 backdrop-blur-sm"
               asChild
             >
               <a 
