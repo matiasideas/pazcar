@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Check } from 'lucide-react';
+import { Check, ChevronDown } from 'lucide-react';
 import fondoShowroom from '@/assets/fondo-showroom.jpeg';
 
 interface AlternativaFondo {
@@ -23,7 +23,7 @@ const alternativas: AlternativaFondo[] = [
     id: 2,
     nombre: "Blur Elegante",
     descripcion: "Desenfoque suave con overlay oscuro",
-    estilos: { filter: 'blur(8px)' },
+    estilos: { filter: 'blur(8px)', transform: 'scale(1.1)' },
     overlays: <div className="absolute inset-0 bg-black/50" />
   },
   {
@@ -118,94 +118,138 @@ const alternativas: AlternativaFondo[] = [
 const Fondo = () => {
   const [seleccionada, setSeleccionada] = useState<number | null>(null);
 
+  const scrollToNext = (currentId: number) => {
+    const nextSection = document.getElementById(`fondo-${currentId + 1}`);
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-background py-8 px-4">
-      <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-12">
-          <h1 className="font-display text-4xl md:text-5xl font-bold mb-4">
-            Alternativas de <span className="gradient-text">Fondo</span>
-          </h1>
-          <p className="text-muted-foreground text-lg">
-            Seleccioná el estilo que más te guste para la sección principal
-          </p>
-        </div>
+    <div className="bg-background">
+      {/* Navigation */}
+      <div className="fixed top-4 left-4 z-50">
+        <Button variant="outline" className="backdrop-blur-md bg-background/80" asChild>
+          <a href="/">← Volver al inicio</a>
+        </Button>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {alternativas.map((alt) => (
-            <div
-              key={alt.id}
-              className={`group relative rounded-xl overflow-hidden cursor-pointer transition-all duration-300 ${
+      {/* Fixed selection indicator */}
+      {seleccionada && (
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
+          <div className="bg-card/95 backdrop-blur-md border border-border rounded-full px-6 py-3 shadow-xl flex items-center gap-4">
+            <span className="text-foreground">
+              Seleccionaste: <strong className="text-primary">{alternativas.find(a => a.id === seleccionada)?.nombre}</strong>
+            </span>
+            <Button className="bg-gradient-neon">
+              Aplicar este estilo
+            </Button>
+          </div>
+        </div>
+      )}
+
+      {/* Thumbnails navigation */}
+      <div className="fixed right-4 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col gap-2">
+        {alternativas.map((alt) => (
+          <button
+            key={alt.id}
+            onClick={() => document.getElementById(`fondo-${alt.id}`)?.scrollIntoView({ behavior: 'smooth' })}
+            className={`w-3 h-3 rounded-full transition-all ${
+              seleccionada === alt.id 
+                ? 'bg-primary scale-125' 
+                : 'bg-white/30 hover:bg-white/60'
+            }`}
+            title={alt.nombre}
+          />
+        ))}
+      </div>
+
+      {/* Full screen sections */}
+      {alternativas.map((alt, index) => (
+        <section
+          key={alt.id}
+          id={`fondo-${alt.id}`}
+          className="relative min-h-screen flex items-center justify-center overflow-hidden cursor-pointer"
+          onClick={() => setSeleccionada(alt.id)}
+        >
+          {/* Background image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ 
+              backgroundImage: `url(${fondoShowroom})`,
+              ...alt.estilos
+            }}
+          />
+          
+          {/* Overlays */}
+          {alt.overlays}
+          
+          {/* Content - similar to SeccionPrincipal */}
+          <div className="relative z-10 container mx-auto px-4 text-center">
+            <div className="max-w-4xl mx-auto space-y-8">
+              {/* Badge */}
+              <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border transition-all ${
                 seleccionada === alt.id 
-                  ? 'ring-4 ring-primary scale-[1.02]' 
-                  : 'hover:scale-[1.02]'
-              }`}
-              onClick={() => setSeleccionada(alt.id)}
-            >
-              {/* Preview */}
-              <div className="relative aspect-video">
-                {/* Background image */}
-                <div 
-                  className="absolute inset-0 bg-cover bg-center"
-                  style={{ 
-                    backgroundImage: `url(${fondoShowroom})`,
-                    ...alt.estilos
-                  }}
-                />
-                
-                {/* Overlays */}
-                {alt.overlays}
-                
-                {/* Sample content */}
-                <div className="absolute inset-0 flex items-center justify-center p-4">
-                  <div className="text-center">
-                    <h3 className="font-display text-xl md:text-2xl font-bold text-white drop-shadow-lg">
-                      Encontrá tu próximo
-                    </h3>
-                    <p className="text-lg md:text-xl font-bold text-white drop-shadow-lg">
-                      auto en <span className="text-cyan-400">PazCar</span>
-                    </p>
-                  </div>
-                </div>
-
-                {/* Selection indicator */}
-                {seleccionada === alt.id && (
-                  <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-primary flex items-center justify-center">
-                    <Check className="w-5 h-5 text-primary-foreground" />
-                  </div>
-                )}
+                  ? 'border-primary bg-primary/20' 
+                  : 'border-white/30 bg-white/10'
+              }`}>
+                <span className="text-sm font-bold text-white">#{alt.id}</span>
+                <span className="text-sm font-medium text-white">{alt.nombre}</span>
+                {seleccionada === alt.id && <Check className="w-4 h-4 text-primary" />}
               </div>
 
-              {/* Info */}
-              <div className="p-4 bg-card border-t border-border">
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="text-sm font-bold text-primary">#{alt.id}</span>
-                  <h4 className="font-semibold text-foreground">{alt.nombre}</h4>
-                </div>
-                <p className="text-sm text-muted-foreground">{alt.descripcion}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+              {/* Main heading */}
+              <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white drop-shadow-2xl">
+                Encontrá tu próximo
+                <br />
+                auto en <span className="gradient-text">PazCar</span>
+              </h1>
+              
+              {/* Subtitle */}
+              <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto drop-shadow-lg">
+                Catálogo interactivo, autos seleccionados y atención personalizada.
+                <br />
+                Tu vehículo ideal te está esperando!
+              </p>
+              
+              {/* Description */}
+              <p className="text-white/60 text-sm">
+                {alt.descripcion}
+              </p>
 
-        {seleccionada && (
-          <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
-            <div className="bg-card border border-border rounded-full px-6 py-3 shadow-xl flex items-center gap-4">
-              <span className="text-foreground">
-                Seleccionaste: <strong>{alternativas.find(a => a.id === seleccionada)?.nombre}</strong>
-              </span>
-              <Button className="bg-gradient-neon">
-                Aplicar este estilo
-              </Button>
+              {/* Sample buttons */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <Button 
+                  size="lg" 
+                  className="text-lg px-8 py-6 bg-gradient-neon hover:opacity-90 transition-opacity shadow-lg"
+                >
+                  Ver Autos
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  className="text-lg px-8 py-6 border-white/50 text-white hover:bg-white/10 backdrop-blur-sm"
+                >
+                  Quiénes Somos
+                </Button>
+              </div>
             </div>
           </div>
-        )}
 
-        <div className="mt-12 text-center">
-          <Button variant="outline" asChild>
-            <a href="/">← Volver al inicio</a>
-          </Button>
-        </div>
-      </div>
+          {/* Scroll indicator */}
+          {index < alternativas.length - 1 && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                scrollToNext(alt.id);
+              }}
+              className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60 hover:text-white transition-colors animate-bounce"
+            >
+              <ChevronDown className="w-8 h-8" />
+            </button>
+          )}
+        </section>
+      ))}
     </div>
   );
 };
