@@ -87,7 +87,7 @@ const ModalConsulta = ({ abierto, onCerrar, vehiculo }: ModalConsultaProps) => {
 
       // Abrir WhatsApp después de 1.5 segundos
       setTimeout(() => {
-        window.open(`https://wa.me/5491112345678?text=${mensajeWhatsapp}`, '_blank');
+        window.open(`https://wa.me/5491154271426?text=${mensajeWhatsapp}`, '_blank');
         setEnviado(false);
         setNombre('');
         setWhatsapp('');
