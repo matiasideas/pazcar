@@ -9,6 +9,13 @@ interface EtiquetaComponenteProps {
 const EtiquetaComponente = ({ nombre, posicion = 'izquierda' }: EtiquetaComponenteProps) => {
   const [copiado, setCopiado] = useState(false);
 
+  // Solo mostrar en desarrollo (preview)
+  const isDevelopment = import.meta.env.DEV;
+  
+  if (!isDevelopment) {
+    return null;
+  }
+
   const copiarNombre = async () => {
     try {
       await navigator.clipboard.writeText(nombre);
