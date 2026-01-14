@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { MessageCircle, Loader2, CheckCircle } from 'lucide-react';
+import { MessageCircle, Loader2, CheckCircle, Copy } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
 
@@ -129,32 +129,59 @@ const ModalConsulta = ({ abierto, onCerrar, vehiculo }: ModalConsultaProps) => {
         </DialogHeader>
 
         {enviado ? (
-          <div className="flex flex-col items-center justify-center py-8 gap-4">
-            <CheckCircle className="w-16 h-16 text-[#25D366]" />
-            <p className="text-lg font-semibold text-center">¡Gracias por tu consulta!</p>
-            <p className="text-muted-foreground text-center">Hacé clic abajo para continuar por WhatsApp</p>
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full"
-              onClick={() => {
-                setEnviado(false);
-                setNombre('');
-                setWhatsapp('');
-                setTipoConsulta('');
-                setWhatsappLink('');
-                onCerrar();
-              }}
-            >
-              <Button 
-                className="w-full bg-[#25D366] hover:bg-[#1da851] text-white font-bold text-base"
-                size="lg"
+          <div className="flex flex-col items-center justify-center py-6 gap-4">
+            <CheckCircle className="w-14 h-14 text-[#25D366]" />
+            <p className="text-lg font-semibold text-center">¡Consulta enviada!</p>
+            
+            <div className="w-full space-y-3">
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full"
+                onClick={() => {
+                  setTimeout(() => {
+                    setEnviado(false);
+                    setNombre('');
+                    setWhatsapp('');
+                    setTipoConsulta('');
+                    setWhatsappLink('');
+                    onCerrar();
+                  }, 500);
+                }}
               >
-                <MessageCircle className="w-5 h-5 mr-2" strokeWidth={2.5} />
-                Abrir WhatsApp
+                <Button 
+                  className="w-full bg-[#25D366] hover:bg-[#1da851] text-white font-bold text-base"
+                  size="lg"
+                >
+                  <MessageCircle className="w-5 h-5 mr-2" strokeWidth={2.5} />
+                  Abrir WhatsApp
+                </Button>
+              </a>
+              
+              <div className="text-center text-sm text-muted-foreground">
+                ¿No funciona? Copiá los datos:
+              </div>
+              
+              <Button 
+                variant="outline"
+                className="w-full"
+                size="lg"
+                onClick={() => {
+                  const tipoTexto = tipoConsultaLabels[tipoConsulta] || tipoConsulta;
+                  const vehiculoTexto = `${vehiculo.marca} ${vehiculo.modelo} ${vehiculo.año}`;
+                  const mensaje = `Hola! Soy ${nombre}. Estoy interesado en ${vehiculoTexto} y ${tipoTexto.toLowerCase()}. Mi WhatsApp es ${whatsapp}.`;
+                  navigator.clipboard.writeText(`Número: 5491154271426\n\nMensaje:\n${mensaje}`);
+                  toast({
+                    title: "¡Copiado!",
+                    description: "Número y mensaje copiados al portapapeles",
+                  });
+                }}
+              >
+                <Copy className="w-5 h-5 mr-2" />
+                Copiar número y mensaje
               </Button>
-            </a>
+            </div>
           </div>
         ) : (
           <form onSubmit={handleEnviar} className="space-y-5">
