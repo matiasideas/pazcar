@@ -65,7 +65,7 @@ const Encabezado = () => {
               asChild
             >
               <a 
-                href="https://web.whatsapp.com/send?phone=5491154271426&text=Hola!%20Quiero%20consultar%20sobre%20un%20vehículo"
+                href="whatsapp://send?phone=5491154271426&text=Hola!%20Quiero%20consultar%20sobre%20un%20vehículo"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -106,7 +106,7 @@ const Encabezado = () => {
               asChild
             >
               <a 
-                href="https://web.whatsapp.com/send?phone=5491154271426&text=Hola!%20Quiero%20consultar%20sobre%20un%20vehículo"
+                href="whatsapp://send?phone=5491154271426&text=Hola!%20Quiero%20consultar%20sobre%20un%20vehículo"
                 target="_blank"
                 rel="noopener noreferrer"
               >
