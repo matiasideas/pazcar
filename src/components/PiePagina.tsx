@@ -22,7 +22,7 @@ const PiePagina = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-muted-foreground">
                 <MapPin className="w-5 h-5 text-primary" />
-                <span>Av. Corrientes 1234, CABA</span>
+                <span>José Maria Paz 1373, Castelar</span>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Phone className="w-5 h-5 text-primary" />
