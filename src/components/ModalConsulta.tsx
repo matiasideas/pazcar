@@ -81,7 +81,7 @@ const ModalConsulta = ({ abierto, onCerrar, vehiculo }: ModalConsultaProps) => {
       );
       
       // Guardar el link de WhatsApp para que el usuario lo abra
-      setWhatsappLink(`https://wa.me/5491154271426?text=${mensajeWhatsapp}`);
+      setWhatsappLink(`https://wa.me/5491154271427?text=${mensajeWhatsapp}`);
 
       setEnviado(true);
       toast({
@@ -171,7 +171,7 @@ const ModalConsulta = ({ abierto, onCerrar, vehiculo }: ModalConsultaProps) => {
                   const tipoTexto = tipoConsultaLabels[tipoConsulta] || tipoConsulta;
                   const vehiculoTexto = `${vehiculo.marca} ${vehiculo.modelo} ${vehiculo.año}`;
                   const mensaje = `Hola! Soy ${nombre}. Estoy interesado en ${vehiculoTexto} y ${tipoTexto.toLowerCase()}. Mi WhatsApp es ${whatsapp}.`;
-                  navigator.clipboard.writeText(`Número: 5491154271426\n\nMensaje:\n${mensaje}`);
+                  navigator.clipboard.writeText(`Número: 5491154271427\n\nMensaje:\n${mensaje}`);
                   toast({
                     title: "¡Copiado!",
                     description: "Número y mensaje copiados al portapapeles",
