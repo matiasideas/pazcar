@@ -134,30 +134,16 @@ const ModalConsulta = ({ abierto, onCerrar, vehiculo }: ModalConsultaProps) => {
             <p className="text-lg font-semibold text-center">¡Consulta enviada!</p>
             
             <div className="w-full space-y-3">
-              <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full"
+              <Button 
+                className="w-full bg-[#25D366] hover:bg-[#1da851] text-white font-bold text-base"
+                size="lg"
                 onClick={() => {
-                  setTimeout(() => {
-                    setEnviado(false);
-                    setNombre('');
-                    setWhatsapp('');
-                    setTipoConsulta('');
-                    setWhatsappLink('');
-                    onCerrar();
-                  }, 500);
+                  window.location.href = whatsappLink;
                 }}
               >
-                <Button 
-                  className="w-full bg-[#25D366] hover:bg-[#1da851] text-white font-bold text-base"
-                  size="lg"
-                >
-                  <MessageCircle className="w-5 h-5 mr-2" strokeWidth={2.5} />
-                  Abrir WhatsApp
-                </Button>
-              </a>
+                <MessageCircle className="w-5 h-5 mr-2" strokeWidth={2.5} />
+                Abrir WhatsApp
+              </Button>
               
               <div className="text-center text-sm text-muted-foreground">
                 ¿No funciona? Copiá los datos:
