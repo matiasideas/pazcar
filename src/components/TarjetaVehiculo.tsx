@@ -166,7 +166,7 @@ const TarjetaVehiculo = ({ vehiculo }: TarjetaVehiculoProps) => {
         </div>
         
         <div className="flex items-baseline gap-1">
-          <span className="text-2xl font-display font-bold gradient-text">
+          <span className="text-2xl font-display font-bold text-white">
             {precioFormateado}
           </span>
         </div>
