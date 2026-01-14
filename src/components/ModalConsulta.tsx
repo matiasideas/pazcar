@@ -15,6 +15,7 @@ interface ModalConsultaProps {
     marca: string;
     modelo: string;
     año: number;
+    imagen: string;
   };
 }
 
@@ -115,6 +116,15 @@ const ModalConsulta = ({ abierto, onCerrar, vehiculo }: ModalConsultaProps) => {
   return (
     <Dialog open={abierto} onOpenChange={onCerrar}>
       <DialogContent className="sm:max-w-md bg-card border-border">
+        {/* Imagen miniatura del vehículo */}
+        <div className="w-full h-32 rounded-lg overflow-hidden mb-2">
+          <img 
+            src={vehiculo.imagen} 
+            alt={`${vehiculo.marca} ${vehiculo.modelo}`}
+            className="w-full h-full object-cover"
+          />
+        </div>
+        
         <DialogHeader>
           <DialogTitle className="font-display text-xl">Consultar por este vehículo</DialogTitle>
           <DialogDescription className="text-muted-foreground">

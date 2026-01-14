@@ -190,6 +190,7 @@ const TarjetaVehiculo = ({ vehiculo }: TarjetaVehiculoProps) => {
           marca: vehiculo.marca,
           modelo: vehiculo.modelo,
           año: vehiculo.año,
+          imagen: vehiculo.imagen,
         }}
       />
     </Card>
