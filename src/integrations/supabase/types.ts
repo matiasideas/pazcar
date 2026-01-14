@@ -14,7 +14,39 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      consultas_vehiculos: {
+        Row: {
+          created_at: string
+          id: string
+          nombre_cliente: string
+          tipo_consulta: string
+          vehiculo_año: number
+          vehiculo_marca: string
+          vehiculo_modelo: string
+          whatsapp_cliente: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          nombre_cliente: string
+          tipo_consulta: string
+          vehiculo_año: number
+          vehiculo_marca: string
+          vehiculo_modelo: string
+          whatsapp_cliente: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          nombre_cliente?: string
+          tipo_consulta?: string
+          vehiculo_año?: number
+          vehiculo_marca?: string
+          vehiculo_modelo?: string
+          whatsapp_cliente?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

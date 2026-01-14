@@ -2,7 +2,8 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { MessageCircle, Eye, Calendar, Gauge, Fuel, ChevronLeft, ChevronRight } from 'lucide-react';
+import { MessageCircle, Calendar, Gauge, Fuel, ChevronLeft, ChevronRight } from 'lucide-react';
+import ModalConsulta from './ModalConsulta';
 
 import { Vehiculo } from '@/data/vehiculos';
 
@@ -13,6 +14,7 @@ interface TarjetaVehiculoProps {
 const TarjetaVehiculo = ({ vehiculo }: TarjetaVehiculoProps) => {
   const [imagenActual, setImagenActual] = useState(0);
   const [isFocused, setIsFocused] = useState(false);
+  const [modalAbierto, setModalAbierto] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
   
   // Use imagenes array if available, otherwise fallback to single imagen
@@ -29,10 +31,6 @@ const TarjetaVehiculo = ({ vehiculo }: TarjetaVehiculoProps) => {
   }).format(vehiculo.precio);
 
   const kilometrajeFormateado = new Intl.NumberFormat('es-AR').format(vehiculo.kilometraje);
-
-  const mensajeWhatsapp = encodeURIComponent(
-    `Hola! Me interesa el ${vehiculo.marca} ${vehiculo.modelo} ${vehiculo.año}. ¿Podrían darme más información?`
-  );
 
   const anteriorImagen = useCallback((e?: React.MouseEvent | React.KeyboardEvent) => {
     e?.stopPropagation();
@@ -176,19 +174,24 @@ const TarjetaVehiculo = ({ vehiculo }: TarjetaVehiculoProps) => {
           <Button 
             size="lg" 
             className="w-full bg-[#25D366] hover:bg-[#1da851] text-white font-bold text-base"
-            asChild
+            onClick={() => setModalAbierto(true)}
           >
-            <a 
-              href={`https://wa.me/5491112345678?text=${mensajeWhatsapp}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <MessageCircle className="w-5 h-5 mr-2" strokeWidth={2.5} />
-              Consultar
-            </a>
+            <MessageCircle className="w-5 h-5 mr-2" strokeWidth={2.5} />
+            Consultar
           </Button>
         </div>
       </CardContent>
+
+      {/* Modal de consulta */}
+      <ModalConsulta
+        abierto={modalAbierto}
+        onCerrar={() => setModalAbierto(false)}
+        vehiculo={{
+          marca: vehiculo.marca,
+          modelo: vehiculo.modelo,
+          año: vehiculo.año,
+        }}
+      />
     </Card>
   );
 };
