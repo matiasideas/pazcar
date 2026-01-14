@@ -25,6 +25,7 @@ const ModalConsulta = ({ abierto, onCerrar, vehiculo }: ModalConsultaProps) => {
   const [tipoConsulta, setTipoConsulta] = useState<string>('');
   const [enviando, setEnviando] = useState(false);
   const [enviado, setEnviado] = useState(false);
+  const [whatsappLink, setWhatsappLink] = useState('');
 
   const handleEnviar = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -72,28 +73,21 @@ const ModalConsulta = ({ abierto, onCerrar, vehiculo }: ModalConsultaProps) => {
         // No bloqueamos el flujo si falla sheets
       }
 
-      setEnviado(true);
-      toast({
-        title: "¡Consulta enviada!",
-        description: "Redirigiendo a WhatsApp...",
-      });
-
       // Preparar mensaje de WhatsApp
       const tipoTexto = tipoConsultaLabels[tipoConsulta] || tipoConsulta;
       const vehiculoTexto = `${vehiculo.marca} ${vehiculo.modelo} ${vehiculo.año}`;
       const mensajeWhatsapp = encodeURIComponent(
-        `Estoy interesado en ${vehiculoTexto} y ${tipoTexto.toLowerCase()}.`
+        `Hola! Soy ${nombre}. Estoy interesado en ${vehiculoTexto} y ${tipoTexto.toLowerCase()}. Mi WhatsApp es ${whatsapp}.`
       );
+      
+      // Guardar el link de WhatsApp para que el usuario lo abra
+      setWhatsappLink(`https://web.whatsapp.com/send?phone=5491154271426&text=${mensajeWhatsapp}`);
 
-      // Abrir WhatsApp después de 1.5 segundos
-      setTimeout(() => {
-        window.open(`https://web.whatsapp.com/send?phone=5491154271426&text=${mensajeWhatsapp}`, '_blank');
-        setEnviado(false);
-        setNombre('');
-        setWhatsapp('');
-        setTipoConsulta('');
-        onCerrar();
-      }, 1500);
+      setEnviado(true);
+      toast({
+        title: "¡Consulta enviada!",
+        description: "Hacé clic en el botón para continuar por WhatsApp.",
+      });
 
     } catch (error) {
       console.error('Error:', error);
@@ -138,7 +132,29 @@ const ModalConsulta = ({ abierto, onCerrar, vehiculo }: ModalConsultaProps) => {
           <div className="flex flex-col items-center justify-center py-8 gap-4">
             <CheckCircle className="w-16 h-16 text-[#25D366]" />
             <p className="text-lg font-semibold text-center">¡Gracias por tu consulta!</p>
-            <p className="text-muted-foreground text-center">Nos pondremos en contacto pronto.</p>
+            <p className="text-muted-foreground text-center">Hacé clic abajo para continuar por WhatsApp</p>
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full"
+              onClick={() => {
+                setEnviado(false);
+                setNombre('');
+                setWhatsapp('');
+                setTipoConsulta('');
+                setWhatsappLink('');
+                onCerrar();
+              }}
+            >
+              <Button 
+                className="w-full bg-[#25D366] hover:bg-[#1da851] text-white font-bold text-base"
+                size="lg"
+              >
+                <MessageCircle className="w-5 h-5 mr-2" strokeWidth={2.5} />
+                Abrir WhatsApp
+              </Button>
+            </a>
           </div>
         ) : (
           <form onSubmit={handleEnviar} className="space-y-5">
