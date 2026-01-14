@@ -69,7 +69,7 @@ const SeccionPrincipal = () => {
               asChild
             >
               <a 
-                href="https://wa.me/5491112345678?text=Hola!%20Quiero%20consultar%20sobre%20un%20vehículo" 
+                href="https://wa.me/5491154271426?text=Hola!%20Quiero%20consultar%20sobre%20un%20vehículo" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
