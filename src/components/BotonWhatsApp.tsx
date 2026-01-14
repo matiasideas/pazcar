@@ -6,7 +6,7 @@ const BotonWhatsApp = () => {
     <div className="fixed bottom-6 right-6 z-50">
       <EtiquetaComponente nombre="BotonWhatsApp" />
       <a
-        href="https://wa.me/5491154271426?text=Hola!%20Quiero%20consultar%20sobre%20un%20vehículo"
+        href="https://web.whatsapp.com/send?phone=5491154271426&text=Hola!%20Quiero%20consultar%20sobre%20un%20vehículo"
         target="_blank"
         rel="noopener noreferrer"
         className="block group mt-10"
