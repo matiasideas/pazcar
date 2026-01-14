@@ -172,18 +172,10 @@ const TarjetaVehiculo = ({ vehiculo }: TarjetaVehiculoProps) => {
         </div>
         
         {/* Actions */}
-        <div className="flex gap-2 pt-2">
-          <Button 
-            variant="outline" 
-            size="sm" 
-            className="flex-1 border-primary/30 hover:bg-primary/10 hover:border-primary"
-          >
-            <Eye className="w-4 h-4 mr-1" />
-            Ver más
-          </Button>
+        <div className="pt-2">
           <Button 
             size="sm" 
-            className="flex-1 bg-gradient-neon hover:opacity-90"
+            className="w-full bg-[#25D366] hover:bg-[#1da851] text-white"
             asChild
           >
             <a 
