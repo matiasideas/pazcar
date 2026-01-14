@@ -74,17 +74,25 @@ const ModalConsulta = ({ abierto, onCerrar, vehiculo }: ModalConsultaProps) => {
       setEnviado(true);
       toast({
         title: "¡Consulta enviada!",
-        description: "Nos pondremos en contacto pronto",
+        description: "Redirigiendo a WhatsApp...",
       });
 
-      // Reset después de 2 segundos
+      // Preparar mensaje de WhatsApp
+      const tipoTexto = tipoConsultaLabels[tipoConsulta] || tipoConsulta;
+      const vehiculoTexto = `${vehiculo.marca} ${vehiculo.modelo} ${vehiculo.año}`;
+      const mensajeWhatsapp = encodeURIComponent(
+        `Estoy interesado en ${vehiculoTexto} y ${tipoTexto.toLowerCase()}.`
+      );
+
+      // Abrir WhatsApp después de 1.5 segundos
       setTimeout(() => {
+        window.open(`https://wa.me/5491112345678?text=${mensajeWhatsapp}`, '_blank');
         setEnviado(false);
         setNombre('');
         setWhatsapp('');
         setTipoConsulta('');
         onCerrar();
-      }, 2000);
+      }, 1500);
 
     } catch (error) {
       console.error('Error:', error);
