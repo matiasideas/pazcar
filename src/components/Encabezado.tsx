@@ -61,7 +61,7 @@ const Encabezado = () => {
           <div className="hidden md:flex items-center gap-3">
             <Button 
               size="sm" 
-              className="bg-gradient-neon hover:opacity-90"
+              className="bg-[#25D366] hover:bg-[#1da851] text-white"
               asChild
             >
               <a 
@@ -102,7 +102,7 @@ const Encabezado = () => {
             ))}
             <Button 
               size="sm" 
-              className="mt-2 bg-gradient-neon hover:opacity-90"
+              className="mt-2 bg-[#25D366] hover:bg-[#1da851] text-white"
               asChild
             >
               <a 
