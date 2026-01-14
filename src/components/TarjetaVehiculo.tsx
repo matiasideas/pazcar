@@ -174,8 +174,8 @@ const TarjetaVehiculo = ({ vehiculo }: TarjetaVehiculoProps) => {
         {/* Actions */}
         <div className="pt-2">
           <Button 
-            size="sm" 
-            className="w-full bg-[#25D366] hover:bg-[#1da851] text-white"
+            size="lg" 
+            className="w-full bg-[#25D366] hover:bg-[#1da851] text-white font-bold text-base"
             asChild
           >
             <a 
@@ -183,7 +183,7 @@ const TarjetaVehiculo = ({ vehiculo }: TarjetaVehiculoProps) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <MessageCircle className="w-4 h-4 mr-1" />
+              <MessageCircle className="w-5 h-5 mr-2" />
               Consultar
             </a>
           </Button>
