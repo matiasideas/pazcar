@@ -147,7 +147,7 @@ const ModalConsulta = ({ abierto, onCerrar, vehiculo }: ModalConsultaProps) => {
             </div>
 
             <div className="space-y-3">
-              <Label>¿Cómo querés comprar?</Label>
+              <Label>¿Qué tipo de transacción desea realizar?</Label>
               <RadioGroup value={tipoConsulta} onValueChange={setTipoConsulta} className="space-y-2">
                 {Object.entries(tipoConsultaLabels).map(([value, label]) => (
                   <div key={value} className="flex items-center space-x-3 p-3 rounded-lg border border-border/50 hover:border-primary/50 transition-colors">
