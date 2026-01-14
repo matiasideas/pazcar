@@ -80,14 +80,21 @@ const ModalConsulta = ({ abierto, onCerrar, vehiculo }: ModalConsultaProps) => {
         `Hola! Soy ${nombre}. Estoy interesado en ${vehiculoTexto} y ${tipoTexto.toLowerCase()}. Mi WhatsApp es ${whatsapp}.`
       );
       
-      // Guardar el link de WhatsApp para que el usuario lo abra
-      setWhatsappLink(`https://wa.me/5491154271427?text=${mensajeWhatsapp}`);
+      const whatsappUrl = `https://wa.me/5491154271427?text=${mensajeWhatsapp}`;
 
-      setEnviado(true);
+      // Cerrar modal y limpiar formulario
+      onCerrar();
+      setNombre('');
+      setWhatsapp('');
+      setTipoConsulta('');
+
       toast({
         title: "¡Consulta enviada!",
-        description: "Hacé clic en el botón para continuar por WhatsApp.",
+        description: "Redirigiendo a WhatsApp...",
       });
+
+      // Redirigir inmediatamente a WhatsApp (fuera del modal)
+      window.location.href = whatsappUrl;
 
     } catch (error) {
       console.error('Error:', error);
