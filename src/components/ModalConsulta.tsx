@@ -81,7 +81,7 @@ const ModalConsulta = ({ abierto, onCerrar, vehiculo }: ModalConsultaProps) => {
       );
       
       // Guardar el link de WhatsApp para que el usuario lo abra
-      setWhatsappLink(`whatsapp://send?phone=5491154271426&text=${mensajeWhatsapp}`);
+      setWhatsappLink(`https://wa.me/5491154271426?text=${mensajeWhatsapp}`);
 
       setEnviado(true);
       toast({
