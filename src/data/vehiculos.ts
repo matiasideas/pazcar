@@ -58,6 +58,16 @@ import renaultKwid7 from '@/assets/renault-kwid-7.webp';
 import renaultKwid8 from '@/assets/renault-kwid-8.webp';
 import renaultKwid9 from '@/assets/renault-kwid-9.webp';
 import renaultKwid10 from '@/assets/renault-kwid-10.webp';
+import fordMaverick1 from '@/assets/ford-maverick-1.webp';
+import fordMaverick2 from '@/assets/ford-maverick-2.webp';
+import fordMaverick3 from '@/assets/ford-maverick-3.webp';
+import fordMaverick4 from '@/assets/ford-maverick-4.webp';
+import fordMaverick5 from '@/assets/ford-maverick-5.webp';
+import fordMaverick6 from '@/assets/ford-maverick-6.webp';
+import fordMaverick7 from '@/assets/ford-maverick-7.webp';
+import fordMaverick8 from '@/assets/ford-maverick-8.webp';
+import fordMaverick9 from '@/assets/ford-maverick-9.webp';
+import fordMaverick10 from '@/assets/ford-maverick-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -96,6 +106,11 @@ const fordRaptorImagenes = [
 const renaultKwidImagenes = [
   renaultKwid1, renaultKwid2, renaultKwid3, renaultKwid4, renaultKwid5,
   renaultKwid6, renaultKwid7, renaultKwid8, renaultKwid9, renaultKwid10,
+];
+
+const fordMaverickImagenes = [
+  fordMaverick1, fordMaverick2, fordMaverick3, fordMaverick4, fordMaverick5,
+  fordMaverick6, fordMaverick7, fordMaverick8, fordMaverick9, fordMaverick10,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -156,6 +171,19 @@ const otrosVehiculos: Vehiculo[] = [
     imagenes: renaultKwidImagenes, 
     categoria: 'Compactos', 
     moneda: 'ARS'
+  },
+  // Camionetas
+  { 
+    id: '5', 
+    marca: 'Ford', 
+    modelo: 'Maverick 2.0 Ecoboost Cd Lariat At8 4wd', 
+    año: 2022, 
+    kilometraje: 19500, 
+    combustible: 'Nafta', 
+    precio: 33999, 
+    imagen: fordMaverick1, 
+    imagenes: fordMaverickImagenes, 
+    categoria: 'Camionetas'
   },
 ];
 
