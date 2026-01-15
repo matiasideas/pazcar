@@ -208,6 +208,16 @@ import vwSaveiro7 from '@/assets/vw-saveiro-7.webp';
 import vwSaveiro8 from '@/assets/vw-saveiro-8.webp';
 import vwSaveiro9 from '@/assets/vw-saveiro-9.webp';
 import vwSaveiro10 from '@/assets/vw-saveiro-10.webp';
+import citroenC31 from '@/assets/citroen-c3-1.webp';
+import citroenC32 from '@/assets/citroen-c3-2.webp';
+import citroenC33 from '@/assets/citroen-c3-3.webp';
+import citroenC34 from '@/assets/citroen-c3-4.webp';
+import citroenC35 from '@/assets/citroen-c3-5.webp';
+import citroenC36 from '@/assets/citroen-c3-6.webp';
+import citroenC37 from '@/assets/citroen-c3-7.webp';
+import citroenC38 from '@/assets/citroen-c3-8.webp';
+import citroenC39 from '@/assets/citroen-c3-9.webp';
+import citroenC310 from '@/assets/citroen-c3-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -321,6 +331,11 @@ const fordEcosportImagenes = [
 const vwSaveiroImagenes = [
   vwSaveiro1, vwSaveiro2, vwSaveiro3, vwSaveiro4, vwSaveiro5,
   vwSaveiro6, vwSaveiro7, vwSaveiro8, vwSaveiro9, vwSaveiro10,
+];
+
+const citroenC3Imagenes = [
+  citroenC31, citroenC32, citroenC33, citroenC34, citroenC35,
+  citroenC36, citroenC37, citroenC38, citroenC39, citroenC310,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -577,6 +592,19 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: vwSaveiro1, 
     imagenes: vwSaveiroImagenes, 
     categoria: 'Camionetas'
+  },
+  // Compactos
+  { 
+    id: '20', 
+    marca: 'Citroën', 
+    modelo: 'C3 1.6 Vti 115 At6 Feel', 
+    año: 2018, 
+    kilometraje: 61000, 
+    combustible: 'Nafta', 
+    precio: 12500, 
+    imagen: citroenC31, 
+    imagenes: citroenC3Imagenes, 
+    categoria: 'Compactos'
   },
 ];
 
