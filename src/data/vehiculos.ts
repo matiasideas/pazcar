@@ -78,6 +78,16 @@ import jeepCompass7 from '@/assets/jeep-compass-7.webp';
 import jeepCompass8 from '@/assets/jeep-compass-8.webp';
 import jeepCompass9 from '@/assets/jeep-compass-9.webp';
 import jeepCompass10 from '@/assets/jeep-compass-10.webp';
+import fordKa1 from '@/assets/ford-ka-1.webp';
+import fordKa2 from '@/assets/ford-ka-2.webp';
+import fordKa3 from '@/assets/ford-ka-3.webp';
+import fordKa4 from '@/assets/ford-ka-4.webp';
+import fordKa5 from '@/assets/ford-ka-5.webp';
+import fordKa6 from '@/assets/ford-ka-6.webp';
+import fordKa7 from '@/assets/ford-ka-7.webp';
+import fordKa8 from '@/assets/ford-ka-8.webp';
+import fordKa9 from '@/assets/ford-ka-9.webp';
+import fordKa10 from '@/assets/ford-ka-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -126,6 +136,11 @@ const fordMaverickImagenes = [
 const jeepCompassImagenes = [
   jeepCompass1, jeepCompass2, jeepCompass3, jeepCompass4, jeepCompass5,
   jeepCompass6, jeepCompass7, jeepCompass8, jeepCompass9, jeepCompass10,
+];
+
+const fordKaImagenes = [
+  fordKa1, fordKa2, fordKa3, fordKa4, fordKa5,
+  fordKa6, fordKa7, fordKa8, fordKa9, fordKa10,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -212,6 +227,19 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: jeepCompass1, 
     imagenes: jeepCompassImagenes, 
     categoria: 'SUV'
+  },
+  // Compactos
+  { 
+    id: '7', 
+    marca: 'Ford', 
+    modelo: 'Ka 1.5 S', 
+    año: 2019, 
+    kilometraje: 84000, 
+    combustible: 'Nafta', 
+    precio: 13500, 
+    imagen: fordKa1, 
+    imagenes: fordKaImagenes, 
+    categoria: 'Compactos'
   },
 ];
 
