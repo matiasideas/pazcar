@@ -88,6 +88,16 @@ import fordKa7 from '@/assets/ford-ka-7.webp';
 import fordKa8 from '@/assets/ford-ka-8.webp';
 import fordKa9 from '@/assets/ford-ka-9.webp';
 import fordKa10 from '@/assets/ford-ka-10.webp';
+import kiaSportage1 from '@/assets/kia-sportage-1.webp';
+import kiaSportage2 from '@/assets/kia-sportage-2.webp';
+import kiaSportage3 from '@/assets/kia-sportage-3.webp';
+import kiaSportage4 from '@/assets/kia-sportage-4.webp';
+import kiaSportage5 from '@/assets/kia-sportage-5.webp';
+import kiaSportage6 from '@/assets/kia-sportage-6.webp';
+import kiaSportage7 from '@/assets/kia-sportage-7.webp';
+import kiaSportage8 from '@/assets/kia-sportage-8.webp';
+import kiaSportage9 from '@/assets/kia-sportage-9.webp';
+import kiaSportage10 from '@/assets/kia-sportage-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -141,6 +151,11 @@ const jeepCompassImagenes = [
 const fordKaImagenes = [
   fordKa1, fordKa2, fordKa3, fordKa4, fordKa5,
   fordKa6, fordKa7, fordKa8, fordKa9, fordKa10,
+];
+
+const kiaSportageImagenes = [
+  kiaSportage1, kiaSportage2, kiaSportage3, kiaSportage4, kiaSportage5,
+  kiaSportage6, kiaSportage7, kiaSportage8, kiaSportage9, kiaSportage10,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -240,6 +255,19 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: fordKa1, 
     imagenes: fordKaImagenes, 
     categoria: 'Compactos'
+  },
+  // SUV
+  { 
+    id: '8', 
+    marca: 'Kia', 
+    modelo: 'Sportage 1.6 T-Gdi X-Line Awd', 
+    año: 2023, 
+    kilometraje: 35000, 
+    combustible: 'Nafta', 
+    precio: 52990, 
+    imagen: kiaSportage1, 
+    imagenes: kiaSportageImagenes, 
+    categoria: 'SUV'
   },
 ];
 
