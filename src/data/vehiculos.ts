@@ -48,6 +48,16 @@ import fordRaptor17 from '@/assets/ford-raptor-17.webp';
 import fordRaptor18 from '@/assets/ford-raptor-18.webp';
 import fordRaptor19 from '@/assets/ford-raptor-19.webp';
 import fordRaptor20 from '@/assets/ford-raptor-20.webp';
+import renaultKwid1 from '@/assets/renault-kwid-1.webp';
+import renaultKwid2 from '@/assets/renault-kwid-2.webp';
+import renaultKwid3 from '@/assets/renault-kwid-3.webp';
+import renaultKwid4 from '@/assets/renault-kwid-4.webp';
+import renaultKwid5 from '@/assets/renault-kwid-5.webp';
+import renaultKwid6 from '@/assets/renault-kwid-6.webp';
+import renaultKwid7 from '@/assets/renault-kwid-7.webp';
+import renaultKwid8 from '@/assets/renault-kwid-8.webp';
+import renaultKwid9 from '@/assets/renault-kwid-9.webp';
+import renaultKwid10 from '@/assets/renault-kwid-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -80,6 +90,11 @@ const fordRaptorImagenes = [
   fordRaptor6, fordRaptor7, fordRaptor8, fordRaptor9, fordRaptor10,
   fordRaptor11, fordRaptor12, fordRaptor13, fordRaptor14, fordRaptor15,
   fordRaptor16, fordRaptor17, fordRaptor18, fordRaptor19, fordRaptor20,
+];
+
+const renaultKwidImagenes = [
+  renaultKwid1, renaultKwid2, renaultKwid3, renaultKwid4, renaultKwid5,
+  renaultKwid6, renaultKwid7, renaultKwid8, renaultKwid9, renaultKwid10,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -121,6 +136,19 @@ export const vehiculosDestacados: Vehiculo[] = [
     imagen: fordRaptor1, 
     imagenes: fordRaptorImagenes, 
     categoria: 'Camionetas', 
+    destacado: true 
+  },
+  { 
+    id: '4', 
+    marca: 'Renault', 
+    modelo: 'Kwid 1.0 Sce 66cv Outside', 
+    año: 2020, 
+    kilometraje: 84000, 
+    combustible: 'Nafta', 
+    precio: 0, 
+    imagen: renaultKwid1, 
+    imagenes: renaultKwidImagenes, 
+    categoria: 'Compactos', 
     destacado: true 
   },
 ];
