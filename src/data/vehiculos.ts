@@ -188,6 +188,16 @@ import mercedesGlc7 from '@/assets/mercedes-glc-7.webp';
 import mercedesGlc8 from '@/assets/mercedes-glc-8.webp';
 import mercedesGlc9 from '@/assets/mercedes-glc-9.webp';
 import mercedesGlc10 from '@/assets/mercedes-glc-10.webp';
+import fordEcosport1 from '@/assets/ford-ecosport-1.webp';
+import fordEcosport2 from '@/assets/ford-ecosport-2.webp';
+import fordEcosport3 from '@/assets/ford-ecosport-3.webp';
+import fordEcosport4 from '@/assets/ford-ecosport-4.webp';
+import fordEcosport5 from '@/assets/ford-ecosport-5.webp';
+import fordEcosport6 from '@/assets/ford-ecosport-6.webp';
+import fordEcosport7 from '@/assets/ford-ecosport-7.webp';
+import fordEcosport8 from '@/assets/ford-ecosport-8.webp';
+import fordEcosport9 from '@/assets/ford-ecosport-9.webp';
+import fordEcosport10 from '@/assets/ford-ecosport-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -291,6 +301,11 @@ const vwVirtusImagenes = [
 const mercedesGlcImagenes = [
   mercedesGlc1, mercedesGlc2, mercedesGlc3, mercedesGlc4, mercedesGlc5,
   mercedesGlc6, mercedesGlc7, mercedesGlc8, mercedesGlc9, mercedesGlc10,
+];
+
+const fordEcosportImagenes = [
+  fordEcosport1, fordEcosport2, fordEcosport3, fordEcosport4, fordEcosport5,
+  fordEcosport6, fordEcosport7, fordEcosport8, fordEcosport9, fordEcosport10,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -520,6 +535,19 @@ const otrosVehiculos: Vehiculo[] = [
     precio: 33000, 
     imagen: mercedesGlc1, 
     imagenes: mercedesGlcImagenes, 
+    categoria: 'SUV'
+  },
+  // SUV
+  { 
+    id: '18', 
+    marca: 'Ford', 
+    modelo: 'Ecosport 1.5 Se 123cv 4x2 Automática', 
+    año: 2018, 
+    kilometraje: 121000, 
+    combustible: 'Nafta', 
+    precio: 15500, 
+    imagen: fordEcosport1, 
+    imagenes: fordEcosportImagenes, 
     categoria: 'SUV'
   },
 ];
