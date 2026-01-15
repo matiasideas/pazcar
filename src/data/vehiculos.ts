@@ -71,6 +71,7 @@ export interface Vehiculo {
   imagenes?: string[];
   categoria: string;
   destacado?: boolean;
+  moneda?: 'USD' | 'ARS';
 }
 
 const ramImagenes = [
@@ -149,7 +150,8 @@ export const vehiculosDestacados: Vehiculo[] = [
     imagen: renaultKwid1, 
     imagenes: renaultKwidImagenes, 
     categoria: 'Compactos', 
-    destacado: true 
+    destacado: true,
+    moneda: 'ARS'
   },
 ];
 

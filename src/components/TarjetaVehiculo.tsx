@@ -24,11 +24,14 @@ const TarjetaVehiculo = ({ vehiculo }: TarjetaVehiculoProps) => {
   
   const tieneMultiplesImagenes = todasLasImagenes.length > 1;
 
-  const precioFormateado = new Intl.NumberFormat('es-AR', {
-    style: 'currency',
-    currency: 'USD',
-    maximumFractionDigits: 0,
-  }).format(vehiculo.precio);
+  const moneda = vehiculo.moneda || 'USD';
+  const precioFormateado = moneda === 'ARS'
+    ? `$${new Intl.NumberFormat('es-AR').format(vehiculo.precio)}`
+    : new Intl.NumberFormat('es-AR', {
+        style: 'currency',
+        currency: 'USD',
+        maximumFractionDigits: 0,
+      }).format(vehiculo.precio);
 
   const kilometrajeFormateado = new Intl.NumberFormat('es-AR').format(vehiculo.kilometraje);
 
