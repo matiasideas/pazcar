@@ -44,7 +44,7 @@ const PiePagina = () => {
             <h4 className="font-display text-lg font-semibold">Seguinos</h4>
             <div className="flex gap-4">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/pazcar.ok/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-muted hover:bg-primary/20 hover:text-primary transition-all"
