@@ -68,6 +68,16 @@ import fordMaverick7 from '@/assets/ford-maverick-7.webp';
 import fordMaverick8 from '@/assets/ford-maverick-8.webp';
 import fordMaverick9 from '@/assets/ford-maverick-9.webp';
 import fordMaverick10 from '@/assets/ford-maverick-10.webp';
+import jeepCompass1 from '@/assets/jeep-compass-1.webp';
+import jeepCompass2 from '@/assets/jeep-compass-2.webp';
+import jeepCompass3 from '@/assets/jeep-compass-3.webp';
+import jeepCompass4 from '@/assets/jeep-compass-4.webp';
+import jeepCompass5 from '@/assets/jeep-compass-5.webp';
+import jeepCompass6 from '@/assets/jeep-compass-6.webp';
+import jeepCompass7 from '@/assets/jeep-compass-7.webp';
+import jeepCompass8 from '@/assets/jeep-compass-8.webp';
+import jeepCompass9 from '@/assets/jeep-compass-9.webp';
+import jeepCompass10 from '@/assets/jeep-compass-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -111,6 +121,11 @@ const renaultKwidImagenes = [
 const fordMaverickImagenes = [
   fordMaverick1, fordMaverick2, fordMaverick3, fordMaverick4, fordMaverick5,
   fordMaverick6, fordMaverick7, fordMaverick8, fordMaverick9, fordMaverick10,
+];
+
+const jeepCompassImagenes = [
+  jeepCompass1, jeepCompass2, jeepCompass3, jeepCompass4, jeepCompass5,
+  jeepCompass6, jeepCompass7, jeepCompass8, jeepCompass9, jeepCompass10,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -184,6 +199,19 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: fordMaverick1, 
     imagenes: fordMaverickImagenes, 
     categoria: 'Camionetas'
+  },
+  // SUV
+  { 
+    id: '6', 
+    marca: 'Jeep', 
+    modelo: 'Compass 2.4 Longitude', 
+    año: 2021, 
+    kilometraje: 64000, 
+    combustible: 'Nafta', 
+    precio: 24990, 
+    imagen: jeepCompass1, 
+    imagenes: jeepCompassImagenes, 
+    categoria: 'SUV'
   },
 ];
 
