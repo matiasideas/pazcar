@@ -66,13 +66,18 @@ const QuienesSomos = () => {
               className="relative group cursor-pointer overflow-hidden rounded-xl aspect-[4/3]"
               onClick={() => abrirImagen(index)}
             >
-              <img 
-                src={imagen.src} 
-                alt={imagen.alt}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <span className="text-white text-lg font-medium">Ver imagen</span>
+              {/* Neon glow effect */}
+              <div className="absolute -inset-1 bg-primary/50 rounded-xl blur-lg opacity-0 group-hover:opacity-70 group-active:opacity-100 transition-opacity duration-300" />
+              
+              <div className="relative h-full rounded-xl overflow-hidden ring-2 ring-transparent group-hover:ring-primary group-active:ring-primary transition-all duration-300">
+                <img 
+                  src={imagen.src} 
+                  alt={imagen.alt}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <span className="text-white text-lg font-medium">Ver imagen</span>
+                </div>
               </div>
             </div>
           ))}
