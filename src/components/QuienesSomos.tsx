@@ -105,11 +105,11 @@ const QuienesSomos = () => {
                 
                 {/* Neon glow behind enlarged image */}
                 <div className="relative">
-                  <div className="absolute -inset-4 bg-primary rounded-2xl blur-2xl opacity-60" />
+                  <div className="absolute -inset-2 bg-primary/40 rounded-xl blur-xl opacity-40" />
                   <img 
                     src={imagenes[imagenSeleccionada].src} 
                     alt={imagenes[imagenSeleccionada].alt}
-                    className="relative z-10 max-h-[80vh] max-w-full object-contain rounded-lg ring-2 ring-primary"
+                    className="relative z-10 max-h-[80vh] max-w-full object-contain rounded-lg ring-1 ring-primary/50"
                   />
                 </div>
                 
