@@ -128,6 +128,16 @@ import bmwX37 from '@/assets/bmw-x3-7.webp';
 import bmwX38 from '@/assets/bmw-x3-8.webp';
 import bmwX39 from '@/assets/bmw-x3-9.webp';
 import bmwX310 from '@/assets/bmw-x3-10.webp';
+import toyotaCorollaCross1 from '@/assets/toyota-corolla-cross-1.webp';
+import toyotaCorollaCross2 from '@/assets/toyota-corolla-cross-2.webp';
+import toyotaCorollaCross3 from '@/assets/toyota-corolla-cross-3.webp';
+import toyotaCorollaCross4 from '@/assets/toyota-corolla-cross-4.webp';
+import toyotaCorollaCross5 from '@/assets/toyota-corolla-cross-5.webp';
+import toyotaCorollaCross6 from '@/assets/toyota-corolla-cross-6.webp';
+import toyotaCorollaCross7 from '@/assets/toyota-corolla-cross-7.webp';
+import toyotaCorollaCross8 from '@/assets/toyota-corolla-cross-8.webp';
+import toyotaCorollaCross9 from '@/assets/toyota-corolla-cross-9.webp';
+import toyotaCorollaCross10 from '@/assets/toyota-corolla-cross-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -201,6 +211,11 @@ const peugeot208Imagenes = [
 const bmwX3Imagenes = [
   bmwX31, bmwX32, bmwX33, bmwX34, bmwX35,
   bmwX36, bmwX37, bmwX38, bmwX39, bmwX310,
+];
+
+const toyotaCorollaCrossImagenes = [
+  toyotaCorollaCross1, toyotaCorollaCross2, toyotaCorollaCross3, toyotaCorollaCross4, toyotaCorollaCross5,
+  toyotaCorollaCross6, toyotaCorollaCross7, toyotaCorollaCross8, toyotaCorollaCross9, toyotaCorollaCross10,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -351,6 +366,19 @@ const otrosVehiculos: Vehiculo[] = [
     precio: 33990, 
     imagen: bmwX31, 
     imagenes: bmwX3Imagenes, 
+    categoria: 'SUV'
+  },
+  // SUV
+  { 
+    id: '12', 
+    marca: 'Toyota', 
+    modelo: 'Corolla Cross 1.8 Xei Ecvt', 
+    año: 2022, 
+    kilometraje: 51000, 
+    combustible: 'Híbrido', 
+    precio: 32500, 
+    imagen: toyotaCorollaCross1, 
+    imagenes: toyotaCorollaCrossImagenes, 
     categoria: 'SUV'
   },
 ];
