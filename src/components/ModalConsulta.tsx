@@ -77,7 +77,7 @@ const ModalConsulta = ({ abierto, onCerrar, vehiculo }: ModalConsultaProps) => {
       const tipoTexto = tipoConsultaLabels[tipoConsulta] || tipoConsulta;
       const vehiculoTexto = `${vehiculo.marca} ${vehiculo.modelo} ${vehiculo.año}`;
       const mensajeWhatsapp = encodeURIComponent(
-        `Hola! Soy ${nombre}. Estoy interesado en ${vehiculoTexto} y ${tipoTexto.toLowerCase()}.`
+        `Hola! Soy ${nombre}. Estoy interesado en la unidad ${vehiculoTexto} y quiero información para ${tipoTexto.toLowerCase()}.`
       );
       
       const whatsappUrl = `https://wa.me/5491154271427?text=${mensajeWhatsapp}`;
@@ -163,7 +163,7 @@ const ModalConsulta = ({ abierto, onCerrar, vehiculo }: ModalConsultaProps) => {
                 onClick={() => {
                   const tipoTexto = tipoConsultaLabels[tipoConsulta] || tipoConsulta;
                   const vehiculoTexto = `${vehiculo.marca} ${vehiculo.modelo} ${vehiculo.año}`;
-                  const mensaje = `Hola! Soy ${nombre}. Estoy interesado en ${vehiculoTexto} y ${tipoTexto.toLowerCase()}.`;
+                  const mensaje = `Hola! Soy ${nombre}. Estoy interesado en la unidad ${vehiculoTexto} y quiero información para ${tipoTexto.toLowerCase()}.`;
                   navigator.clipboard.writeText(`Número: 5491154271427\n\nMensaje:\n${mensaje}`);
                   toast({
                     title: "¡Copiado!",
