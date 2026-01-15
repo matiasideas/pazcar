@@ -198,6 +198,16 @@ import fordEcosport7 from '@/assets/ford-ecosport-7.webp';
 import fordEcosport8 from '@/assets/ford-ecosport-8.webp';
 import fordEcosport9 from '@/assets/ford-ecosport-9.webp';
 import fordEcosport10 from '@/assets/ford-ecosport-10.webp';
+import vwSaveiro1 from '@/assets/vw-saveiro-1.webp';
+import vwSaveiro2 from '@/assets/vw-saveiro-2.webp';
+import vwSaveiro3 from '@/assets/vw-saveiro-3.webp';
+import vwSaveiro4 from '@/assets/vw-saveiro-4.webp';
+import vwSaveiro5 from '@/assets/vw-saveiro-5.webp';
+import vwSaveiro6 from '@/assets/vw-saveiro-6.webp';
+import vwSaveiro7 from '@/assets/vw-saveiro-7.webp';
+import vwSaveiro8 from '@/assets/vw-saveiro-8.webp';
+import vwSaveiro9 from '@/assets/vw-saveiro-9.webp';
+import vwSaveiro10 from '@/assets/vw-saveiro-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -306,6 +316,11 @@ const mercedesGlcImagenes = [
 const fordEcosportImagenes = [
   fordEcosport1, fordEcosport2, fordEcosport3, fordEcosport4, fordEcosport5,
   fordEcosport6, fordEcosport7, fordEcosport8, fordEcosport9, fordEcosport10,
+];
+
+const vwSaveiroImagenes = [
+  vwSaveiro1, vwSaveiro2, vwSaveiro3, vwSaveiro4, vwSaveiro5,
+  vwSaveiro6, vwSaveiro7, vwSaveiro8, vwSaveiro9, vwSaveiro10,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -549,6 +564,19 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: fordEcosport1, 
     imagenes: fordEcosportImagenes, 
     categoria: 'SUV'
+  },
+  // Camionetas
+  { 
+    id: '19', 
+    marca: 'Volkswagen', 
+    modelo: 'Saveiro 1.6 Highline', 
+    año: 2021, 
+    kilometraje: 97000, 
+    combustible: 'Nafta', 
+    precio: 17999, 
+    imagen: vwSaveiro1, 
+    imagenes: vwSaveiroImagenes, 
+    categoria: 'Camionetas'
   },
 ];
 
