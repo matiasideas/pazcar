@@ -178,6 +178,16 @@ import vwVirtus7 from '@/assets/vw-virtus-7.webp';
 import vwVirtus8 from '@/assets/vw-virtus-8.webp';
 import vwVirtus9 from '@/assets/vw-virtus-9.webp';
 import vwVirtus10 from '@/assets/vw-virtus-10.webp';
+import mercedesGlc1 from '@/assets/mercedes-glc-1.webp';
+import mercedesGlc2 from '@/assets/mercedes-glc-2.webp';
+import mercedesGlc3 from '@/assets/mercedes-glc-3.webp';
+import mercedesGlc4 from '@/assets/mercedes-glc-4.webp';
+import mercedesGlc5 from '@/assets/mercedes-glc-5.webp';
+import mercedesGlc6 from '@/assets/mercedes-glc-6.webp';
+import mercedesGlc7 from '@/assets/mercedes-glc-7.webp';
+import mercedesGlc8 from '@/assets/mercedes-glc-8.webp';
+import mercedesGlc9 from '@/assets/mercedes-glc-9.webp';
+import mercedesGlc10 from '@/assets/mercedes-glc-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -276,6 +286,11 @@ const hondaFitImagenes = [
 const vwVirtusImagenes = [
   vwVirtus1, vwVirtus2, vwVirtus3, vwVirtus4, vwVirtus5,
   vwVirtus6, vwVirtus7, vwVirtus8, vwVirtus9, vwVirtus10,
+];
+
+const mercedesGlcImagenes = [
+  mercedesGlc1, mercedesGlc2, mercedesGlc3, mercedesGlc4, mercedesGlc5,
+  mercedesGlc6, mercedesGlc7, mercedesGlc8, mercedesGlc9, mercedesGlc10,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -493,6 +508,19 @@ const otrosVehiculos: Vehiculo[] = [
     imagenes: vwVirtusImagenes, 
     categoria: 'Sedanes',
     moneda: 'ARS'
+  },
+  // SUV
+  { 
+    id: '17', 
+    marca: 'Mercedes-Benz', 
+    modelo: 'Clase GLC 2.0 Glc300 4matic Automático', 
+    año: 2016, 
+    kilometraje: 104000, 
+    combustible: 'Nafta', 
+    precio: 33000, 
+    imagen: mercedesGlc1, 
+    imagenes: mercedesGlcImagenes, 
+    categoria: 'SUV'
   },
 ];
 
