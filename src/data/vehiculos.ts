@@ -168,6 +168,16 @@ import hondaFit7 from '@/assets/honda-fit-7.webp';
 import hondaFit8 from '@/assets/honda-fit-8.webp';
 import hondaFit9 from '@/assets/honda-fit-9.webp';
 import hondaFit10 from '@/assets/honda-fit-10.webp';
+import vwVirtus1 from '@/assets/vw-virtus-1.webp';
+import vwVirtus2 from '@/assets/vw-virtus-2.webp';
+import vwVirtus3 from '@/assets/vw-virtus-3.webp';
+import vwVirtus4 from '@/assets/vw-virtus-4.webp';
+import vwVirtus5 from '@/assets/vw-virtus-5.webp';
+import vwVirtus6 from '@/assets/vw-virtus-6.webp';
+import vwVirtus7 from '@/assets/vw-virtus-7.webp';
+import vwVirtus8 from '@/assets/vw-virtus-8.webp';
+import vwVirtus9 from '@/assets/vw-virtus-9.webp';
+import vwVirtus10 from '@/assets/vw-virtus-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -261,6 +271,11 @@ const peugeot308Imagenes = [
 const hondaFitImagenes = [
   hondaFit1, hondaFit2, hondaFit3, hondaFit4, hondaFit5,
   hondaFit6, hondaFit7, hondaFit8, hondaFit9, hondaFit10,
+];
+
+const vwVirtusImagenes = [
+  vwVirtus1, vwVirtus2, vwVirtus3, vwVirtus4, vwVirtus5,
+  vwVirtus6, vwVirtus7, vwVirtus8, vwVirtus9, vwVirtus10,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -464,6 +479,20 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: hondaFit1, 
     imagenes: hondaFitImagenes, 
     categoria: 'Compactos'
+  },
+  // Sedanes
+  { 
+    id: '16', 
+    marca: 'Volkswagen', 
+    modelo: 'Virtus 1.6 Msi Trendline', 
+    año: 2019, 
+    kilometraje: 56000, 
+    combustible: 'Nafta', 
+    precio: 22990000, 
+    imagen: vwVirtus1, 
+    imagenes: vwVirtusImagenes, 
+    categoria: 'Sedanes',
+    moneda: 'ARS'
   },
 ];
 
