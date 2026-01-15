@@ -61,19 +61,23 @@ const TarjetaVehiculo = ({ vehiculo }: TarjetaVehiculoProps) => {
   }, [isFocused, tieneMultiplesImagenes, anteriorImagen, siguienteImagen]);
 
   return (
-    <Card 
-      ref={cardRef}
-      tabIndex={0}
-      onMouseEnter={() => setIsFocused(true)}
-      onMouseLeave={() => setIsFocused(false)}
-      onFocus={() => setIsFocused(true)}
-      onBlur={() => setIsFocused(false)}
-      className={`group overflow-hidden bg-gradient-card border-border/50 card-hover outline-none focus:ring-2 focus:ring-primary/50 ${
-        vehiculo.destacado ? 'featured-glow neon-border' : ''
-      }`}
-    >
-      {/* Image container with carousel */}
-      <div className="relative aspect-[16/10] overflow-hidden">
+    <div className="relative group/card">
+      {/* Neon glow effect behind the card */}
+      <div className="absolute -inset-1 bg-primary/40 rounded-2xl blur-xl opacity-0 group-hover/card:opacity-70 transition-opacity duration-300" />
+      
+      <Card 
+        ref={cardRef}
+        tabIndex={0}
+        onMouseEnter={() => setIsFocused(true)}
+        onMouseLeave={() => setIsFocused(false)}
+        onFocus={() => setIsFocused(true)}
+        onBlur={() => setIsFocused(false)}
+        className={`relative group overflow-hidden bg-gradient-card border-border/50 card-hover outline-none focus:ring-2 focus:ring-primary/50 ${
+          vehiculo.destacado ? 'featured-glow neon-border' : ''
+        }`}
+      >
+        {/* Image container with carousel */}
+        <div className="relative aspect-[16/10] overflow-hidden">
         <img
           src={todasLasImagenes[imagenActual]}
           alt={`${vehiculo.marca} ${vehiculo.modelo}`}
@@ -193,7 +197,8 @@ const TarjetaVehiculo = ({ vehiculo }: TarjetaVehiculoProps) => {
           imagen: vehiculo.imagen,
         }}
       />
-    </Card>
+      </Card>
+    </div>
   );
 };
 
