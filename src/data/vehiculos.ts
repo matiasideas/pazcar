@@ -139,6 +139,11 @@ export const vehiculosDestacados: Vehiculo[] = [
     categoria: 'Camionetas', 
     destacado: true 
   },
+];
+
+// Otros vehículos del catálogo
+const otrosVehiculos: Vehiculo[] = [
+  // Compactos
   { 
     id: '4', 
     marca: 'Renault', 
@@ -150,16 +155,8 @@ export const vehiculosDestacados: Vehiculo[] = [
     imagen: renaultKwid1, 
     imagenes: renaultKwidImagenes, 
     categoria: 'Compactos', 
-    destacado: true,
     moneda: 'ARS'
   },
-];
-
-// Otros vehículos del catálogo (sin fotos reales aún)
-const otrosVehiculos: Vehiculo[] = [
-  // Compactos
-  { id: '10', marca: 'Toyota', modelo: 'Yaris', año: 2023, kilometraje: 15000, combustible: 'Nafta', precio: 18500, imagen: 'https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Compactos' },
-  { id: '11', marca: 'Volkswagen', modelo: 'Polo', año: 2022, kilometraje: 28000, combustible: 'Nafta', precio: 17800, imagen: 'https://images.pexels.com/photos/1149137/pexels-photo-1149137.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Compactos' },
   
   // Sedanes
   { id: '41', marca: 'Volkswagen', modelo: 'Vento', año: 2023, kilometraje: 25000, combustible: 'Nafta', precio: 26000, imagen: 'https://images.pexels.com/photos/1035108/pexels-photo-1035108.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Sedanes' },
