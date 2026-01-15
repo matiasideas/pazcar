@@ -145,7 +145,7 @@ export const vehiculosDestacados: Vehiculo[] = [
     año: 2020, 
     kilometraje: 84000, 
     combustible: 'Nafta', 
-    precio: 0, 
+    precio: 15990000, 
     imagen: renaultKwid1, 
     imagenes: renaultKwidImagenes, 
     categoria: 'Compactos', 
