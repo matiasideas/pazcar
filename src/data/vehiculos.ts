@@ -148,6 +148,16 @@ import cheryTiggo47 from '@/assets/chery-tiggo4-7.webp';
 import cheryTiggo48 from '@/assets/chery-tiggo4-8.webp';
 import cheryTiggo49 from '@/assets/chery-tiggo4-9.webp';
 import cheryTiggo410 from '@/assets/chery-tiggo4-10.webp';
+import peugeot3081 from '@/assets/peugeot-308-1.webp';
+import peugeot3082 from '@/assets/peugeot-308-2.webp';
+import peugeot3083 from '@/assets/peugeot-308-3.webp';
+import peugeot3084 from '@/assets/peugeot-308-4.webp';
+import peugeot3085 from '@/assets/peugeot-308-5.webp';
+import peugeot3086 from '@/assets/peugeot-308-6.webp';
+import peugeot3087 from '@/assets/peugeot-308-7.webp';
+import peugeot3088 from '@/assets/peugeot-308-8.webp';
+import peugeot3089 from '@/assets/peugeot-308-9.webp';
+import peugeot30810 from '@/assets/peugeot-308-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -231,6 +241,11 @@ const toyotaCorollaCrossImagenes = [
 const cheryTiggo4Imagenes = [
   cheryTiggo41, cheryTiggo42, cheryTiggo43, cheryTiggo44, cheryTiggo45,
   cheryTiggo46, cheryTiggo47, cheryTiggo48, cheryTiggo49, cheryTiggo410,
+];
+
+const peugeot308Imagenes = [
+  peugeot3081, peugeot3082, peugeot3083, peugeot3084, peugeot3085,
+  peugeot3086, peugeot3087, peugeot3088, peugeot3089, peugeot30810,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -408,6 +423,19 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: cheryTiggo41, 
     imagenes: cheryTiggo4Imagenes, 
     categoria: 'SUV'
+  },
+  // Compactos
+  { 
+    id: '14', 
+    marca: 'Peugeot', 
+    modelo: '308 1.6 Allure Nav 115cv', 
+    año: 2014, 
+    kilometraje: 78000, 
+    combustible: 'Nafta', 
+    precio: 10500, 
+    imagen: peugeot3081, 
+    imagenes: peugeot308Imagenes, 
+    categoria: 'Compactos'
   },
 ];
 
