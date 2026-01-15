@@ -59,17 +59,18 @@ const QuienesSomos = () => {
           <h3 className="text-2xl font-semibold text-foreground">Nuestro Showroom</h3>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
           {imagenes.map((imagen, index) => (
             <div 
               key={index} 
-              className="relative group cursor-pointer overflow-hidden rounded-xl aspect-[4/3]"
+              className="relative group cursor-pointer"
               onClick={() => abrirImagen(index)}
             >
-              {/* Neon glow effect */}
-              <div className="absolute -inset-1 bg-primary/50 rounded-xl blur-lg opacity-0 group-hover:opacity-70 group-active:opacity-100 transition-opacity duration-300" />
+              {/* Neon glow effect - positioned behind */}
+              <div className="absolute -inset-2 bg-primary rounded-xl blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-300 z-0" />
               
-              <div className="relative h-full rounded-xl overflow-hidden ring-2 ring-transparent group-hover:ring-primary group-active:ring-primary transition-all duration-300">
+              {/* Image container */}
+              <div className="relative z-10 overflow-hidden rounded-xl aspect-[4/3] ring-2 ring-transparent group-hover:ring-primary transition-all duration-300">
                 <img 
                   src={imagen.src} 
                   alt={imagen.alt}
