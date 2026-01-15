@@ -80,7 +80,7 @@ const ModalConsulta = ({ abierto, onCerrar, vehiculo }: ModalConsultaProps) => {
         `Hola! Soy ${nombre}. Estoy interesado en la unidad ${vehiculoTexto} y quiero información para ${tipoTexto.toLowerCase()}.`
       );
       
-      const whatsappUrl = `https://wa.me/5491154271427?text=${mensajeWhatsapp}`;
+      const whatsappUrl = `https://wa.me/5491133095902?text=${mensajeWhatsapp}`;
 
       // Cerrar modal y limpiar formulario
       onCerrar();
