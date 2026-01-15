@@ -26,7 +26,7 @@ const PiePagina = () => {
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Phone className="w-5 h-5 text-primary" />
-                <a href="tel:+5491133095902" className="hover:text-primary transition-colors">
+                <a href="https://wa.me/5491133095902?text=Hola!%20Quiero%20consultar%20sobre%20un%20vehículo" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                   +54 9 11-3309-5902
                 </a>
               </li>
