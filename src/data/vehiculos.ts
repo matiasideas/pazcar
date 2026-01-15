@@ -138,6 +138,16 @@ import toyotaCorollaCross7 from '@/assets/toyota-corolla-cross-7.webp';
 import toyotaCorollaCross8 from '@/assets/toyota-corolla-cross-8.webp';
 import toyotaCorollaCross9 from '@/assets/toyota-corolla-cross-9.webp';
 import toyotaCorollaCross10 from '@/assets/toyota-corolla-cross-10.webp';
+import cheryTiggo41 from '@/assets/chery-tiggo4-1.webp';
+import cheryTiggo42 from '@/assets/chery-tiggo4-2.webp';
+import cheryTiggo43 from '@/assets/chery-tiggo4-3.webp';
+import cheryTiggo44 from '@/assets/chery-tiggo4-4.webp';
+import cheryTiggo45 from '@/assets/chery-tiggo4-5.webp';
+import cheryTiggo46 from '@/assets/chery-tiggo4-6.webp';
+import cheryTiggo47 from '@/assets/chery-tiggo4-7.webp';
+import cheryTiggo48 from '@/assets/chery-tiggo4-8.webp';
+import cheryTiggo49 from '@/assets/chery-tiggo4-9.webp';
+import cheryTiggo410 from '@/assets/chery-tiggo4-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -216,6 +226,11 @@ const bmwX3Imagenes = [
 const toyotaCorollaCrossImagenes = [
   toyotaCorollaCross1, toyotaCorollaCross2, toyotaCorollaCross3, toyotaCorollaCross4, toyotaCorollaCross5,
   toyotaCorollaCross6, toyotaCorollaCross7, toyotaCorollaCross8, toyotaCorollaCross9, toyotaCorollaCross10,
+];
+
+const cheryTiggo4Imagenes = [
+  cheryTiggo41, cheryTiggo42, cheryTiggo43, cheryTiggo44, cheryTiggo45,
+  cheryTiggo46, cheryTiggo47, cheryTiggo48, cheryTiggo49, cheryTiggo410,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -379,6 +394,19 @@ const otrosVehiculos: Vehiculo[] = [
     precio: 32500, 
     imagen: toyotaCorollaCross1, 
     imagenes: toyotaCorollaCrossImagenes, 
+    categoria: 'SUV'
+  },
+  // SUV
+  { 
+    id: '13', 
+    marca: 'Chery', 
+    modelo: 'Tiggo 4 2.0 Comfort Cvt', 
+    año: 2021, 
+    kilometraje: 56000, 
+    combustible: 'Nafta', 
+    precio: 19990, 
+    imagen: cheryTiggo41, 
+    imagenes: cheryTiggo4Imagenes, 
     categoria: 'SUV'
   },
 ];
