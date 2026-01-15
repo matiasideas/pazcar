@@ -98,6 +98,16 @@ import kiaSportage7 from '@/assets/kia-sportage-7.webp';
 import kiaSportage8 from '@/assets/kia-sportage-8.webp';
 import kiaSportage9 from '@/assets/kia-sportage-9.webp';
 import kiaSportage10 from '@/assets/kia-sportage-10.webp';
+import fiatFastback1 from '@/assets/fiat-fastback-1.webp';
+import fiatFastback2 from '@/assets/fiat-fastback-2.webp';
+import fiatFastback3 from '@/assets/fiat-fastback-3.webp';
+import fiatFastback4 from '@/assets/fiat-fastback-4.webp';
+import fiatFastback5 from '@/assets/fiat-fastback-5.webp';
+import fiatFastback6 from '@/assets/fiat-fastback-6.webp';
+import fiatFastback7 from '@/assets/fiat-fastback-7.webp';
+import fiatFastback8 from '@/assets/fiat-fastback-8.webp';
+import fiatFastback9 from '@/assets/fiat-fastback-9.webp';
+import fiatFastback10 from '@/assets/fiat-fastback-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -156,6 +166,11 @@ const fordKaImagenes = [
 const kiaSportageImagenes = [
   kiaSportage1, kiaSportage2, kiaSportage3, kiaSportage4, kiaSportage5,
   kiaSportage6, kiaSportage7, kiaSportage8, kiaSportage9, kiaSportage10,
+];
+
+const fiatFastbackImagenes = [
+  fiatFastback1, fiatFastback2, fiatFastback3, fiatFastback4, fiatFastback5,
+  fiatFastback6, fiatFastback7, fiatFastback8, fiatFastback9, fiatFastback10,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -267,6 +282,19 @@ const otrosVehiculos: Vehiculo[] = [
     precio: 52990, 
     imagen: kiaSportage1, 
     imagenes: kiaSportageImagenes, 
+    categoria: 'SUV'
+  },
+  // SUV
+  { 
+    id: '9', 
+    marca: 'Fiat', 
+    modelo: 'Fastback 1.3 T270 At6', 
+    año: 2025, 
+    kilometraje: 4000, 
+    combustible: 'Nafta', 
+    precio: 26999, 
+    imagen: fiatFastback1, 
+    imagenes: fiatFastbackImagenes, 
     categoria: 'SUV'
   },
 ];
