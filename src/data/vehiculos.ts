@@ -108,6 +108,16 @@ import fiatFastback7 from '@/assets/fiat-fastback-7.webp';
 import fiatFastback8 from '@/assets/fiat-fastback-8.webp';
 import fiatFastback9 from '@/assets/fiat-fastback-9.webp';
 import fiatFastback10 from '@/assets/fiat-fastback-10.webp';
+import peugeot2081 from '@/assets/peugeot-208-1.webp';
+import peugeot2082 from '@/assets/peugeot-208-2.webp';
+import peugeot2083 from '@/assets/peugeot-208-3.webp';
+import peugeot2084 from '@/assets/peugeot-208-4.webp';
+import peugeot2085 from '@/assets/peugeot-208-5.webp';
+import peugeot2086 from '@/assets/peugeot-208-6.webp';
+import peugeot2087 from '@/assets/peugeot-208-7.webp';
+import peugeot2088 from '@/assets/peugeot-208-8.webp';
+import peugeot2089 from '@/assets/peugeot-208-9.webp';
+import peugeot20810 from '@/assets/peugeot-208-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -171,6 +181,11 @@ const kiaSportageImagenes = [
 const fiatFastbackImagenes = [
   fiatFastback1, fiatFastback2, fiatFastback3, fiatFastback4, fiatFastback5,
   fiatFastback6, fiatFastback7, fiatFastback8, fiatFastback9, fiatFastback10,
+];
+
+const peugeot208Imagenes = [
+  peugeot2081, peugeot2082, peugeot2083, peugeot2084, peugeot2085,
+  peugeot2086, peugeot2087, peugeot2088, peugeot2089, peugeot20810,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -296,6 +311,19 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: fiatFastback1, 
     imagenes: fiatFastbackImagenes, 
     categoria: 'SUV'
+  },
+  // Compactos
+  { 
+    id: '10', 
+    marca: 'Peugeot', 
+    modelo: '208 1.6 Gt Thp', 
+    año: 2017, 
+    kilometraje: 85000, 
+    combustible: 'Nafta', 
+    precio: 15999, 
+    imagen: peugeot2081, 
+    imagenes: peugeot208Imagenes, 
+    categoria: 'Compactos'
   },
 ];
 
