@@ -103,11 +103,15 @@ const QuienesSomos = () => {
                   <ChevronLeft className="w-8 h-8 text-white" />
                 </button>
                 
-                <img 
-                  src={imagenes[imagenSeleccionada].src} 
-                  alt={imagenes[imagenSeleccionada].alt}
-                  className="max-h-[80vh] max-w-full object-contain"
-                />
+                {/* Neon glow behind enlarged image */}
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-primary rounded-2xl blur-2xl opacity-60" />
+                  <img 
+                    src={imagenes[imagenSeleccionada].src} 
+                    alt={imagenes[imagenSeleccionada].alt}
+                    className="relative z-10 max-h-[80vh] max-w-full object-contain rounded-lg ring-2 ring-primary"
+                  />
+                </div>
                 
                 <button 
                   onClick={siguienteImagen}
