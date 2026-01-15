@@ -118,6 +118,16 @@ import peugeot2087 from '@/assets/peugeot-208-7.webp';
 import peugeot2088 from '@/assets/peugeot-208-8.webp';
 import peugeot2089 from '@/assets/peugeot-208-9.webp';
 import peugeot20810 from '@/assets/peugeot-208-10.webp';
+import bmwX31 from '@/assets/bmw-x3-1.webp';
+import bmwX32 from '@/assets/bmw-x3-2.webp';
+import bmwX33 from '@/assets/bmw-x3-3.webp';
+import bmwX34 from '@/assets/bmw-x3-4.webp';
+import bmwX35 from '@/assets/bmw-x3-5.webp';
+import bmwX36 from '@/assets/bmw-x3-6.webp';
+import bmwX37 from '@/assets/bmw-x3-7.webp';
+import bmwX38 from '@/assets/bmw-x3-8.webp';
+import bmwX39 from '@/assets/bmw-x3-9.webp';
+import bmwX310 from '@/assets/bmw-x3-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -186,6 +196,11 @@ const fiatFastbackImagenes = [
 const peugeot208Imagenes = [
   peugeot2081, peugeot2082, peugeot2083, peugeot2084, peugeot2085,
   peugeot2086, peugeot2087, peugeot2088, peugeot2089, peugeot20810,
+];
+
+const bmwX3Imagenes = [
+  bmwX31, bmwX32, bmwX33, bmwX34, bmwX35,
+  bmwX36, bmwX37, bmwX38, bmwX39, bmwX310,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -324,6 +339,19 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: peugeot2081, 
     imagenes: peugeot208Imagenes, 
     categoria: 'Compactos'
+  },
+  // SUV
+  { 
+    id: '11', 
+    marca: 'BMW', 
+    modelo: 'X3 3.0 Xdrive 35i Executive 306cv', 
+    año: 2014, 
+    kilometraje: 175500, 
+    combustible: 'Nafta', 
+    precio: 33990, 
+    imagen: bmwX31, 
+    imagenes: bmwX3Imagenes, 
+    categoria: 'SUV'
   },
 ];
 
