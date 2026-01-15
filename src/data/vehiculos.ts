@@ -218,6 +218,16 @@ import citroenC37 from '@/assets/citroen-c3-7.webp';
 import citroenC38 from '@/assets/citroen-c3-8.webp';
 import citroenC39 from '@/assets/citroen-c3-9.webp';
 import citroenC310 from '@/assets/citroen-c3-10.webp';
+import fiatPulseAbarth1 from '@/assets/fiat-pulse-abarth-1.webp';
+import fiatPulseAbarth2 from '@/assets/fiat-pulse-abarth-2.webp';
+import fiatPulseAbarth3 from '@/assets/fiat-pulse-abarth-3.webp';
+import fiatPulseAbarth4 from '@/assets/fiat-pulse-abarth-4.webp';
+import fiatPulseAbarth5 from '@/assets/fiat-pulse-abarth-5.webp';
+import fiatPulseAbarth6 from '@/assets/fiat-pulse-abarth-6.webp';
+import fiatPulseAbarth7 from '@/assets/fiat-pulse-abarth-7.webp';
+import fiatPulseAbarth8 from '@/assets/fiat-pulse-abarth-8.webp';
+import fiatPulseAbarth9 from '@/assets/fiat-pulse-abarth-9.webp';
+import fiatPulseAbarth10 from '@/assets/fiat-pulse-abarth-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -336,6 +346,11 @@ const vwSaveiroImagenes = [
 const citroenC3Imagenes = [
   citroenC31, citroenC32, citroenC33, citroenC34, citroenC35,
   citroenC36, citroenC37, citroenC38, citroenC39, citroenC310,
+];
+
+const fiatPulseAbarthImagenes = [
+  fiatPulseAbarth1, fiatPulseAbarth2, fiatPulseAbarth3, fiatPulseAbarth4, fiatPulseAbarth5,
+  fiatPulseAbarth6, fiatPulseAbarth7, fiatPulseAbarth8, fiatPulseAbarth9, fiatPulseAbarth10,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -605,6 +620,20 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: citroenC31, 
     imagenes: citroenC3Imagenes, 
     categoria: 'Compactos'
+  },
+  // SUV
+  { 
+    id: '21', 
+    marca: 'Fiat', 
+    modelo: 'Pulse 1.3 Gse Abarth Turbo 270 At', 
+    año: 2024, 
+    kilometraje: 11000, 
+    combustible: 'Nafta', 
+    precio: 35500000, 
+    imagen: fiatPulseAbarth1, 
+    imagenes: fiatPulseAbarthImagenes, 
+    categoria: 'SUV',
+    moneda: 'ARS'
   },
 ];
 
