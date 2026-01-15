@@ -1,6 +1,5 @@
 import { MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react';
 import logo from '@/assets/logo-pazcar.png';
-import mercadolibreIcon from '@/assets/mercadolibre-icon.png';
 import EtiquetaComponente from './EtiquetaComponente';
 
 const PiePagina = () => {
@@ -59,14 +58,6 @@ const PiePagina = () => {
                 className="p-3 rounded-full bg-muted hover:bg-primary/20 hover:text-primary transition-all"
               >
                 <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="https://www.mercadolibre.com.ar/pagina/pazcar"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-full bg-muted hover:bg-primary/20 hover:text-primary transition-all"
-              >
-                <img src={mercadolibreIcon} alt="MercadoLibre" className="w-7 h-7 object-contain grayscale brightness-200" />
               </a>
             </div>
           </div>
