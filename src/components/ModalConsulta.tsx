@@ -109,9 +109,9 @@ const ModalConsulta = ({ abierto, onCerrar, vehiculo }: ModalConsultaProps) => {
   };
 
   const tipoConsultaLabels: Record<string, string> = {
-    contado: 'Quiero una compra de contado',
-    financiado: 'Quiero una compra financiada',
-    parte_pago: 'Quiero dejar mi auto como parte de pago',
+    contado: 'Compra de contado',
+    financiado: 'Compra Financiada',
+    parte_pago: 'Dejar mi auto como parte de pago',
   };
 
   return (
