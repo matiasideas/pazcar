@@ -33,7 +33,15 @@ const SeccionPrincipal = () => {
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white drop-shadow-2xl">
             Encontrá tu próximo
             <br />
-            auto en <span className="gradient-text">PazCar</span>
+            auto en{' '}
+            <span className="relative inline-block">
+              <span className="absolute inset-0 flex justify-center gap-1 opacity-30 overflow-hidden">
+                <span className="w-3 md:w-4 h-full bg-primary transform -skew-x-12" />
+                <span className="w-3 md:w-4 h-full bg-primary transform -skew-x-12" />
+                <span className="w-3 md:w-4 h-full bg-primary transform -skew-x-12" />
+              </span>
+              <span className="relative gradient-text">PazCar</span>
+            </span>
           </h1>
           
           {/* Subtitle */}
