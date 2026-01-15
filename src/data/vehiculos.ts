@@ -157,14 +157,6 @@ const otrosVehiculos: Vehiculo[] = [
     categoria: 'Compactos', 
     moneda: 'ARS'
   },
-  
-  // Sedanes
-  { id: '41', marca: 'Volkswagen', modelo: 'Vento', año: 2023, kilometraje: 25000, combustible: 'Nafta', precio: 26000, imagen: 'https://images.pexels.com/photos/1035108/pexels-photo-1035108.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Sedanes' },
-  
-  // 4x4
-  { id: '50', marca: 'Jeep', modelo: 'Wrangler Rubicon', año: 2023, kilometraje: 15000, combustible: 'Nafta', precio: 68000, imagen: 'https://images.pexels.com/photos/1638459/pexels-photo-1638459.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: '4x4' },
-  { id: '51', marca: 'Toyota', modelo: 'Land Cruiser', año: 2022, kilometraje: 32000, combustible: 'Diesel', precio: 85000, imagen: 'https://images.pexels.com/photos/1007410/pexels-photo-1007410.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: '4x4' },
-  { id: '52', marca: 'Land Rover', modelo: 'Defender', año: 2024, kilometraje: 8000, combustible: 'Diesel', precio: 95000, imagen: 'https://images.pexels.com/photos/2676096/pexels-photo-2676096.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: '4x4', destacado: true },
 ];
 
 // Catálogo completo: destacados primero + otros vehículos
