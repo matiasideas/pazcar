@@ -158,6 +158,16 @@ import peugeot3087 from '@/assets/peugeot-308-7.webp';
 import peugeot3088 from '@/assets/peugeot-308-8.webp';
 import peugeot3089 from '@/assets/peugeot-308-9.webp';
 import peugeot30810 from '@/assets/peugeot-308-10.webp';
+import hondaFit1 from '@/assets/honda-fit-1.webp';
+import hondaFit2 from '@/assets/honda-fit-2.webp';
+import hondaFit3 from '@/assets/honda-fit-3.webp';
+import hondaFit4 from '@/assets/honda-fit-4.webp';
+import hondaFit5 from '@/assets/honda-fit-5.webp';
+import hondaFit6 from '@/assets/honda-fit-6.webp';
+import hondaFit7 from '@/assets/honda-fit-7.webp';
+import hondaFit8 from '@/assets/honda-fit-8.webp';
+import hondaFit9 from '@/assets/honda-fit-9.webp';
+import hondaFit10 from '@/assets/honda-fit-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -246,6 +256,11 @@ const cheryTiggo4Imagenes = [
 const peugeot308Imagenes = [
   peugeot3081, peugeot3082, peugeot3083, peugeot3084, peugeot3085,
   peugeot3086, peugeot3087, peugeot3088, peugeot3089, peugeot30810,
+];
+
+const hondaFitImagenes = [
+  hondaFit1, hondaFit2, hondaFit3, hondaFit4, hondaFit5,
+  hondaFit6, hondaFit7, hondaFit8, hondaFit9, hondaFit10,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -435,6 +450,19 @@ const otrosVehiculos: Vehiculo[] = [
     precio: 10500, 
     imagen: peugeot3081, 
     imagenes: peugeot308Imagenes, 
+    categoria: 'Compactos'
+  },
+  // Compactos
+  { 
+    id: '15', 
+    marca: 'Honda', 
+    modelo: 'Fit 1.5 Ex-l 132cv', 
+    año: 2018, 
+    kilometraje: 98000, 
+    combustible: 'Nafta', 
+    precio: 22500, 
+    imagen: hondaFit1, 
+    imagenes: hondaFitImagenes, 
     categoria: 'Compactos'
   },
 ];
