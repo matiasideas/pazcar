@@ -160,18 +160,8 @@ const otrosVehiculos: Vehiculo[] = [
   // Compactos
   { id: '10', marca: 'Toyota', modelo: 'Yaris', año: 2023, kilometraje: 15000, combustible: 'Nafta', precio: 18500, imagen: 'https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Compactos' },
   { id: '11', marca: 'Volkswagen', modelo: 'Polo', año: 2022, kilometraje: 28000, combustible: 'Nafta', precio: 17800, imagen: 'https://images.pexels.com/photos/1149137/pexels-photo-1149137.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Compactos' },
-  { id: '12', marca: 'Ford', modelo: 'Fiesta', año: 2023, kilometraje: 8500, combustible: 'Nafta', precio: 16500, imagen: 'https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Compactos', destacado: true },
-  
-  // SUV
-  { id: '20', marca: 'Honda', modelo: 'CR-V', año: 2023, kilometraje: 22000, combustible: 'Nafta', precio: 42000, imagen: 'https://images.pexels.com/photos/3786091/pexels-photo-3786091.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'SUV' },
-  { id: '21', marca: 'Jeep', modelo: 'Compass', año: 2023, kilometraje: 18000, combustible: 'Diesel', precio: 38000, imagen: 'https://images.pexels.com/photos/1638459/pexels-photo-1638459.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'SUV' },
-  
-  // Camionetas
-  { id: '30', marca: 'Ford', modelo: 'Ranger', año: 2023, kilometraje: 35000, combustible: 'Diesel', precio: 48000, imagen: 'https://images.pexels.com/photos/1007410/pexels-photo-1007410.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Camionetas' },
-  { id: '31', marca: 'Volkswagen', modelo: 'Amarok', año: 2023, kilometraje: 42000, combustible: 'Diesel', precio: 55000, imagen: 'https://images.pexels.com/photos/2676096/pexels-photo-2676096.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Camionetas' },
   
   // Sedanes
-  { id: '40', marca: 'Toyota', modelo: 'Corolla', año: 2024, kilometraje: 8000, combustible: 'Híbrido', precio: 28000, imagen: 'https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Sedanes' },
   { id: '41', marca: 'Volkswagen', modelo: 'Vento', año: 2023, kilometraje: 25000, combustible: 'Nafta', precio: 26000, imagen: 'https://images.pexels.com/photos/1035108/pexels-photo-1035108.jpeg?auto=compress&cs=tinysrgb&w=600', categoria: 'Sedanes' },
   
   // 4x4
