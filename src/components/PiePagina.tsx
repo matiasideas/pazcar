@@ -66,7 +66,7 @@ const PiePagina = () => {
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-muted hover:bg-primary/20 hover:text-primary transition-all"
               >
-                <img src={mercadolibreIcon} alt="MercadoLibre" className="w-5 h-5 object-contain" />
+                <img src={mercadolibreIcon} alt="MercadoLibre" className="w-7 h-7 object-contain grayscale brightness-200" />
               </a>
             </div>
           </div>
