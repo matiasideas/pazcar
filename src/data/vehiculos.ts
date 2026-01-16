@@ -635,6 +635,19 @@ const otrosVehiculos: Vehiculo[] = [
     categoria: 'SUV',
     moneda: 'ARS'
   },
+  // Compactos
+  { 
+    id: '22', 
+    marca: 'Peugeot', 
+    modelo: '208 1.0T Gt', 
+    año: 2025, 
+    kilometraje: 111111, 
+    combustible: 'Nafta', 
+    precio: 26500, 
+    imagen: peugeot2081, 
+    imagenes: peugeot208Imagenes, 
+    categoria: 'Compactos'
+  },
 ];
 
 // Catálogo completo: destacados primero + otros vehículos
