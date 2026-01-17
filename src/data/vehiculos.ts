@@ -248,6 +248,16 @@ import vwAmarok7 from '@/assets/vw-amarok-7.webp';
 import vwAmarok8 from '@/assets/vw-amarok-8.webp';
 import vwAmarok9 from '@/assets/vw-amarok-9.webp';
 import vwAmarok10 from '@/assets/vw-amarok-10.webp';
+import coradirTito1 from '@/assets/coradir-tito-1.webp';
+import coradirTito2 from '@/assets/coradir-tito-2.webp';
+import coradirTito3 from '@/assets/coradir-tito-3.webp';
+import coradirTito4 from '@/assets/coradir-tito-4.webp';
+import coradirTito5 from '@/assets/coradir-tito-5.webp';
+import coradirTito6 from '@/assets/coradir-tito-6.webp';
+import coradirTito7 from '@/assets/coradir-tito-7.webp';
+import coradirTito8 from '@/assets/coradir-tito-8.webp';
+import coradirTito9 from '@/assets/coradir-tito-9.webp';
+import coradirTito10 from '@/assets/coradir-tito-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -381,6 +391,11 @@ const vwSciroccoImagenes = [
 const vwAmarokImagenes = [
   vwAmarok1, vwAmarok2, vwAmarok3, vwAmarok4, vwAmarok5,
   vwAmarok6, vwAmarok7, vwAmarok8, vwAmarok9, vwAmarok10,
+];
+
+const coradirTitoImagenes = [
+  coradirTito1, coradirTito2, coradirTito3, coradirTito4, coradirTito5,
+  coradirTito6, coradirTito7, coradirTito8, coradirTito9, coradirTito10,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -716,6 +731,20 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: vwAmarok1, 
     imagenes: vwAmarokImagenes, 
     categoria: 'Camionetas'
+  },
+  // Eléctricos
+  { 
+    id: '26', 
+    marca: 'Coradir', 
+    modelo: 'Tito S2', 
+    año: 2023, 
+    kilometraje: 2500, 
+    combustible: 'Eléctrico', 
+    precio: 10000000, 
+    imagen: coradirTito1, 
+    imagenes: coradirTitoImagenes, 
+    categoria: 'Eléctricos',
+    moneda: 'ARS'
   },
 ];
 
