@@ -298,6 +298,16 @@ import fordEcosportTitanium7 from '@/assets/ford-ecosport-titanium-7.webp';
 import fordEcosportTitanium8 from '@/assets/ford-ecosport-titanium-8.webp';
 import fordEcosportTitanium9 from '@/assets/ford-ecosport-titanium-9.webp';
 import fordEcosportTitanium10 from '@/assets/ford-ecosport-titanium-10.webp';
+import renaultArkana1 from '@/assets/renault-arkana-1.webp';
+import renaultArkana2 from '@/assets/renault-arkana-2.webp';
+import renaultArkana3 from '@/assets/renault-arkana-3.webp';
+import renaultArkana4 from '@/assets/renault-arkana-4.webp';
+import renaultArkana5 from '@/assets/renault-arkana-5.webp';
+import renaultArkana6 from '@/assets/renault-arkana-6.webp';
+import renaultArkana7 from '@/assets/renault-arkana-7.webp';
+import renaultArkana8 from '@/assets/renault-arkana-8.webp';
+import renaultArkana9 from '@/assets/renault-arkana-9.webp';
+import renaultArkana10 from '@/assets/renault-arkana-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -456,6 +466,11 @@ const vwTaosImagenes = [
 const fordEcosportTitaniumImagenes = [
   fordEcosportTitanium1, fordEcosportTitanium2, fordEcosportTitanium3, fordEcosportTitanium4, fordEcosportTitanium5,
   fordEcosportTitanium6, fordEcosportTitanium7, fordEcosportTitanium8, fordEcosportTitanium9, fordEcosportTitanium10,
+];
+
+const renaultArkanaImagenes = [
+  renaultArkana1, renaultArkana2, renaultArkana3, renaultArkana4, renaultArkana5,
+  renaultArkana6, renaultArkana7, renaultArkana8, renaultArkana9, renaultArkana10,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -855,6 +870,18 @@ const otrosVehiculos: Vehiculo[] = [
     precio: 20490, 
     imagen: fordEcosportTitanium1, 
     imagenes: fordEcosportTitaniumImagenes, 
+    categoria: 'SUVs'
+  },
+  { 
+    id: '31', 
+    marca: 'Renault', 
+    modelo: 'Arkana 1.3 E-Tech Hybrid Espirit Alpine', 
+    año: 2025, 
+    kilometraje: 111111, 
+    combustible: 'Híbrido', 
+    precio: 37000, 
+    imagen: renaultArkana1, 
+    imagenes: renaultArkanaImagenes, 
     categoria: 'SUVs'
   },
 ];
