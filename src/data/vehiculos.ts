@@ -238,6 +238,16 @@ import vwScirocco7 from '@/assets/vw-scirocco-7.webp';
 import vwScirocco8 from '@/assets/vw-scirocco-8.webp';
 import vwScirocco9 from '@/assets/vw-scirocco-9.webp';
 import vwScirocco10 from '@/assets/vw-scirocco-10.webp';
+import vwAmarok1 from '@/assets/vw-amarok-1.webp';
+import vwAmarok2 from '@/assets/vw-amarok-2.webp';
+import vwAmarok3 from '@/assets/vw-amarok-3.webp';
+import vwAmarok4 from '@/assets/vw-amarok-4.webp';
+import vwAmarok5 from '@/assets/vw-amarok-5.webp';
+import vwAmarok6 from '@/assets/vw-amarok-6.webp';
+import vwAmarok7 from '@/assets/vw-amarok-7.webp';
+import vwAmarok8 from '@/assets/vw-amarok-8.webp';
+import vwAmarok9 from '@/assets/vw-amarok-9.webp';
+import vwAmarok10 from '@/assets/vw-amarok-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -366,6 +376,11 @@ const fiatPulseAbarthImagenes = [
 const vwSciroccoImagenes = [
   vwScirocco1, vwScirocco2, vwScirocco3, vwScirocco4, vwScirocco5,
   vwScirocco6, vwScirocco7, vwScirocco8, vwScirocco9, vwScirocco10,
+];
+
+const vwAmarokImagenes = [
+  vwAmarok1, vwAmarok2, vwAmarok3, vwAmarok4, vwAmarok5,
+  vwAmarok6, vwAmarok7, vwAmarok8, vwAmarok9, vwAmarok10,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -688,6 +703,19 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: vwScirocco1, 
     imagenes: vwSciroccoImagenes, 
     categoria: 'Compactos'
+  },
+  // Camionetas
+  { 
+    id: '25', 
+    marca: 'Volkswagen', 
+    modelo: 'Amarok 3.0 V6 Extreme 258Cv', 
+    año: 2020, 
+    kilometraje: 119000, 
+    combustible: 'Diesel', 
+    precio: 34990, 
+    imagen: vwAmarok1, 
+    imagenes: vwAmarokImagenes, 
+    categoria: 'Camionetas'
   },
 ];
 
