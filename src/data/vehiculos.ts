@@ -228,6 +228,16 @@ import fiatPulseAbarth7 from '@/assets/fiat-pulse-abarth-7.webp';
 import fiatPulseAbarth8 from '@/assets/fiat-pulse-abarth-8.webp';
 import fiatPulseAbarth9 from '@/assets/fiat-pulse-abarth-9.webp';
 import fiatPulseAbarth10 from '@/assets/fiat-pulse-abarth-10.webp';
+import vwScirocco1 from '@/assets/vw-scirocco-1.webp';
+import vwScirocco2 from '@/assets/vw-scirocco-2.webp';
+import vwScirocco3 from '@/assets/vw-scirocco-3.webp';
+import vwScirocco4 from '@/assets/vw-scirocco-4.webp';
+import vwScirocco5 from '@/assets/vw-scirocco-5.webp';
+import vwScirocco6 from '@/assets/vw-scirocco-6.webp';
+import vwScirocco7 from '@/assets/vw-scirocco-7.webp';
+import vwScirocco8 from '@/assets/vw-scirocco-8.webp';
+import vwScirocco9 from '@/assets/vw-scirocco-9.webp';
+import vwScirocco10 from '@/assets/vw-scirocco-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -351,6 +361,11 @@ const citroenC3Imagenes = [
 const fiatPulseAbarthImagenes = [
   fiatPulseAbarth1, fiatPulseAbarth2, fiatPulseAbarth3, fiatPulseAbarth4, fiatPulseAbarth5,
   fiatPulseAbarth6, fiatPulseAbarth7, fiatPulseAbarth8, fiatPulseAbarth9, fiatPulseAbarth10,
+];
+
+const vwSciroccoImagenes = [
+  vwScirocco1, vwScirocco2, vwScirocco3, vwScirocco4, vwScirocco5,
+  vwScirocco6, vwScirocco7, vwScirocco8, vwScirocco9, vwScirocco10,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -660,6 +675,19 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: kiaSportage1, 
     imagenes: kiaSportageImagenes, 
     categoria: 'SUV'
+  },
+  // Compactos
+  { 
+    id: '24', 
+    marca: 'Volkswagen', 
+    modelo: 'Scirocco 2.0 Tsi 211cv C/techo Panoramico', 
+    año: 2013, 
+    kilometraje: 126000, 
+    combustible: 'Nafta', 
+    precio: 21990, 
+    imagen: vwScirocco1, 
+    imagenes: vwSciroccoImagenes, 
+    categoria: 'Compactos'
   },
 ];
 
