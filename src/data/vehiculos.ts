@@ -258,6 +258,16 @@ import coradirTito7 from '@/assets/coradir-tito-7.webp';
 import coradirTito8 from '@/assets/coradir-tito-8.webp';
 import coradirTito9 from '@/assets/coradir-tito-9.webp';
 import coradirTito10 from '@/assets/coradir-tito-10.webp';
+import fiatMobi1 from '@/assets/fiat-mobi-1.webp';
+import fiatMobi2 from '@/assets/fiat-mobi-2.webp';
+import fiatMobi3 from '@/assets/fiat-mobi-3.webp';
+import fiatMobi4 from '@/assets/fiat-mobi-4.webp';
+import fiatMobi5 from '@/assets/fiat-mobi-5.webp';
+import fiatMobi6 from '@/assets/fiat-mobi-6.webp';
+import fiatMobi7 from '@/assets/fiat-mobi-7.webp';
+import fiatMobi8 from '@/assets/fiat-mobi-8.webp';
+import fiatMobi9 from '@/assets/fiat-mobi-9.webp';
+import fiatMobi10 from '@/assets/fiat-mobi-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -396,6 +406,11 @@ const vwAmarokImagenes = [
 const coradirTitoImagenes = [
   coradirTito1, coradirTito2, coradirTito3, coradirTito4, coradirTito5,
   coradirTito6, coradirTito7, coradirTito8, coradirTito9, coradirTito10,
+];
+
+const fiatMobiImagenes = [
+  fiatMobi1, fiatMobi2, fiatMobi3, fiatMobi4, fiatMobi5,
+  fiatMobi6, fiatMobi7, fiatMobi8, fiatMobi9, fiatMobi10,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -745,6 +760,19 @@ const otrosVehiculos: Vehiculo[] = [
     imagenes: coradirTitoImagenes, 
     categoria: 'Eléctricos',
     moneda: 'ARS'
+  },
+  // Compactos
+  { 
+    id: '27', 
+    marca: 'Fiat', 
+    modelo: 'Mobi 1.0 Way', 
+    año: 2019, 
+    kilometraje: 99000, 
+    combustible: 'Nafta', 
+    precio: 11500, 
+    imagen: fiatMobi1, 
+    imagenes: fiatMobiImagenes, 
+    categoria: 'Compactos'
   },
 ];
 
