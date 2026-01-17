@@ -268,6 +268,16 @@ import fiatMobi7 from '@/assets/fiat-mobi-7.webp';
 import fiatMobi8 from '@/assets/fiat-mobi-8.webp';
 import fiatMobi9 from '@/assets/fiat-mobi-9.webp';
 import fiatMobi10 from '@/assets/fiat-mobi-10.webp';
+import vwPolo1 from '@/assets/vw-polo-1.webp';
+import vwPolo2 from '@/assets/vw-polo-2.webp';
+import vwPolo3 from '@/assets/vw-polo-3.webp';
+import vwPolo4 from '@/assets/vw-polo-4.webp';
+import vwPolo5 from '@/assets/vw-polo-5.webp';
+import vwPolo6 from '@/assets/vw-polo-6.webp';
+import vwPolo7 from '@/assets/vw-polo-7.webp';
+import vwPolo8 from '@/assets/vw-polo-8.webp';
+import vwPolo9 from '@/assets/vw-polo-9.webp';
+import vwPolo10 from '@/assets/vw-polo-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -411,6 +421,11 @@ const coradirTitoImagenes = [
 const fiatMobiImagenes = [
   fiatMobi1, fiatMobi2, fiatMobi3, fiatMobi4, fiatMobi5,
   fiatMobi6, fiatMobi7, fiatMobi8, fiatMobi9, fiatMobi10,
+];
+
+const vwPoloImagenes = [
+  vwPolo1, vwPolo2, vwPolo3, vwPolo4, vwPolo5,
+  vwPolo6, vwPolo7, vwPolo8, vwPolo9, vwPolo10,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -773,6 +788,19 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: fiatMobi1, 
     imagenes: fiatMobiImagenes, 
     categoria: 'Compactos'
+  },
+  { 
+    id: '28', 
+    marca: 'Volkswagen', 
+    modelo: 'Polo 1.6 Msi Track', 
+    año: 2024, 
+    kilometraje: 8900, 
+    combustible: 'Nafta', 
+    precio: 24990000, 
+    imagen: vwPolo1, 
+    imagenes: vwPoloImagenes, 
+    categoria: 'Compactos',
+    moneda: 'ARS'
   },
 ];
 
