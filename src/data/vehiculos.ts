@@ -288,6 +288,16 @@ import vwTaos7 from '@/assets/vw-taos-7.webp';
 import vwTaos8 from '@/assets/vw-taos-8.webp';
 import vwTaos9 from '@/assets/vw-taos-9.webp';
 import vwTaos10 from '@/assets/vw-taos-10.webp';
+import fordEcosportTitanium1 from '@/assets/ford-ecosport-titanium-1.webp';
+import fordEcosportTitanium2 from '@/assets/ford-ecosport-titanium-2.webp';
+import fordEcosportTitanium3 from '@/assets/ford-ecosport-titanium-3.webp';
+import fordEcosportTitanium4 from '@/assets/ford-ecosport-titanium-4.webp';
+import fordEcosportTitanium5 from '@/assets/ford-ecosport-titanium-5.webp';
+import fordEcosportTitanium6 from '@/assets/ford-ecosport-titanium-6.webp';
+import fordEcosportTitanium7 from '@/assets/ford-ecosport-titanium-7.webp';
+import fordEcosportTitanium8 from '@/assets/ford-ecosport-titanium-8.webp';
+import fordEcosportTitanium9 from '@/assets/ford-ecosport-titanium-9.webp';
+import fordEcosportTitanium10 from '@/assets/ford-ecosport-titanium-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -441,6 +451,11 @@ const vwPoloImagenes = [
 const vwTaosImagenes = [
   vwTaos1, vwTaos2, vwTaos3, vwTaos4, vwTaos5,
   vwTaos6, vwTaos7, vwTaos8, vwTaos9, vwTaos10,
+];
+
+const fordEcosportTitaniumImagenes = [
+  fordEcosportTitanium1, fordEcosportTitanium2, fordEcosportTitanium3, fordEcosportTitanium4, fordEcosportTitanium5,
+  fordEcosportTitanium6, fordEcosportTitanium7, fordEcosportTitanium8, fordEcosportTitanium9, fordEcosportTitanium10,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -828,6 +843,18 @@ const otrosVehiculos: Vehiculo[] = [
     precio: 33500, 
     imagen: vwTaos1, 
     imagenes: vwTaosImagenes, 
+    categoria: 'SUVs'
+  },
+  { 
+    id: '30', 
+    marca: 'Ford', 
+    modelo: 'Ecosport 2.0 Gdi Titanium 170cv 4x2', 
+    año: 2020, 
+    kilometraje: 95000, 
+    combustible: 'Nafta', 
+    precio: 20490, 
+    imagen: fordEcosportTitanium1, 
+    imagenes: fordEcosportTitaniumImagenes, 
     categoria: 'SUVs'
   },
 ];
