@@ -278,6 +278,16 @@ import vwPolo7 from '@/assets/vw-polo-7.webp';
 import vwPolo8 from '@/assets/vw-polo-8.webp';
 import vwPolo9 from '@/assets/vw-polo-9.webp';
 import vwPolo10 from '@/assets/vw-polo-10.webp';
+import vwTaos1 from '@/assets/vw-taos-1.webp';
+import vwTaos2 from '@/assets/vw-taos-2.webp';
+import vwTaos3 from '@/assets/vw-taos-3.webp';
+import vwTaos4 from '@/assets/vw-taos-4.webp';
+import vwTaos5 from '@/assets/vw-taos-5.webp';
+import vwTaos6 from '@/assets/vw-taos-6.webp';
+import vwTaos7 from '@/assets/vw-taos-7.webp';
+import vwTaos8 from '@/assets/vw-taos-8.webp';
+import vwTaos9 from '@/assets/vw-taos-9.webp';
+import vwTaos10 from '@/assets/vw-taos-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -426,6 +436,11 @@ const fiatMobiImagenes = [
 const vwPoloImagenes = [
   vwPolo1, vwPolo2, vwPolo3, vwPolo4, vwPolo5,
   vwPolo6, vwPolo7, vwPolo8, vwPolo9, vwPolo10,
+];
+
+const vwTaosImagenes = [
+  vwTaos1, vwTaos2, vwTaos3, vwTaos4, vwTaos5,
+  vwTaos6, vwTaos7, vwTaos8, vwTaos9, vwTaos10,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -801,6 +816,19 @@ const otrosVehiculos: Vehiculo[] = [
     imagenes: vwPoloImagenes, 
     categoria: 'Compactos',
     moneda: 'ARS'
+  },
+  // SUVs
+  { 
+    id: '29', 
+    marca: 'Volkswagen', 
+    modelo: 'Taos 1.4 250 Tsi Highline Tiptronic', 
+    año: 2024, 
+    kilometraje: 15000, 
+    combustible: 'Nafta', 
+    precio: 33500, 
+    imagen: vwTaos1, 
+    imagenes: vwTaosImagenes, 
+    categoria: 'SUVs'
   },
 ];
 
