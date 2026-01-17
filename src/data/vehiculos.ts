@@ -648,6 +648,19 @@ const otrosVehiculos: Vehiculo[] = [
     imagenes: peugeot208Imagenes, 
     categoria: 'Compactos'
   },
+  // SUV
+  { 
+    id: '23', 
+    marca: 'Kia', 
+    modelo: 'Sportage 1.6 T-Gdi X-Line Awd', 
+    año: 2023, 
+    kilometraje: 35000, 
+    combustible: 'Nafta', 
+    precio: 52990, 
+    imagen: kiaSportage1, 
+    imagenes: kiaSportageImagenes, 
+    categoria: 'SUV'
+  },
 ];
 
 // Catálogo completo: destacados primero + otros vehículos
