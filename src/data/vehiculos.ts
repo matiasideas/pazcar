@@ -1,3 +1,13 @@
+import jeepRenegade1 from '@/assets/jeep-renegade-1.webp';
+import jeepRenegade2 from '@/assets/jeep-renegade-2.webp';
+import jeepRenegade3 from '@/assets/jeep-renegade-3.webp';
+import jeepRenegade4 from '@/assets/jeep-renegade-4.webp';
+import jeepRenegade5 from '@/assets/jeep-renegade-5.webp';
+import jeepRenegade6 from '@/assets/jeep-renegade-6.webp';
+import jeepRenegade7 from '@/assets/jeep-renegade-7.webp';
+import jeepRenegade8 from '@/assets/jeep-renegade-8.webp';
+import jeepRenegade9 from '@/assets/jeep-renegade-9.webp';
+import jeepRenegade10 from '@/assets/jeep-renegade-10.webp';
 import chevroletCruze1 from '@/assets/chevrolet-cruze-1.webp';
 import chevroletCruze2 from '@/assets/chevrolet-cruze-2.webp';
 import chevroletCruze3 from '@/assets/chevrolet-cruze-3.webp';
@@ -696,6 +706,11 @@ const chevroletCruzeImagenes = [
   chevroletCruze6, chevroletCruze7, chevroletCruze8, chevroletCruze9, chevroletCruze10,
 ];
 
+const jeepRenegadeImagenes = [
+  jeepRenegade1, jeepRenegade2, jeepRenegade3, jeepRenegade4, jeepRenegade5,
+  jeepRenegade6, jeepRenegade7, jeepRenegade8, jeepRenegade9, jeepRenegade10,
+];
+
 // Vehículos destacados (con fotos reales)
 export const vehiculosDestacados: Vehiculo[] = [
   { 
@@ -1290,6 +1305,18 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: chevroletCruze1, 
     imagenes: chevroletCruzeImagenes, 
     categoria: 'Sedanes'
+  },
+  { 
+    id: '47', 
+    marca: 'Jeep', 
+    modelo: 'Renegade 1.8 Sport Wild', 
+    año: 2021, 
+    kilometraje: 35000, 
+    combustible: 'Nafta', 
+    precio: 19490, 
+    imagen: jeepRenegade1, 
+    imagenes: jeepRenegadeImagenes, 
+    categoria: 'SUV'
   },
 ];
 
