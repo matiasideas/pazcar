@@ -1,3 +1,13 @@
+import nissanFrontier1 from '@/assets/nissan-frontier-1.webp';
+import nissanFrontier2 from '@/assets/nissan-frontier-2.webp';
+import nissanFrontier3 from '@/assets/nissan-frontier-3.webp';
+import nissanFrontier4 from '@/assets/nissan-frontier-4.webp';
+import nissanFrontier5 from '@/assets/nissan-frontier-5.webp';
+import nissanFrontier6 from '@/assets/nissan-frontier-6.webp';
+import nissanFrontier7 from '@/assets/nissan-frontier-7.webp';
+import nissanFrontier8 from '@/assets/nissan-frontier-8.webp';
+import nissanFrontier9 from '@/assets/nissan-frontier-9.webp';
+import nissanFrontier10 from '@/assets/nissan-frontier-10.webp';
 import toyotaEtios1 from '@/assets/toyota-etios-1.webp';
 import toyotaEtios2 from '@/assets/toyota-etios-2.webp';
 import toyotaEtios3 from '@/assets/toyota-etios-3.webp';
@@ -770,6 +780,11 @@ const toyotaEtiosImagenes = [
   toyotaEtios6, toyotaEtios7, toyotaEtios8, toyotaEtios9, toyotaEtios10,
 ];
 
+const nissanFrontierImagenes = [
+  nissanFrontier1, nissanFrontier2, nissanFrontier3, nissanFrontier4, nissanFrontier5,
+  nissanFrontier6, nissanFrontier7, nissanFrontier8, nissanFrontier9, nissanFrontier10,
+];
+
 // Vehículos destacados (con fotos reales)
 export const vehiculosDestacados: Vehiculo[] = [
   { 
@@ -1425,6 +1440,18 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: toyotaEtios1, 
     imagenes: toyotaEtiosImagenes, 
     categoria: 'Compactos'
+  },
+  { 
+    id: '52', 
+    marca: 'Nissan', 
+    modelo: 'Frontier 2.3 X-gear 4X2 AT', 
+    año: 2022, 
+    kilometraje: 76000, 
+    combustible: 'Diesel', 
+    precio: 28999, 
+    imagen: nissanFrontier1, 
+    imagenes: nissanFrontierImagenes, 
+    categoria: 'Pickups'
   },
 ];
 
