@@ -1,3 +1,13 @@
+import chevroletCruze1 from '@/assets/chevrolet-cruze-1.webp';
+import chevroletCruze2 from '@/assets/chevrolet-cruze-2.webp';
+import chevroletCruze3 from '@/assets/chevrolet-cruze-3.webp';
+import chevroletCruze4 from '@/assets/chevrolet-cruze-4.webp';
+import chevroletCruze5 from '@/assets/chevrolet-cruze-5.webp';
+import chevroletCruze6 from '@/assets/chevrolet-cruze-6.webp';
+import chevroletCruze7 from '@/assets/chevrolet-cruze-7.webp';
+import chevroletCruze8 from '@/assets/chevrolet-cruze-8.webp';
+import chevroletCruze9 from '@/assets/chevrolet-cruze-9.webp';
+import chevroletCruze10 from '@/assets/chevrolet-cruze-10.webp';
 import fordMaverickTremor1 from '@/assets/ford-maverick-tremor-1.webp';
 import fordMaverickTremor2 from '@/assets/ford-maverick-tremor-2.webp';
 import fordMaverickTremor3 from '@/assets/ford-maverick-tremor-3.webp';
@@ -681,6 +691,11 @@ const fordMaverickTremorImagenes = [
   fordMaverickTremor6, fordMaverickTremor7, fordMaverickTremor8, fordMaverickTremor9, fordMaverickTremor10,
 ];
 
+const chevroletCruzeImagenes = [
+  chevroletCruze1, chevroletCruze2, chevroletCruze3, chevroletCruze4, chevroletCruze5,
+  chevroletCruze6, chevroletCruze7, chevroletCruze8, chevroletCruze9, chevroletCruze10,
+];
+
 // Vehículos destacados (con fotos reales)
 export const vehiculosDestacados: Vehiculo[] = [
   { 
@@ -1263,6 +1278,18 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: fordMaverickTremor1, 
     imagenes: fordMaverickTremorImagenes, 
     categoria: 'Camionetas'
+  },
+  { 
+    id: '46', 
+    marca: 'Chevrolet', 
+    modelo: 'Cruze 1.8 Ltz Mt', 
+    año: 2012, 
+    kilometraje: 102000, 
+    combustible: 'Nafta', 
+    precio: 11500, 
+    imagen: chevroletCruze1, 
+    imagenes: chevroletCruzeImagenes, 
+    categoria: 'Sedanes'
   },
 ];
 
