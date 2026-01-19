@@ -328,6 +328,16 @@ import vwGol7 from '@/assets/vw-gol-7.webp';
 import vwGol8 from '@/assets/vw-gol-8.webp';
 import vwGol9 from '@/assets/vw-gol-9.webp';
 import vwGol10 from '@/assets/vw-gol-10.webp';
+import renaultKwidIconic1 from '@/assets/renault-kwid-iconic-1.webp';
+import renaultKwidIconic2 from '@/assets/renault-kwid-iconic-2.webp';
+import renaultKwidIconic3 from '@/assets/renault-kwid-iconic-3.webp';
+import renaultKwidIconic4 from '@/assets/renault-kwid-iconic-4.webp';
+import renaultKwidIconic5 from '@/assets/renault-kwid-iconic-5.webp';
+import renaultKwidIconic6 from '@/assets/renault-kwid-iconic-6.webp';
+import renaultKwidIconic7 from '@/assets/renault-kwid-iconic-7.webp';
+import renaultKwidIconic8 from '@/assets/renault-kwid-iconic-8.webp';
+import renaultKwidIconic9 from '@/assets/renault-kwid-iconic-9.webp';
+import renaultKwidIconic10 from '@/assets/renault-kwid-iconic-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -501,6 +511,11 @@ const mercedesGlbImagenes = [
 const vwGolImagenes = [
   vwGol1, vwGol2, vwGol3, vwGol4, vwGol5,
   vwGol6, vwGol7, vwGol8, vwGol9, vwGol10,
+];
+
+const renaultKwidIconicImagenes = [
+  renaultKwidIconic1, renaultKwidIconic2, renaultKwidIconic3, renaultKwidIconic4, renaultKwidIconic5,
+  renaultKwidIconic6, renaultKwidIconic7, renaultKwidIconic8, renaultKwidIconic9, renaultKwidIconic10,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -937,6 +952,19 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: vwGol1, 
     imagenes: vwGolImagenes, 
     categoria: 'Compactos'
+  },
+  { 
+    id: '34', 
+    marca: 'Renault', 
+    modelo: 'Kwid 1.0 Sce 66Cv Iconic Bitono', 
+    año: 2025, 
+    kilometraje: 500, 
+    combustible: 'Nafta', 
+    precio: 23999999, 
+    imagen: renaultKwidIconic1, 
+    imagenes: renaultKwidIconicImagenes, 
+    categoria: 'Compactos',
+    moneda: 'ARS'
   },
 ];
 
