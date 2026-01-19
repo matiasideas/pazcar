@@ -1,3 +1,13 @@
+import bmwX21 from '@/assets/bmw-x2-1.webp';
+import bmwX22 from '@/assets/bmw-x2-2.webp';
+import bmwX23 from '@/assets/bmw-x2-3.webp';
+import bmwX24 from '@/assets/bmw-x2-4.webp';
+import bmwX25 from '@/assets/bmw-x2-5.webp';
+import bmwX26 from '@/assets/bmw-x2-6.webp';
+import bmwX27 from '@/assets/bmw-x2-7.webp';
+import bmwX28 from '@/assets/bmw-x2-8.webp';
+import bmwX29 from '@/assets/bmw-x2-9.webp';
+import bmwX210 from '@/assets/bmw-x2-10.webp';
 import ram1500Image1 from '@/assets/ram-1500.webp';
 import ram1500Image2 from '@/assets/ram-1500-2.webp';
 import ram1500Image3 from '@/assets/ram-1500-3.webp';
@@ -591,6 +601,11 @@ const fiat500xImagenes = [
   fiat500x6, fiat500x7, fiat500x8, fiat500x9, fiat500x10,
 ];
 
+const bmwX2Imagenes = [
+  bmwX21, bmwX22, bmwX23, bmwX24, bmwX25,
+  bmwX26, bmwX27, bmwX28, bmwX29, bmwX210,
+];
+
 // Vehículos destacados (con fotos reales)
 export const vehiculosDestacados: Vehiculo[] = [
   { 
@@ -1098,6 +1113,18 @@ const otrosVehiculos: Vehiculo[] = [
     moneda: 'ARS',
     imagen: fiat500x1, 
     imagenes: fiat500xImagenes, 
+    categoria: 'SUV'
+  },
+  { 
+    id: '40', 
+    marca: 'BMW', 
+    modelo: 'X2 2.0 Sdrive20i Msportx', 
+    año: 2018, 
+    kilometraje: 97000, 
+    combustible: 'Nafta', 
+    precio: 40500, 
+    imagen: bmwX21, 
+    imagenes: bmwX2Imagenes, 
     categoria: 'SUV'
   },
 ];
