@@ -338,6 +338,16 @@ import renaultKwidIconic7 from '@/assets/renault-kwid-iconic-7.webp';
 import renaultKwidIconic8 from '@/assets/renault-kwid-iconic-8.webp';
 import renaultKwidIconic9 from '@/assets/renault-kwid-iconic-9.webp';
 import renaultKwidIconic10 from '@/assets/renault-kwid-iconic-10.webp';
+import vwGolPack1 from '@/assets/vw-gol-pack-1.webp';
+import vwGolPack2 from '@/assets/vw-gol-pack-2.webp';
+import vwGolPack3 from '@/assets/vw-gol-pack-3.webp';
+import vwGolPack4 from '@/assets/vw-gol-pack-4.webp';
+import vwGolPack5 from '@/assets/vw-gol-pack-5.webp';
+import vwGolPack6 from '@/assets/vw-gol-pack-6.webp';
+import vwGolPack7 from '@/assets/vw-gol-pack-7.webp';
+import vwGolPack8 from '@/assets/vw-gol-pack-8.webp';
+import vwGolPack9 from '@/assets/vw-gol-pack-9.webp';
+import vwGolPack10 from '@/assets/vw-gol-pack-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -516,6 +526,11 @@ const vwGolImagenes = [
 const renaultKwidIconicImagenes = [
   renaultKwidIconic1, renaultKwidIconic2, renaultKwidIconic3, renaultKwidIconic4, renaultKwidIconic5,
   renaultKwidIconic6, renaultKwidIconic7, renaultKwidIconic8, renaultKwidIconic9, renaultKwidIconic10,
+];
+
+const vwGolPackImagenes = [
+  vwGolPack1, vwGolPack2, vwGolPack3, vwGolPack4, vwGolPack5,
+  vwGolPack6, vwGolPack7, vwGolPack8, vwGolPack9, vwGolPack10,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -965,6 +980,18 @@ const otrosVehiculos: Vehiculo[] = [
     imagenes: renaultKwidIconicImagenes, 
     categoria: 'Compactos',
     moneda: 'ARS'
+  },
+  { 
+    id: '35', 
+    marca: 'Volkswagen', 
+    modelo: 'Gol Trend 1.6 Pack I Plus 101cv', 
+    año: 2010, 
+    kilometraje: 148000, 
+    combustible: 'Nafta', 
+    precio: 8000, 
+    imagen: vwGolPack1, 
+    imagenes: vwGolPackImagenes, 
+    categoria: 'Compactos'
   },
 ];
 
