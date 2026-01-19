@@ -318,6 +318,16 @@ import mercedesGlb7 from '@/assets/mercedes-glb-7.webp';
 import mercedesGlb8 from '@/assets/mercedes-glb-8.webp';
 import mercedesGlb9 from '@/assets/mercedes-glb-9.webp';
 import mercedesGlb10 from '@/assets/mercedes-glb-10.webp';
+import vwGol1 from '@/assets/vw-gol-1.webp';
+import vwGol2 from '@/assets/vw-gol-2.webp';
+import vwGol3 from '@/assets/vw-gol-3.webp';
+import vwGol4 from '@/assets/vw-gol-4.webp';
+import vwGol5 from '@/assets/vw-gol-5.webp';
+import vwGol6 from '@/assets/vw-gol-6.webp';
+import vwGol7 from '@/assets/vw-gol-7.webp';
+import vwGol8 from '@/assets/vw-gol-8.webp';
+import vwGol9 from '@/assets/vw-gol-9.webp';
+import vwGol10 from '@/assets/vw-gol-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -486,6 +496,11 @@ const renaultArkanaImagenes = [
 const mercedesGlbImagenes = [
   mercedesGlb1, mercedesGlb2, mercedesGlb3, mercedesGlb4, mercedesGlb5,
   mercedesGlb6, mercedesGlb7, mercedesGlb8, mercedesGlb9, mercedesGlb10,
+];
+
+const vwGolImagenes = [
+  vwGol1, vwGol2, vwGol3, vwGol4, vwGol5,
+  vwGol6, vwGol7, vwGol8, vwGol9, vwGol10,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -910,6 +925,18 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: mercedesGlb1, 
     imagenes: mercedesGlbImagenes, 
     categoria: 'SUVs'
+  },
+  { 
+    id: '33', 
+    marca: 'Volkswagen', 
+    modelo: 'Gol Trend 1.6 Trendline 101cv', 
+    año: 2016, 
+    kilometraje: 152000, 
+    combustible: 'Nafta', 
+    precio: 10500, 
+    imagen: vwGol1, 
+    imagenes: vwGolImagenes, 
+    categoria: 'Compactos'
   },
 ];
 
