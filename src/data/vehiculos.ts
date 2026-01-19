@@ -1,3 +1,13 @@
+import chevroletCruzeLtz1 from '@/assets/chevrolet-cruze-ltz-1.webp';
+import chevroletCruzeLtz2 from '@/assets/chevrolet-cruze-ltz-2.webp';
+import chevroletCruzeLtz3 from '@/assets/chevrolet-cruze-ltz-3.webp';
+import chevroletCruzeLtz4 from '@/assets/chevrolet-cruze-ltz-4.webp';
+import chevroletCruzeLtz5 from '@/assets/chevrolet-cruze-ltz-5.webp';
+import chevroletCruzeLtz6 from '@/assets/chevrolet-cruze-ltz-6.webp';
+import chevroletCruzeLtz7 from '@/assets/chevrolet-cruze-ltz-7.webp';
+import chevroletCruzeLtz8 from '@/assets/chevrolet-cruze-ltz-8.webp';
+import chevroletCruzeLtz9 from '@/assets/chevrolet-cruze-ltz-9.webp';
+import chevroletCruzeLtz10 from '@/assets/chevrolet-cruze-ltz-10.webp';
 import nissanFrontier1 from '@/assets/nissan-frontier-1.webp';
 import nissanFrontier2 from '@/assets/nissan-frontier-2.webp';
 import nissanFrontier3 from '@/assets/nissan-frontier-3.webp';
@@ -785,6 +795,11 @@ const nissanFrontierImagenes = [
   nissanFrontier6, nissanFrontier7, nissanFrontier8, nissanFrontier9, nissanFrontier10,
 ];
 
+const chevroletCruzeLtzImagenes = [
+  chevroletCruzeLtz1, chevroletCruzeLtz2, chevroletCruzeLtz3, chevroletCruzeLtz4, chevroletCruzeLtz5,
+  chevroletCruzeLtz6, chevroletCruzeLtz7, chevroletCruzeLtz8, chevroletCruzeLtz9, chevroletCruzeLtz10,
+];
+
 // Vehículos destacados (con fotos reales)
 export const vehiculosDestacados: Vehiculo[] = [
   { 
@@ -1452,6 +1467,18 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: nissanFrontier1, 
     imagenes: nissanFrontierImagenes, 
     categoria: 'Pickups'
+  },
+  { 
+    id: '53', 
+    marca: 'Chevrolet', 
+    modelo: 'Cruze 1.4 Ltz At Sedan', 
+    año: 2024, 
+    kilometraje: 28000, 
+    combustible: 'Nafta', 
+    precio: 23990, 
+    imagen: chevroletCruzeLtz1, 
+    imagenes: chevroletCruzeLtzImagenes, 
+    categoria: 'Sedanes'
   },
 ];
 
