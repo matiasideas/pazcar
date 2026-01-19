@@ -1,3 +1,13 @@
+import renaultKwidOutsider1 from '@/assets/renault-kwid-outsider-1.webp';
+import renaultKwidOutsider2 from '@/assets/renault-kwid-outsider-2.webp';
+import renaultKwidOutsider3 from '@/assets/renault-kwid-outsider-3.webp';
+import renaultKwidOutsider4 from '@/assets/renault-kwid-outsider-4.webp';
+import renaultKwidOutsider5 from '@/assets/renault-kwid-outsider-5.webp';
+import renaultKwidOutsider6 from '@/assets/renault-kwid-outsider-6.webp';
+import renaultKwidOutsider7 from '@/assets/renault-kwid-outsider-7.webp';
+import renaultKwidOutsider8 from '@/assets/renault-kwid-outsider-8.webp';
+import renaultKwidOutsider9 from '@/assets/renault-kwid-outsider-9.webp';
+import renaultKwidOutsider10 from '@/assets/renault-kwid-outsider-10.webp';
 import vwGolf1 from '@/assets/vw-golf-1.webp';
 import vwGolf2 from '@/assets/vw-golf-2.webp';
 import vwGolf3 from '@/assets/vw-golf-3.webp';
@@ -651,6 +661,11 @@ const vwGolfImagenes = [
   vwGolf6, vwGolf7, vwGolf8, vwGolf9, vwGolf10,
 ];
 
+const renaultKwidOutsiderImagenes = [
+  renaultKwidOutsider1, renaultKwidOutsider2, renaultKwidOutsider3, renaultKwidOutsider4, renaultKwidOutsider5,
+  renaultKwidOutsider6, renaultKwidOutsider7, renaultKwidOutsider8, renaultKwidOutsider9, renaultKwidOutsider10,
+];
+
 // Vehículos destacados (con fotos reales)
 export const vehiculosDestacados: Vehiculo[] = [
   { 
@@ -1207,6 +1222,19 @@ const otrosVehiculos: Vehiculo[] = [
     precio: 20500, 
     imagen: vwGolf1, 
     imagenes: vwGolfImagenes, 
+    categoria: 'Compactos'
+  },
+  { 
+    id: '44', 
+    marca: 'Renault', 
+    modelo: 'Kwid 1.0 Sce 66cv Outsider', 
+    año: 2020, 
+    kilometraje: 94000, 
+    combustible: 'Nafta', 
+    precio: 15990000, 
+    moneda: 'ARS',
+    imagen: renaultKwidOutsider1, 
+    imagenes: renaultKwidOutsiderImagenes, 
     categoria: 'Compactos'
   },
 ];
