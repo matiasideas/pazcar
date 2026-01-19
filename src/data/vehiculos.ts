@@ -1,3 +1,13 @@
+import fiatCronos1 from '@/assets/fiat-cronos-1.webp';
+import fiatCronos2 from '@/assets/fiat-cronos-2.webp';
+import fiatCronos3 from '@/assets/fiat-cronos-3.webp';
+import fiatCronos4 from '@/assets/fiat-cronos-4.webp';
+import fiatCronos5 from '@/assets/fiat-cronos-5.webp';
+import fiatCronos6 from '@/assets/fiat-cronos-6.webp';
+import fiatCronos7 from '@/assets/fiat-cronos-7.webp';
+import fiatCronos8 from '@/assets/fiat-cronos-8.webp';
+import fiatCronos9 from '@/assets/fiat-cronos-9.webp';
+import fiatCronos10 from '@/assets/fiat-cronos-10.webp';
 import fiat5001 from '@/assets/fiat-500-1.webp';
 import fiat5002 from '@/assets/fiat-500-2.webp';
 import fiat5003 from '@/assets/fiat-500-3.webp';
@@ -621,6 +631,11 @@ const fiat500Imagenes = [
   fiat5006, fiat5007, fiat5008, fiat5009, fiat50010,
 ];
 
+const fiatCronosImagenes = [
+  fiatCronos1, fiatCronos2, fiatCronos3, fiatCronos4, fiatCronos5,
+  fiatCronos6, fiatCronos7, fiatCronos8, fiatCronos9, fiatCronos10,
+];
+
 // Vehículos destacados (con fotos reales)
 export const vehiculosDestacados: Vehiculo[] = [
   { 
@@ -1153,6 +1168,19 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: fiat5001, 
     imagenes: fiat500Imagenes, 
     categoria: 'Compactos'
+  },
+  { 
+    id: '42', 
+    marca: 'Fiat', 
+    modelo: 'Cronos 1.8 16v Precision Pack Premium', 
+    año: 2020, 
+    kilometraje: 32000, 
+    combustible: 'Nafta', 
+    precio: 24990000, 
+    moneda: 'ARS',
+    imagen: fiatCronos1, 
+    imagenes: fiatCronosImagenes, 
+    categoria: 'Sedanes'
   },
 ];
 
