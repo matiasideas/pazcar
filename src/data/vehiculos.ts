@@ -1,3 +1,13 @@
+import vwGolf1 from '@/assets/vw-golf-1.webp';
+import vwGolf2 from '@/assets/vw-golf-2.webp';
+import vwGolf3 from '@/assets/vw-golf-3.webp';
+import vwGolf4 from '@/assets/vw-golf-4.webp';
+import vwGolf5 from '@/assets/vw-golf-5.webp';
+import vwGolf6 from '@/assets/vw-golf-6.webp';
+import vwGolf7 from '@/assets/vw-golf-7.webp';
+import vwGolf8 from '@/assets/vw-golf-8.webp';
+import vwGolf9 from '@/assets/vw-golf-9.webp';
+import vwGolf10 from '@/assets/vw-golf-10.webp';
 import fiatCronos1 from '@/assets/fiat-cronos-1.webp';
 import fiatCronos2 from '@/assets/fiat-cronos-2.webp';
 import fiatCronos3 from '@/assets/fiat-cronos-3.webp';
@@ -636,6 +646,11 @@ const fiatCronosImagenes = [
   fiatCronos6, fiatCronos7, fiatCronos8, fiatCronos9, fiatCronos10,
 ];
 
+const vwGolfImagenes = [
+  vwGolf1, vwGolf2, vwGolf3, vwGolf4, vwGolf5,
+  vwGolf6, vwGolf7, vwGolf8, vwGolf9, vwGolf10,
+];
+
 // Vehículos destacados (con fotos reales)
 export const vehiculosDestacados: Vehiculo[] = [
   { 
@@ -1181,6 +1196,18 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: fiatCronos1, 
     imagenes: fiatCronosImagenes, 
     categoria: 'Sedanes'
+  },
+  { 
+    id: '43', 
+    marca: 'Volkswagen', 
+    modelo: 'Golf 1.4 Highline Tsi Dsg', 
+    año: 2015, 
+    kilometraje: 99000, 
+    combustible: 'Nafta', 
+    precio: 20500, 
+    imagen: vwGolf1, 
+    imagenes: vwGolfImagenes, 
+    categoria: 'Compactos'
   },
 ];
 
