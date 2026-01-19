@@ -1,3 +1,13 @@
+import toyotaEtios1 from '@/assets/toyota-etios-1.webp';
+import toyotaEtios2 from '@/assets/toyota-etios-2.webp';
+import toyotaEtios3 from '@/assets/toyota-etios-3.webp';
+import toyotaEtios4 from '@/assets/toyota-etios-4.webp';
+import toyotaEtios5 from '@/assets/toyota-etios-5.webp';
+import toyotaEtios6 from '@/assets/toyota-etios-6.webp';
+import toyotaEtios7 from '@/assets/toyota-etios-7.webp';
+import toyotaEtios8 from '@/assets/toyota-etios-8.webp';
+import toyotaEtios9 from '@/assets/toyota-etios-9.webp';
+import toyotaEtios10 from '@/assets/toyota-etios-10.webp';
 import vwBeetle1 from '@/assets/vw-beetle-1.webp';
 import vwBeetle2 from '@/assets/vw-beetle-2.webp';
 import vwBeetle3 from '@/assets/vw-beetle-3.webp';
@@ -755,6 +765,11 @@ const vwBeetleImagenes = [
   vwBeetle6, vwBeetle7, vwBeetle8, vwBeetle9,
 ];
 
+const toyotaEtiosImagenes = [
+  toyotaEtios1, toyotaEtios2, toyotaEtios3, toyotaEtios4, toyotaEtios5,
+  toyotaEtios6, toyotaEtios7, toyotaEtios8, toyotaEtios9, toyotaEtios10,
+];
+
 // Vehículos destacados (con fotos reales)
 export const vehiculosDestacados: Vehiculo[] = [
   { 
@@ -1396,6 +1411,19 @@ const otrosVehiculos: Vehiculo[] = [
     precio: 16500, 
     imagen: vwBeetle1, 
     imagenes: vwBeetleImagenes, 
+    categoria: 'Compactos'
+  },
+  { 
+    id: '51', 
+    marca: 'Toyota', 
+    modelo: 'Etios Aibo Furgon', 
+    año: 2023, 
+    kilometraje: 30000, 
+    combustible: 'Nafta', 
+    precio: 24000000, 
+    moneda: 'ARS',
+    imagen: toyotaEtios1, 
+    imagenes: toyotaEtiosImagenes, 
     categoria: 'Compactos'
   },
 ];
