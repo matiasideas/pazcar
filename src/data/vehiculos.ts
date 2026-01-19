@@ -308,6 +308,16 @@ import renaultArkana7 from '@/assets/renault-arkana-7.webp';
 import renaultArkana8 from '@/assets/renault-arkana-8.webp';
 import renaultArkana9 from '@/assets/renault-arkana-9.webp';
 import renaultArkana10 from '@/assets/renault-arkana-10.webp';
+import mercedesGlb1 from '@/assets/mercedes-glb-1.webp';
+import mercedesGlb2 from '@/assets/mercedes-glb-2.webp';
+import mercedesGlb3 from '@/assets/mercedes-glb-3.webp';
+import mercedesGlb4 from '@/assets/mercedes-glb-4.webp';
+import mercedesGlb5 from '@/assets/mercedes-glb-5.webp';
+import mercedesGlb6 from '@/assets/mercedes-glb-6.webp';
+import mercedesGlb7 from '@/assets/mercedes-glb-7.webp';
+import mercedesGlb8 from '@/assets/mercedes-glb-8.webp';
+import mercedesGlb9 from '@/assets/mercedes-glb-9.webp';
+import mercedesGlb10 from '@/assets/mercedes-glb-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -471,6 +481,11 @@ const fordEcosportTitaniumImagenes = [
 const renaultArkanaImagenes = [
   renaultArkana1, renaultArkana2, renaultArkana3, renaultArkana4, renaultArkana5,
   renaultArkana6, renaultArkana7, renaultArkana8, renaultArkana9, renaultArkana10,
+];
+
+const mercedesGlbImagenes = [
+  mercedesGlb1, mercedesGlb2, mercedesGlb3, mercedesGlb4, mercedesGlb5,
+  mercedesGlb6, mercedesGlb7, mercedesGlb8, mercedesGlb9, mercedesGlb10,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -882,6 +897,18 @@ const otrosVehiculos: Vehiculo[] = [
     precio: 37000, 
     imagen: renaultArkana1, 
     imagenes: renaultArkanaImagenes, 
+    categoria: 'SUVs'
+  },
+  { 
+    id: '32', 
+    marca: 'Mercedes-Benz', 
+    modelo: 'Clase GLB 1.4 Glb200 Advance 163Cv', 
+    año: 2021, 
+    kilometraje: 54500, 
+    combustible: 'Nafta', 
+    precio: 55500, 
+    imagen: mercedesGlb1, 
+    imagenes: mercedesGlbImagenes, 
     categoria: 'SUVs'
   },
 ];
