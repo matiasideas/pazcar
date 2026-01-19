@@ -1,3 +1,12 @@
+import vwBeetle1 from '@/assets/vw-beetle-1.webp';
+import vwBeetle2 from '@/assets/vw-beetle-2.webp';
+import vwBeetle3 from '@/assets/vw-beetle-3.webp';
+import vwBeetle4 from '@/assets/vw-beetle-4.webp';
+import vwBeetle5 from '@/assets/vw-beetle-5.webp';
+import vwBeetle6 from '@/assets/vw-beetle-6.webp';
+import vwBeetle7 from '@/assets/vw-beetle-7.webp';
+import vwBeetle8 from '@/assets/vw-beetle-8.webp';
+import vwBeetle9 from '@/assets/vw-beetle-9.webp';
 import baicX551 from '@/assets/baic-x55-1.webp';
 import baicX552 from '@/assets/baic-x55-2.webp';
 import baicX553 from '@/assets/baic-x55-3.webp';
@@ -741,6 +750,11 @@ const baicX55Imagenes = [
   baicX556, baicX557, baicX558, baicX559, baicX5510,
 ];
 
+const vwBeetleImagenes = [
+  vwBeetle1, vwBeetle2, vwBeetle3, vwBeetle4, vwBeetle5,
+  vwBeetle6, vwBeetle7, vwBeetle8, vwBeetle9,
+];
+
 // Vehículos destacados (con fotos reales)
 export const vehiculosDestacados: Vehiculo[] = [
   { 
@@ -1371,6 +1385,18 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: baicX551, 
     imagenes: baicX55Imagenes, 
     categoria: 'SUV'
+  },
+  { 
+    id: '50', 
+    marca: 'Volkswagen', 
+    modelo: 'The Beetle 1.4 Tsi Design', 
+    año: 2015, 
+    kilometraje: 74500, 
+    combustible: 'Nafta', 
+    precio: 16500, 
+    imagen: vwBeetle1, 
+    imagenes: vwBeetleImagenes, 
+    categoria: 'Compactos'
   },
 ];
 
