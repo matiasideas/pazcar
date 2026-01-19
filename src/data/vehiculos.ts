@@ -1,3 +1,13 @@
+import bmwX61 from '@/assets/bmw-x6-1.webp';
+import bmwX62 from '@/assets/bmw-x6-2.webp';
+import bmwX63 from '@/assets/bmw-x6-3.webp';
+import bmwX64 from '@/assets/bmw-x6-4.webp';
+import bmwX65 from '@/assets/bmw-x6-5.webp';
+import bmwX66 from '@/assets/bmw-x6-6.webp';
+import bmwX67 from '@/assets/bmw-x6-7.webp';
+import bmwX68 from '@/assets/bmw-x6-8.webp';
+import bmwX69 from '@/assets/bmw-x6-9.webp';
+import bmwX610 from '@/assets/bmw-x6-10.webp';
 import jeepRenegade1 from '@/assets/jeep-renegade-1.webp';
 import jeepRenegade2 from '@/assets/jeep-renegade-2.webp';
 import jeepRenegade3 from '@/assets/jeep-renegade-3.webp';
@@ -711,6 +721,11 @@ const jeepRenegadeImagenes = [
   jeepRenegade6, jeepRenegade7, jeepRenegade8, jeepRenegade9, jeepRenegade10,
 ];
 
+const bmwX6Imagenes = [
+  bmwX61, bmwX62, bmwX63, bmwX64, bmwX65,
+  bmwX66, bmwX67, bmwX68, bmwX69, bmwX610,
+];
+
 // Vehículos destacados (con fotos reales)
 export const vehiculosDestacados: Vehiculo[] = [
   { 
@@ -1316,6 +1331,18 @@ const otrosVehiculos: Vehiculo[] = [
     precio: 19490, 
     imagen: jeepRenegade1, 
     imagenes: jeepRenegadeImagenes, 
+    categoria: 'SUV'
+  },
+  { 
+    id: '48', 
+    marca: 'BMW', 
+    modelo: 'X6 4.4 M 555cv', 
+    año: 2013, 
+    kilometraje: 99000, 
+    combustible: 'Nafta', 
+    precio: 61490, 
+    imagen: bmwX61, 
+    imagenes: bmwX6Imagenes, 
     categoria: 'SUV'
   },
 ];
