@@ -348,6 +348,16 @@ import vwGolPack7 from '@/assets/vw-gol-pack-7.webp';
 import vwGolPack8 from '@/assets/vw-gol-pack-8.webp';
 import vwGolPack9 from '@/assets/vw-gol-pack-9.webp';
 import vwGolPack10 from '@/assets/vw-gol-pack-10.webp';
+import vwVentoGli1 from '@/assets/vw-vento-gli-1.webp';
+import vwVentoGli2 from '@/assets/vw-vento-gli-2.webp';
+import vwVentoGli3 from '@/assets/vw-vento-gli-3.webp';
+import vwVentoGli4 from '@/assets/vw-vento-gli-4.webp';
+import vwVentoGli5 from '@/assets/vw-vento-gli-5.webp';
+import vwVentoGli6 from '@/assets/vw-vento-gli-6.webp';
+import vwVentoGli7 from '@/assets/vw-vento-gli-7.webp';
+import vwVentoGli8 from '@/assets/vw-vento-gli-8.webp';
+import vwVentoGli9 from '@/assets/vw-vento-gli-9.webp';
+import vwVentoGli10 from '@/assets/vw-vento-gli-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -531,6 +541,11 @@ const renaultKwidIconicImagenes = [
 const vwGolPackImagenes = [
   vwGolPack1, vwGolPack2, vwGolPack3, vwGolPack4, vwGolPack5,
   vwGolPack6, vwGolPack7, vwGolPack8, vwGolPack9, vwGolPack10,
+];
+
+const vwVentoGliImagenes = [
+  vwVentoGli1, vwVentoGli2, vwVentoGli3, vwVentoGli4, vwVentoGli5,
+  vwVentoGli6, vwVentoGli7, vwVentoGli8, vwVentoGli9, vwVentoGli10,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -992,6 +1007,18 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: vwGolPack1, 
     imagenes: vwGolPackImagenes, 
     categoria: 'Compactos'
+  },
+  { 
+    id: '36', 
+    marca: 'Volkswagen', 
+    modelo: 'Vento 2.0 Tsi Gli 211cv App Connect + Nav Dsg', 
+    año: 2018, 
+    kilometraje: 95000, 
+    combustible: 'Nafta', 
+    precio: 27990, 
+    imagen: vwVentoGli1, 
+    imagenes: vwVentoGliImagenes, 
+    categoria: 'Sedanes'
   },
 ];
 
