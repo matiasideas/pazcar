@@ -376,6 +376,16 @@ import vwSaveiroExtreme5 from '@/assets/vw-saveiro-extreme-5.webp';
 import vwSaveiroExtreme6 from '@/assets/vw-saveiro-extreme-6.webp';
 import vwSaveiroExtreme7 from '@/assets/vw-saveiro-extreme-7.webp';
 import vwSaveiroExtreme8 from '@/assets/vw-saveiro-extreme-8.webp';
+import fiat500x1 from '@/assets/fiat-500x-1.webp';
+import fiat500x2 from '@/assets/fiat-500x-2.webp';
+import fiat500x3 from '@/assets/fiat-500x-3.webp';
+import fiat500x4 from '@/assets/fiat-500x-4.webp';
+import fiat500x5 from '@/assets/fiat-500x-5.webp';
+import fiat500x6 from '@/assets/fiat-500x-6.webp';
+import fiat500x7 from '@/assets/fiat-500x-7.webp';
+import fiat500x8 from '@/assets/fiat-500x-8.webp';
+import fiat500x9 from '@/assets/fiat-500x-9.webp';
+import fiat500x10 from '@/assets/fiat-500x-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -574,6 +584,11 @@ const vwVentoImagenes = [
 const vwSaveiroExtremeImagenes = [
   vwSaveiroExtreme1, vwSaveiroExtreme2, vwSaveiroExtreme3, vwSaveiroExtreme4,
   vwSaveiroExtreme5, vwSaveiroExtreme6, vwSaveiroExtreme7, vwSaveiroExtreme8,
+];
+
+const fiat500xImagenes = [
+  fiat500x1, fiat500x2, fiat500x3, fiat500x4, fiat500x5,
+  fiat500x6, fiat500x7, fiat500x8, fiat500x9, fiat500x10,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -1071,6 +1086,19 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: vwSaveiroExtreme1, 
     imagenes: vwSaveiroExtremeImagenes, 
     categoria: 'Camionetas'
+  },
+  { 
+    id: '39', 
+    marca: 'Fiat', 
+    modelo: '500X 1.4 T 16v Pop', 
+    año: 2018, 
+    kilometraje: 74000, 
+    combustible: 'Nafta', 
+    precio: 21900000, 
+    moneda: 'ARS',
+    imagen: fiat500x1, 
+    imagenes: fiat500xImagenes, 
+    categoria: 'SUV'
   },
 ];
 
