@@ -1,3 +1,13 @@
+import fiat5001 from '@/assets/fiat-500-1.webp';
+import fiat5002 from '@/assets/fiat-500-2.webp';
+import fiat5003 from '@/assets/fiat-500-3.webp';
+import fiat5004 from '@/assets/fiat-500-4.webp';
+import fiat5005 from '@/assets/fiat-500-5.webp';
+import fiat5006 from '@/assets/fiat-500-6.webp';
+import fiat5007 from '@/assets/fiat-500-7.webp';
+import fiat5008 from '@/assets/fiat-500-8.webp';
+import fiat5009 from '@/assets/fiat-500-9.webp';
+import fiat50010 from '@/assets/fiat-500-10.webp';
 import bmwX21 from '@/assets/bmw-x2-1.webp';
 import bmwX22 from '@/assets/bmw-x2-2.webp';
 import bmwX23 from '@/assets/bmw-x2-3.webp';
@@ -606,6 +616,11 @@ const bmwX2Imagenes = [
   bmwX26, bmwX27, bmwX28, bmwX29, bmwX210,
 ];
 
+const fiat500Imagenes = [
+  fiat5001, fiat5002, fiat5003, fiat5004, fiat5005,
+  fiat5006, fiat5007, fiat5008, fiat5009, fiat50010,
+];
+
 // Vehículos destacados (con fotos reales)
 export const vehiculosDestacados: Vehiculo[] = [
   { 
@@ -1126,6 +1141,18 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: bmwX21, 
     imagenes: bmwX2Imagenes, 
     categoria: 'SUV'
+  },
+  { 
+    id: '41', 
+    marca: 'Fiat', 
+    modelo: '500 1.4 Lounge 105cv At', 
+    año: 2015, 
+    kilometraje: 80000, 
+    combustible: 'Nafta', 
+    precio: 17990, 
+    imagen: fiat5001, 
+    imagenes: fiat500Imagenes, 
+    categoria: 'Compactos'
   },
 ];
 
