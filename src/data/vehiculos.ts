@@ -358,6 +358,16 @@ import vwVentoGli7 from '@/assets/vw-vento-gli-7.webp';
 import vwVentoGli8 from '@/assets/vw-vento-gli-8.webp';
 import vwVentoGli9 from '@/assets/vw-vento-gli-9.webp';
 import vwVentoGli10 from '@/assets/vw-vento-gli-10.webp';
+import vwVento1 from '@/assets/vw-vento-1.webp';
+import vwVento2 from '@/assets/vw-vento-2.webp';
+import vwVento3 from '@/assets/vw-vento-3.webp';
+import vwVento4 from '@/assets/vw-vento-4.webp';
+import vwVento5 from '@/assets/vw-vento-5.webp';
+import vwVento6 from '@/assets/vw-vento-6.webp';
+import vwVento7 from '@/assets/vw-vento-7.webp';
+import vwVento8 from '@/assets/vw-vento-8.webp';
+import vwVento9 from '@/assets/vw-vento-9.webp';
+import vwVento10 from '@/assets/vw-vento-10.webp';
 
 export interface Vehiculo {
   id: string;
@@ -546,6 +556,11 @@ const vwGolPackImagenes = [
 const vwVentoGliImagenes = [
   vwVentoGli1, vwVentoGli2, vwVentoGli3, vwVentoGli4, vwVentoGli5,
   vwVentoGli6, vwVentoGli7, vwVentoGli8, vwVentoGli9, vwVentoGli10,
+];
+
+const vwVentoImagenes = [
+  vwVento1, vwVento2, vwVento3, vwVento4, vwVento5,
+  vwVento6, vwVento7, vwVento8, vwVento9, vwVento10,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -1018,6 +1033,18 @@ const otrosVehiculos: Vehiculo[] = [
     precio: 27990, 
     imagen: vwVentoGli1, 
     imagenes: vwVentoGliImagenes, 
+    categoria: 'Sedanes'
+  },
+  { 
+    id: '37', 
+    marca: 'Volkswagen', 
+    modelo: 'Vento 1.4 Comfortline 150cv At', 
+    año: 2018, 
+    kilometraje: 141000, 
+    combustible: 'Nafta', 
+    precio: 18100, 
+    imagen: vwVento1, 
+    imagenes: vwVentoImagenes, 
     categoria: 'Sedanes'
   },
 ];
