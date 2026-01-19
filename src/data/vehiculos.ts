@@ -1,3 +1,13 @@
+import fordMaverickTremor1 from '@/assets/ford-maverick-tremor-1.webp';
+import fordMaverickTremor2 from '@/assets/ford-maverick-tremor-2.webp';
+import fordMaverickTremor3 from '@/assets/ford-maverick-tremor-3.webp';
+import fordMaverickTremor4 from '@/assets/ford-maverick-tremor-4.webp';
+import fordMaverickTremor5 from '@/assets/ford-maverick-tremor-5.webp';
+import fordMaverickTremor6 from '@/assets/ford-maverick-tremor-6.webp';
+import fordMaverickTremor7 from '@/assets/ford-maverick-tremor-7.webp';
+import fordMaverickTremor8 from '@/assets/ford-maverick-tremor-8.webp';
+import fordMaverickTremor9 from '@/assets/ford-maverick-tremor-9.webp';
+import fordMaverickTremor10 from '@/assets/ford-maverick-tremor-10.webp';
 import renaultKwidOutsider1 from '@/assets/renault-kwid-outsider-1.webp';
 import renaultKwidOutsider2 from '@/assets/renault-kwid-outsider-2.webp';
 import renaultKwidOutsider3 from '@/assets/renault-kwid-outsider-3.webp';
@@ -666,6 +676,11 @@ const renaultKwidOutsiderImagenes = [
   renaultKwidOutsider6, renaultKwidOutsider7, renaultKwidOutsider8, renaultKwidOutsider9, renaultKwidOutsider10,
 ];
 
+const fordMaverickTremorImagenes = [
+  fordMaverickTremor1, fordMaverickTremor2, fordMaverickTremor3, fordMaverickTremor4, fordMaverickTremor5,
+  fordMaverickTremor6, fordMaverickTremor7, fordMaverickTremor8, fordMaverickTremor9, fordMaverickTremor10,
+];
+
 // Vehículos destacados (con fotos reales)
 export const vehiculosDestacados: Vehiculo[] = [
   { 
@@ -1236,6 +1251,18 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: renaultKwidOutsider1, 
     imagenes: renaultKwidOutsiderImagenes, 
     categoria: 'Compactos'
+  },
+  { 
+    id: '45', 
+    marca: 'Ford', 
+    modelo: 'Maverick 2.0 Ecoboost Tremor At8 4Wd My25', 
+    año: 2025, 
+    kilometraje: 8000, 
+    combustible: 'Nafta', 
+    precio: 48999, 
+    imagen: fordMaverickTremor1, 
+    imagenes: fordMaverickTremorImagenes, 
+    categoria: 'Camionetas'
   },
 ];
 
