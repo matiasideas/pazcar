@@ -368,6 +368,14 @@ import vwVento7 from '@/assets/vw-vento-7.webp';
 import vwVento8 from '@/assets/vw-vento-8.webp';
 import vwVento9 from '@/assets/vw-vento-9.webp';
 import vwVento10 from '@/assets/vw-vento-10.webp';
+import vwSaveiroExtreme1 from '@/assets/vw-saveiro-extreme-1.webp';
+import vwSaveiroExtreme2 from '@/assets/vw-saveiro-extreme-2.webp';
+import vwSaveiroExtreme3 from '@/assets/vw-saveiro-extreme-3.webp';
+import vwSaveiroExtreme4 from '@/assets/vw-saveiro-extreme-4.webp';
+import vwSaveiroExtreme5 from '@/assets/vw-saveiro-extreme-5.webp';
+import vwSaveiroExtreme6 from '@/assets/vw-saveiro-extreme-6.webp';
+import vwSaveiroExtreme7 from '@/assets/vw-saveiro-extreme-7.webp';
+import vwSaveiroExtreme8 from '@/assets/vw-saveiro-extreme-8.webp';
 
 export interface Vehiculo {
   id: string;
@@ -561,6 +569,11 @@ const vwVentoGliImagenes = [
 const vwVentoImagenes = [
   vwVento1, vwVento2, vwVento3, vwVento4, vwVento5,
   vwVento6, vwVento7, vwVento8, vwVento9, vwVento10,
+];
+
+const vwSaveiroExtremeImagenes = [
+  vwSaveiroExtreme1, vwSaveiroExtreme2, vwSaveiroExtreme3, vwSaveiroExtreme4,
+  vwSaveiroExtreme5, vwSaveiroExtreme6, vwSaveiroExtreme7, vwSaveiroExtreme8,
 ];
 
 // Vehículos destacados (con fotos reales)
@@ -1046,6 +1059,18 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: vwVento1, 
     imagenes: vwVentoImagenes, 
     categoria: 'Sedanes'
+  },
+  { 
+    id: '38', 
+    marca: 'Volkswagen', 
+    modelo: 'Saveiro 1.6 Msi Extreme Cd', 
+    año: 2025, 
+    kilometraje: 25000, 
+    combustible: 'Nafta', 
+    precio: 21000, 
+    imagen: vwSaveiroExtreme1, 
+    imagenes: vwSaveiroExtremeImagenes, 
+    categoria: 'Camionetas'
   },
 ];
 
