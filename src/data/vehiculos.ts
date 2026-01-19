@@ -1,3 +1,13 @@
+import baicX551 from '@/assets/baic-x55-1.webp';
+import baicX552 from '@/assets/baic-x55-2.webp';
+import baicX553 from '@/assets/baic-x55-3.webp';
+import baicX554 from '@/assets/baic-x55-4.webp';
+import baicX555 from '@/assets/baic-x55-5.webp';
+import baicX556 from '@/assets/baic-x55-6.webp';
+import baicX557 from '@/assets/baic-x55-7.webp';
+import baicX558 from '@/assets/baic-x55-8.webp';
+import baicX559 from '@/assets/baic-x55-9.webp';
+import baicX5510 from '@/assets/baic-x55-10.webp';
 import bmwX61 from '@/assets/bmw-x6-1.webp';
 import bmwX62 from '@/assets/bmw-x6-2.webp';
 import bmwX63 from '@/assets/bmw-x6-3.webp';
@@ -726,6 +736,11 @@ const bmwX6Imagenes = [
   bmwX66, bmwX67, bmwX68, bmwX69, bmwX610,
 ];
 
+const baicX55Imagenes = [
+  baicX551, baicX552, baicX553, baicX554, baicX555,
+  baicX556, baicX557, baicX558, baicX559, baicX5510,
+];
+
 // Vehículos destacados (con fotos reales)
 export const vehiculosDestacados: Vehiculo[] = [
   { 
@@ -1343,6 +1358,18 @@ const otrosVehiculos: Vehiculo[] = [
     precio: 61490, 
     imagen: bmwX61, 
     imagenes: bmwX6Imagenes, 
+    categoria: 'SUV'
+  },
+  { 
+    id: '49', 
+    marca: 'BAIC', 
+    modelo: 'X55 II 1.5T Luxury 7Dct', 
+    año: 2024, 
+    kilometraje: 1000, 
+    combustible: 'Nafta', 
+    precio: 33990, 
+    imagen: baicX551, 
+    imagenes: baicX55Imagenes, 
     categoria: 'SUV'
   },
 ];
