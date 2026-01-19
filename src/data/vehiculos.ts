@@ -1,3 +1,13 @@
+import toyotaHiluxCs1 from '@/assets/toyota-hilux-cs-1.webp';
+import toyotaHiluxCs2 from '@/assets/toyota-hilux-cs-2.webp';
+import toyotaHiluxCs3 from '@/assets/toyota-hilux-cs-3.webp';
+import toyotaHiluxCs4 from '@/assets/toyota-hilux-cs-4.webp';
+import toyotaHiluxCs5 from '@/assets/toyota-hilux-cs-5.webp';
+import toyotaHiluxCs6 from '@/assets/toyota-hilux-cs-6.webp';
+import toyotaHiluxCs7 from '@/assets/toyota-hilux-cs-7.webp';
+import toyotaHiluxCs8 from '@/assets/toyota-hilux-cs-8.webp';
+import toyotaHiluxCs9 from '@/assets/toyota-hilux-cs-9.webp';
+import toyotaHiluxCs10 from '@/assets/toyota-hilux-cs-10.webp';
 import chevroletCruzeLtz1 from '@/assets/chevrolet-cruze-ltz-1.webp';
 import chevroletCruzeLtz2 from '@/assets/chevrolet-cruze-ltz-2.webp';
 import chevroletCruzeLtz3 from '@/assets/chevrolet-cruze-ltz-3.webp';
@@ -800,6 +810,11 @@ const chevroletCruzeLtzImagenes = [
   chevroletCruzeLtz6, chevroletCruzeLtz7, chevroletCruzeLtz8, chevroletCruzeLtz9, chevroletCruzeLtz10,
 ];
 
+const toyotaHiluxCsImagenes = [
+  toyotaHiluxCs1, toyotaHiluxCs2, toyotaHiluxCs3, toyotaHiluxCs4, toyotaHiluxCs5,
+  toyotaHiluxCs6, toyotaHiluxCs7, toyotaHiluxCs8, toyotaHiluxCs9, toyotaHiluxCs10,
+];
+
 // Vehículos destacados (con fotos reales)
 export const vehiculosDestacados: Vehiculo[] = [
   { 
@@ -1479,6 +1494,18 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: chevroletCruzeLtz1, 
     imagenes: chevroletCruzeLtzImagenes, 
     categoria: 'Sedanes'
+  },
+  { 
+    id: '54', 
+    marca: 'Toyota', 
+    modelo: 'Hilux Cs Dx 150cv 4x2', 
+    año: 2021, 
+    kilometraje: 27000, 
+    combustible: 'Diesel', 
+    precio: 27990, 
+    imagen: toyotaHiluxCs1, 
+    imagenes: toyotaHiluxCsImagenes, 
+    categoria: 'Pickups'
   },
 ];
 
