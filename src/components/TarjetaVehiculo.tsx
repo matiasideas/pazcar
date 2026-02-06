@@ -4,6 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { MessageCircle, Calendar, Gauge, Fuel, ChevronLeft, ChevronRight } from 'lucide-react';
 import ModalConsulta from './ModalConsulta';
+import GaleriaImagenes from './GaleriaImagenes';
 
 import { Vehiculo } from '@/data/vehiculos';
 
@@ -15,6 +16,7 @@ const TarjetaVehiculo = ({ vehiculo }: TarjetaVehiculoProps) => {
   const [imagenActual, setImagenActual] = useState(0);
   const [isFocused, setIsFocused] = useState(false);
   const [modalAbierto, setModalAbierto] = useState(false);
+  const [galeriaAbierta, setGaleriaAbierta] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
   
   // Use imagenes array if available, otherwise fallback to single imagen
@@ -84,7 +86,8 @@ const TarjetaVehiculo = ({ vehiculo }: TarjetaVehiculoProps) => {
         <img
           src={todasLasImagenes[imagenActual]}
           alt={`${vehiculo.marca} ${vehiculo.modelo}`}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 cursor-pointer"
+          onClick={() => setGaleriaAbierta(true)}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
         
@@ -199,6 +202,15 @@ const TarjetaVehiculo = ({ vehiculo }: TarjetaVehiculoProps) => {
           año: vehiculo.año,
           imagen: vehiculo.imagen,
         }}
+      />
+
+      {/* Galería de imágenes */}
+      <GaleriaImagenes
+        imagenes={todasLasImagenes}
+        imagenInicial={imagenActual}
+        abierto={galeriaAbierta}
+        onCerrar={() => setGaleriaAbierta(false)}
+        titulo={`${vehiculo.marca} ${vehiculo.modelo}`}
       />
       </Card>
     </div>
