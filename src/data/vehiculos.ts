@@ -1,3 +1,5 @@
+import jeepRenegadeSport1 from '@/assets/jeep-renegade-sport-1.webp';
+import jeepRenegadeSport2 from '@/assets/jeep-renegade-sport-2.webp';
 import toyotaHiluxCs1 from '@/assets/toyota-hilux-cs-1.webp';
 import toyotaHiluxCs2 from '@/assets/toyota-hilux-cs-2.webp';
 import toyotaHiluxCs3 from '@/assets/toyota-hilux-cs-3.webp';
@@ -815,6 +817,10 @@ const toyotaHiluxCsImagenes = [
   toyotaHiluxCs6, toyotaHiluxCs7, toyotaHiluxCs8, toyotaHiluxCs9, toyotaHiluxCs10,
 ];
 
+const jeepRenegadeSportImagenes = [
+  jeepRenegadeSport1, jeepRenegadeSport2,
+];
+
 // Vehículos destacados (con fotos reales)
 export const vehiculosDestacados: Vehiculo[] = [
   { 
@@ -1506,6 +1512,18 @@ const otrosVehiculos: Vehiculo[] = [
     imagen: toyotaHiluxCs1, 
     imagenes: toyotaHiluxCsImagenes, 
     categoria: 'Pickups'
+  },
+  { 
+    id: '55', 
+    marca: 'Jeep', 
+    modelo: 'Renegade 1.8 Sport Wild', 
+    año: 2021, 
+    kilometraje: 35000, 
+    combustible: 'Nafta', 
+    precio: 18999, 
+    imagen: jeepRenegadeSport1, 
+    imagenes: jeepRenegadeSportImagenes, 
+    categoria: 'SUV'
   },
 ];
 
