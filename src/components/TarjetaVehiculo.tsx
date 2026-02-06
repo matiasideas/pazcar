@@ -82,14 +82,13 @@ const TarjetaVehiculo = ({ vehiculo }: TarjetaVehiculoProps) => {
         }`}
       >
         {/* Image container with carousel */}
-        <div className="relative aspect-[16/10] overflow-hidden">
+        <div className="relative aspect-[16/10] overflow-hidden cursor-pointer" onClick={() => setGaleriaAbierta(true)}>
         <img
           src={todasLasImagenes[imagenActual]}
           alt={`${vehiculo.marca} ${vehiculo.modelo}`}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 cursor-pointer"
-          onClick={() => setGaleriaAbierta(true)}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent pointer-events-none" />
         
         {/* Carousel arrows */}
         {tieneMultiplesImagenes && (
