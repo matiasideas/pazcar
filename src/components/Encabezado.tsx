@@ -121,7 +121,7 @@ const Encabezado = () => {
       {menuAbierto && (
         <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-border/50 animate-fade-in">
           <nav className="container mx-auto px-4 py-4 flex flex-col gap-2">
-            {enlacesNav.map((link) => (
+            {todosEnlaces.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
