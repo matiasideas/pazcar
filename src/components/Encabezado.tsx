@@ -101,6 +101,7 @@ const Encabezado = () => {
                 WhatsApp
               </a>
             </Button>
+            </div>
           </div>
 
           {/* Mobile menu button */}
