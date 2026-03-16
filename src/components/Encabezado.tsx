@@ -4,13 +4,17 @@ import { Menu, X, MessageCircle } from 'lucide-react';
 import logo from '@/assets/logo-pazcar.png';
 import EtiquetaComponente from './EtiquetaComponente';
 
-const enlacesNav = [
-  { label: 'Inicio', href: '#' },
+const enlacesIzquierda = [
   { label: 'Catálogo', href: '#catalogo' },
   { label: 'Destacados', href: '#destacados' },
+];
+
+const enlacesDerecha = [
   { label: 'Quiénes Somos', href: '#quienes-somos' },
   { label: 'Contacto', href: '#footer' },
 ];
+
+const todosEnlaces = [...enlacesIzquierda, ...enlacesDerecha];
 
 const Encabezado = () => {
   const [menuAbierto, setMenuAbierto] = useState(false);
