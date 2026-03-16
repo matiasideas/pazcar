@@ -48,7 +48,7 @@ const Encabezado = () => {
           </a>
 
           {/* Left nav */}
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden md:flex items-center gap-1 flex-1 justify-end">
             {enlacesIzquierda.map((link) => (
               <a
                 key={link.label}
@@ -65,7 +65,7 @@ const Encabezado = () => {
           <a 
             href="#" 
             onClick={(e) => { e.preventDefault(); scrollASeccion('#'); }}
-            className="flex items-center group"
+            className="hidden md:flex items-center group mx-6"
           >
             <img 
               src={logo} 
@@ -74,8 +74,8 @@ const Encabezado = () => {
             />
           </a>
 
-          {/* Right nav */}
-          <nav className="hidden md:flex items-center gap-1">
+          {/* Right nav + CTA */}
+          <div className="hidden md:flex items-center gap-1 flex-1 justify-start">
             {enlacesDerecha.map((link) => (
               <a
                 key={link.label}
@@ -86,10 +86,7 @@ const Encabezado = () => {
                 {link.label}
               </a>
             ))}
-          </nav>
-
-          {/* Desktop CTA */}
-          <div className="hidden md:flex items-center gap-3">
+            <div className="ml-3">
             <Button 
               size="sm" 
               className="bg-[#25D366] hover:bg-[#1da851] text-white"
@@ -104,6 +101,7 @@ const Encabezado = () => {
                 WhatsApp
               </a>
             </Button>
+            </div>
           </div>
 
           {/* Mobile menu button */}
