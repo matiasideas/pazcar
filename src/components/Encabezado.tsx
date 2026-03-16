@@ -34,11 +34,11 @@ const Encabezado = () => {
       <EtiquetaComponente nombre="Encabezado" posicion="derecha" />
       <div className="container mx-auto max-w-7xl px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+          {/* Mobile logo (left on small screens) */}
           <a 
             href="#" 
             onClick={(e) => { e.preventDefault(); scrollASeccion('#'); }}
-            className="flex items-center group"
+            className="flex md:hidden items-center group"
           >
             <img 
               src={logo} 
