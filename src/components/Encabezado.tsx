@@ -47,9 +47,36 @@ const Encabezado = () => {
             />
           </a>
 
-          {/* Desktop nav */}
+          {/* Left nav */}
           <nav className="hidden md:flex items-center gap-1">
-            {enlacesNav.map((link) => (
+            {enlacesIzquierda.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={(e) => { e.preventDefault(); scrollASeccion(link.href); }}
+                className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-muted/50"
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+
+          {/* Centered Logo */}
+          <a 
+            href="#" 
+            onClick={(e) => { e.preventDefault(); scrollASeccion('#'); }}
+            className="flex items-center group"
+          >
+            <img 
+              src={logo} 
+              alt="PazCar" 
+              className="h-8 w-auto transition-transform group-hover:scale-105"
+            />
+          </a>
+
+          {/* Right nav */}
+          <nav className="hidden md:flex items-center gap-1">
+            {enlacesDerecha.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
