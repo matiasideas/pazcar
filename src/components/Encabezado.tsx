@@ -6,13 +6,9 @@ import EtiquetaComponente from './EtiquetaComponente';
 
 const enlacesIzquierda = [
   { label: 'Encontrá tu Auto', href: '#catalogo' },
-  { label: 'Destacados', href: '#destacados' },
 ];
 
-const enlacesDerecha = [
-  { label: 'Quiénes Somos', href: '#quienes-somos' },
-  { label: 'Contacto', href: '#footer' },
-];
+const enlacesDerecha = [];
 
 const todosEnlaces = [...enlacesIzquierda, ...enlacesDerecha];
 
