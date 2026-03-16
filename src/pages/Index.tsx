@@ -5,6 +5,7 @@ import VehiculosDestacados from '@/components/VehiculosDestacados';
 import QuienesSomos from '@/components/QuienesSomos';
 import PiePagina from '@/components/PiePagina';
 import BotonWhatsApp from '@/components/BotonWhatsApp';
+import VendeTuAuto from '@/components/VendeTuAuto';
 
 const Index = () => {
   return (
@@ -15,6 +16,7 @@ const Index = () => {
         <VehiculosDestacados />
       </div>
       <CatalogoVehiculos />
+      <VendeTuAuto />
       <QuienesSomos />
       <div id="footer">
         <PiePagina />
