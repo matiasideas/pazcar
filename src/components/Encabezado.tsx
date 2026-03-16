@@ -4,13 +4,17 @@ import { Menu, X, MessageCircle } from 'lucide-react';
 import logo from '@/assets/logo-pazcar.png';
 import EtiquetaComponente from './EtiquetaComponente';
 
-const enlacesNav = [
-  { label: 'Inicio', href: '#' },
+const enlacesIzquierda = [
   { label: 'Catálogo', href: '#catalogo' },
   { label: 'Destacados', href: '#destacados' },
+];
+
+const enlacesDerecha = [
   { label: 'Quiénes Somos', href: '#quienes-somos' },
   { label: 'Contacto', href: '#footer' },
 ];
+
+const todosEnlaces = [...enlacesIzquierda, ...enlacesDerecha];
 
 const Encabezado = () => {
   const [menuAbierto, setMenuAbierto] = useState(false);
@@ -30,7 +34,34 @@ const Encabezado = () => {
       <EtiquetaComponente nombre="Encabezado" posicion="derecha" />
       <div className="container mx-auto max-w-7xl px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+          {/* Mobile logo (left on small screens) */}
+          <a 
+            href="#" 
+            onClick={(e) => { e.preventDefault(); scrollASeccion('#'); }}
+            className="flex md:hidden items-center group"
+          >
+            <img 
+              src={logo} 
+              alt="PazCar" 
+              className="h-8 w-auto transition-transform group-hover:scale-105"
+            />
+          </a>
+
+          {/* Left nav */}
+          <nav className="hidden md:flex items-center gap-1">
+            {enlacesIzquierda.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={(e) => { e.preventDefault(); scrollASeccion(link.href); }}
+                className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-muted/50"
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+
+          {/* Centered Logo */}
           <a 
             href="#" 
             onClick={(e) => { e.preventDefault(); scrollASeccion('#'); }}
@@ -43,9 +74,9 @@ const Encabezado = () => {
             />
           </a>
 
-          {/* Desktop nav */}
+          {/* Right nav */}
           <nav className="hidden md:flex items-center gap-1">
-            {enlacesNav.map((link) => (
+            {enlacesDerecha.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
@@ -90,7 +121,7 @@ const Encabezado = () => {
       {menuAbierto && (
         <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-border/50 animate-fade-in">
           <nav className="container mx-auto px-4 py-4 flex flex-col gap-2">
-            {enlacesNav.map((link) => (
+            {todosEnlaces.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
