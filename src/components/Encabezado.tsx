@@ -8,7 +8,9 @@ const enlacesIzquierda = [
   { label: 'Encontrá tu Auto', href: '#catalogo' },
 ];
 
-const enlacesDerecha = [];
+const enlacesDerecha = [
+  { label: 'Vendé tu Auto', href: '#vende-tu-auto' },
+];
 
 const todosEnlaces = [...enlacesIzquierda, ...enlacesDerecha];
 
