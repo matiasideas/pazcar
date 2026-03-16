@@ -109,20 +109,6 @@ const Encabezado = () => {
                 {link.label}
               </a>
             ))}
-            <Button 
-              size="sm" 
-              className="mt-2 bg-[#25D366] hover:bg-[#1da851] text-white"
-              asChild
-            >
-              <a 
-                href="https://wa.me/5491133095902?text=Hola!%20Quiero%20consultar%20sobre%20un%20vehículo"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <MessageCircle className="w-4 h-4 mr-1" />
-                WhatsApp
-              </a>
-            </Button>
           </nav>
         </div>
       )}
