@@ -28,6 +28,21 @@ const Index = () => {
     }
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentVideo((prev) => {
+        const next = (prev + 1) % videos.length;
+        const vid = videoRefs.current[next];
+        if (vid) {
+          vid.currentTime = 0;
+          vid.play();
+        }
+        return next;
+      });
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <main className="min-h-screen bg-background pt-16">
       <Encabezado />
