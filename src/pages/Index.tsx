@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback } from 'react';
+import { useState, useRef, useCallback, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Encabezado from '@/components/Encabezado';
 import SeccionPrincipal from '@/components/SeccionPrincipal';
