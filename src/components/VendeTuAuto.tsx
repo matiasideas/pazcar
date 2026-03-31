@@ -153,15 +153,17 @@ const VendeTuAuto = () => {
             />
           </div>
 
-          <Button
-            type="submit"
-            size="lg"
-            className="w-full h-12 text-base font-semibold rounded-lg bg-primary hover:bg-primary/90"
-            disabled={enviando}
-          >
-            <Send className="w-4 h-4 mr-2" />
-            {enviando ? 'Enviando...' : 'Enviar consulta'}
-          </Button>
+          <div className="flex justify-center">
+            <Button
+              type="submit"
+              size="lg"
+              className="h-12 px-16 text-base font-semibold rounded-lg bg-red-700 hover:bg-red-800 text-white"
+              disabled={enviando}
+            >
+              <Send className="w-4 h-4 mr-2" />
+              {enviando ? 'Enviando...' : 'Enviar consulta'}
+            </Button>
+          </div>
         </form>
       </div>
     </section>
