@@ -11,7 +11,7 @@ const Index = () => {
   return (
     <main className="min-h-screen bg-background">
       <Encabezado />
-      <div className="w-full h-[300px] md:h-[400px] overflow-hidden relative">
+      <div className="w-full h-[200px] md:h-[500px] lg:h-[600px] overflow-hidden relative">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat will-change-transform"
           style={{
