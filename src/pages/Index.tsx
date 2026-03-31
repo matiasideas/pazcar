@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Encabezado from '@/components/Encabezado';
 import SeccionPrincipal from '@/components/SeccionPrincipal';
 import CatalogoVehiculos from '@/components/CatalogoVehiculos';
@@ -39,6 +40,19 @@ const Index = () => {
             }}
           />
         ))}
+        {/* Arrows */}
+        <button
+          onClick={() => setCurrentBanner((prev) => (prev - 1 + banners.length) % banners.length)}
+          className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-black/40 hover:bg-black/60 text-white rounded-full p-2 transition-all"
+        >
+          <ChevronLeft size={24} />
+        </button>
+        <button
+          onClick={() => setCurrentBanner((prev) => (prev + 1) % banners.length)}
+          className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-black/40 hover:bg-black/60 text-white rounded-full p-2 transition-all"
+        >
+          <ChevronRight size={24} />
+        </button>
         {/* Dots */}
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
           {banners.map((_, i) => (
