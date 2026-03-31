@@ -27,17 +27,15 @@ const Index = () => {
   return (
     <main className="min-h-screen bg-background pt-16">
       <Encabezado />
-      <div className="w-full h-[200px] md:h-[500px] lg:h-[600px] overflow-hidden relative">
+      <div className="w-full aspect-[3.5/1] overflow-hidden relative bg-black">
         {banners.map((src, i) => (
-          <div
+          <img
             key={src}
-            className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
+            src={src}
+            alt="Banner PazCar"
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
               i === currentBanner ? 'opacity-100' : 'opacity-0'
             }`}
-            style={{
-              backgroundImage: `url(${src})`,
-              backgroundAttachment: 'fixed',
-            }}
           />
         ))}
         {/* Arrows */}
