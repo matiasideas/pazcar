@@ -27,7 +27,7 @@ const Index = () => {
             key={src}
             src={src}
             autoPlay
-            loop
+            
             muted
             playsInline
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
