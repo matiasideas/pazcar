@@ -11,8 +11,14 @@ const Index = () => {
   return (
     <main className="min-h-screen bg-background">
       <Encabezado />
-      <div className="w-full">
-        <img src="/images/banner-pazcar.jpg" alt="Encontrá tu auto en PazCar" className="w-full h-auto block" />
+      <div className="w-full h-[300px] md:h-[400px] overflow-hidden relative">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat will-change-transform"
+          style={{
+            backgroundImage: 'url(/images/banner-pazcar.jpg)',
+            backgroundAttachment: 'fixed',
+          }}
+        />
       </div>
       <SeccionPrincipal />
       <div id="destacados">
