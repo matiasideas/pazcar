@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useCallback } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Encabezado from '@/components/Encabezado';
 import SeccionPrincipal from '@/components/SeccionPrincipal';
@@ -17,6 +17,16 @@ const videos = [
 
 const Index = () => {
   const [currentVideo, setCurrentVideo] = useState(0);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+
+  const changeVideo = useCallback((next: number) => {
+    setCurrentVideo(next);
+    const vid = videoRefs.current[next];
+    if (vid) {
+      vid.currentTime = 0;
+      vid.play();
+    }
+  }, []);
 
   return (
     <main className="min-h-screen bg-background pt-16">
@@ -25,9 +35,9 @@ const Index = () => {
         {videos.map((src, i) => (
           <video
             key={src}
+            ref={(el) => { videoRefs.current[i] = el; }}
             src={src}
-            autoPlay
-            
+            autoPlay={i === 0}
             muted
             playsInline
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
@@ -37,13 +47,13 @@ const Index = () => {
         ))}
         {/* Arrows */}
         <button
-          onClick={() => setCurrentVideo((prev) => (prev - 1 + videos.length) % videos.length)}
+          onClick={() => changeVideo((currentVideo - 1 + videos.length) % videos.length)}
           className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-red-600/80 hover:bg-red-700 text-white rounded-full p-2 transition-all"
         >
           <ChevronLeft size={24} />
         </button>
         <button
-          onClick={() => setCurrentVideo((prev) => (prev + 1) % videos.length)}
+          onClick={() => changeVideo((currentVideo + 1) % videos.length)}
           className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-red-600/80 hover:bg-red-700 text-white rounded-full p-2 transition-all"
         >
           <ChevronRight size={24} />
