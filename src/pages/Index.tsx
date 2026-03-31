@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Encabezado from '@/components/Encabezado';
 import SeccionPrincipal from '@/components/SeccionPrincipal';
@@ -27,7 +27,7 @@ const Index = () => {
   return (
     <main className="min-h-screen bg-background pt-16">
       <Encabezado />
-      <div className="w-full aspect-[3.5/1] overflow-hidden relative bg-black">
+      <div className="w-full aspect-[1920/814] overflow-hidden relative bg-black">
         {banners.map((src, i) => (
           <img
             key={src}
