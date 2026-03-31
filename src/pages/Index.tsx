@@ -18,30 +18,31 @@ const videos = [
 const Index = () => {
   const [currentVideo, setCurrentVideo] = useState(0);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const startTimer = useCallback(() => {
+    if (timerRef.current) clearInterval(timerRef.current);
+    timerRef.current = setInterval(() => {
+      setCurrentVideo((prev) => {
+        const next = (prev + 1) % videos.length;
+        const vid = videoRefs.current[next];
+        if (vid) { vid.currentTime = 0; vid.play(); }
+        return next;
+      });
+    }, 5000);
+  }, []);
 
   const changeVideo = useCallback((next: number) => {
     setCurrentVideo(next);
     const vid = videoRefs.current[next];
-    if (vid) {
-      vid.currentTime = 0;
-      vid.play();
-    }
-  }, []);
+    if (vid) { vid.currentTime = 0; vid.play(); }
+    startTimer();
+  }, [startTimer]);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentVideo((prev) => {
-        const next = (prev + 1) % videos.length;
-        const vid = videoRefs.current[next];
-        if (vid) {
-          vid.currentTime = 0;
-          vid.play();
-        }
-        return next;
-      });
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+    startTimer();
+    return () => { if (timerRef.current) clearInterval(timerRef.current); };
+  }, [startTimer]);
 
   return (
     <main className="min-h-screen bg-background pt-16">
