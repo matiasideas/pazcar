@@ -11,6 +11,9 @@ const Index = () => {
   return (
     <main className="min-h-screen bg-background">
       <Encabezado />
+      <div className="w-full">
+        <img src="/images/banner-pazcar.jpg" alt="Encontrá tu auto en PazCar" className="w-full h-auto block" />
+      </div>
       <SeccionPrincipal />
       <div id="destacados">
         <VehiculosDestacados />
