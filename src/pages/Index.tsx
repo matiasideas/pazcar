@@ -47,7 +47,7 @@ const Index = () => {
         </button>
         <button
           onClick={() => setCurrentBanner((prev) => (prev + 1) % banners.length)}
-          className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-black/40 hover:bg-black/60 text-white rounded-full p-2 transition-all"
+          className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-red-600/80 hover:bg-red-700 text-white rounded-full p-2 transition-all"
         >
           <ChevronRight size={24} />
         </button>
