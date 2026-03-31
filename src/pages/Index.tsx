@@ -87,7 +87,7 @@ const Index = () => {
           ))}
         </div>
       </div>
-      <SeccionPrincipal />
+      {/* <SeccionPrincipal /> */}
       <div id="destacados">
         <VehiculosDestacados />
       </div>
