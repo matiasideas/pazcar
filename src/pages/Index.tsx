@@ -9,7 +9,7 @@ import VendeTuAuto from '@/components/VendeTuAuto';
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background pt-16">
       <Encabezado />
       <div className="w-full h-[200px] md:h-[500px] lg:h-[600px] overflow-hidden relative">
         <div
