@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback } from 'react';
+import { useState, useRef, useCallback, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Encabezado from '@/components/Encabezado';
 import SeccionPrincipal from '@/components/SeccionPrincipal';
@@ -26,6 +26,21 @@ const Index = () => {
       vid.currentTime = 0;
       vid.play();
     }
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentVideo((prev) => {
+        const next = (prev + 1) % videos.length;
+        const vid = videoRefs.current[next];
+        if (vid) {
+          vid.currentTime = 0;
+          vid.play();
+        }
+        return next;
+      });
+    }, 5000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
