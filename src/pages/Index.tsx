@@ -63,7 +63,7 @@ const Index = () => {
           {videos.map((_, i) => (
             <button
               key={i}
-              onClick={() => setCurrentVideo(i)}
+              onClick={() => changeVideo(i)}
               className={`w-3 h-3 rounded-full transition-all ${
                 i === currentVideo ? 'bg-white scale-110' : 'bg-white/50'
               }`}
