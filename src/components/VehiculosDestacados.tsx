@@ -1,13 +1,16 @@
-import TarjetaVehiculo from './TarjetaVehiculo';
-import { Sparkles } from 'lucide-react';
+import { useCatalogo } from '@/hooks/useCatalogo';
+import TarjetaVehiculo from '@/components/TarjetaVehiculo';
+import { Sparkles, Loader2 } from 'lucide-react';
 import EtiquetaComponente from './EtiquetaComponente';
-import { vehiculosDestacados } from '@/data/vehiculos';
 
 const VehiculosDestacados = () => {
+  const { vehiculos, loading } = useCatalogo();
+  const destacados = vehiculos.filter((v) => v.destacado).slice(0, 3);
+
   return (
     <section className="relative py-20 px-4 overflow-hidden">
       <EtiquetaComponente nombre="VehiculosDestacados" />
-      
+
       {/* Background glow effect */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-neon-cyan/10 rounded-full blur-3xl" />
@@ -30,17 +33,23 @@ const VehiculosDestacados = () => {
         </div>
 
         {/* Featured grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {vehiculosDestacados.map((vehiculo, index) => (
-            <div
-              key={vehiculo.id}
-              className="animate-fade-in"
-              style={{ animationDelay: `${index * 0.15}s` }}
-            >
-              <TarjetaVehiculo vehiculo={vehiculo} />
-            </div>
-          ))}
-        </div>
+        {loading ? (
+          <div className="flex justify-center py-12">
+            <Loader2 className="w-8 h-8 animate-spin text-primary" />
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {destacados.map((vehiculo, index) => (
+              <div
+                key={vehiculo.id}
+                className="animate-fade-in"
+                style={{ animationDelay: `${index * 0.15}s` }}
+              >
+                <TarjetaVehiculo vehiculo={vehiculo} />
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
