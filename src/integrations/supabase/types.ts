@@ -47,6 +47,78 @@ export type Database = {
         }
         Relationships: []
       }
+      vehiculos: {
+        Row: {
+          año: number
+          categoria: string
+          color: string | null
+          combustible: string
+          created_at: string
+          descripcion: string | null
+          destacado: boolean
+          equipamiento: string | null
+          estado: string
+          id: string
+          imagen_url: string | null
+          imagenes_urls: string[] | null
+          kilometraje: number
+          marca: string
+          modelo: string
+          moneda: string
+          pausado: boolean
+          precio: number
+          puertas: number | null
+          transmision: string
+          updated_at: string
+        }
+        Insert: {
+          año: number
+          categoria?: string
+          color?: string | null
+          combustible?: string
+          created_at?: string
+          descripcion?: string | null
+          destacado?: boolean
+          equipamiento?: string | null
+          estado?: string
+          id?: string
+          imagen_url?: string | null
+          imagenes_urls?: string[] | null
+          kilometraje?: number
+          marca: string
+          modelo: string
+          moneda?: string
+          pausado?: boolean
+          precio: number
+          puertas?: number | null
+          transmision?: string
+          updated_at?: string
+        }
+        Update: {
+          año?: number
+          categoria?: string
+          color?: string | null
+          combustible?: string
+          created_at?: string
+          descripcion?: string | null
+          destacado?: boolean
+          equipamiento?: string | null
+          estado?: string
+          id?: string
+          imagen_url?: string | null
+          imagenes_urls?: string[] | null
+          kilometraje?: number
+          marca?: string
+          modelo?: string
+          moneda?: string
+          pausado?: boolean
+          precio?: number
+          puertas?: number | null
+          transmision?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
