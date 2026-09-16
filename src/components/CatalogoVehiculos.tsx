@@ -1,26 +1,32 @@
 import { useState, useMemo } from 'react';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Input } from '@/components/ui/input';
-import { Search } from 'lucide-react';
+import { Search, Loader2 } from 'lucide-react';
 import TarjetaVehiculo from './TarjetaVehiculo';
 import EtiquetaComponente from './EtiquetaComponente';
-import { todosLosVehiculos, categorias } from '@/data/vehiculos';
+import { useCatalogo } from '@/hooks/useCatalogo';
 
 const CatalogoVehiculos = () => {
+  const { vehiculos, loading } = useCatalogo();
   const [categoriaActiva, setCategoriaActiva] = useState('Todos');
   const [busqueda, setBusqueda] = useState('');
 
+  const categorias = useMemo(
+    () => ['Todos', ...Array.from(new Set(vehiculos.map((v) => v.categoria)))],
+    [vehiculos]
+  );
+
   const vehiculosFiltrados = useMemo(() => {
-    return todosLosVehiculos.filter((vehiculo) => {
+    return vehiculos.filter((vehiculo) => {
       const coincideCategoria = categoriaActiva === 'Todos' || vehiculo.categoria === categoriaActiva;
-      const coincideBusqueda = 
+      const coincideBusqueda =
         vehiculo.marca.toLowerCase().includes(busqueda.toLowerCase()) ||
         vehiculo.modelo.toLowerCase().includes(busqueda.toLowerCase()) ||
         vehiculo.año.toString().includes(busqueda);
-      
+
       return coincideCategoria && coincideBusqueda;
     });
-  }, [categoriaActiva, busqueda]);
+  }, [vehiculos, categoriaActiva, busqueda]);
 
   return (
     <section id="catalogo" className="relative py-20 px-4">
@@ -59,29 +65,35 @@ const CatalogoVehiculos = () => {
             ))}
           </TabsList>
 
-          {categorias.map((categoria) => (
-            <TabsContent key={categoria} value={categoria} className="mt-0">
-              {vehiculosFiltrados.length > 0 ? (
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {vehiculosFiltrados.map((vehiculo, index) => (
-                    <div
-                      key={vehiculo.id}
-                      className="animate-fade-in"
-                      style={{ animationDelay: `${index * 0.1}s` }}
-                    >
-                      <TarjetaVehiculo vehiculo={vehiculo} />
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <div className="text-center py-16">
-                  <p className="text-muted-foreground text-lg">
-                    No se encontraron vehículos con esos criterios.
-                  </p>
-                </div>
-              )}
-            </TabsContent>
-          ))}
+          {loading ? (
+            <div className="flex justify-center py-16">
+              <Loader2 className="w-8 h-8 animate-spin text-primary" />
+            </div>
+          ) : (
+            categorias.map((categoria) => (
+              <TabsContent key={categoria} value={categoria} className="mt-0">
+                {vehiculosFiltrados.length > 0 ? (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {vehiculosFiltrados.map((vehiculo, index) => (
+                      <div
+                        key={vehiculo.id}
+                        className="animate-fade-in"
+                        style={{ animationDelay: `${index * 0.1}s` }}
+                      >
+                        <TarjetaVehiculo vehiculo={vehiculo} />
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="text-center py-16">
+                    <p className="text-muted-foreground text-lg">
+                      No se encontraron vehículos con esos criterios.
+                    </p>
+                  </div>
+                )}
+              </TabsContent>
+            ))
+          )}
         </Tabs>
       </div>
     </section>
