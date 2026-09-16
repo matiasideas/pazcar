@@ -5,7 +5,7 @@ import logo from '@/assets/logo-pazcar.png';
 import EtiquetaComponente from './EtiquetaComponente';
 
 const enlacesIzquierda = [
-  { label: 'Encontrá tu auto usado', href: '#catalogo' },
+  { label: 'Encontrá tu auto', href: '#catalogo' },
 ];
 
 const enlacesDerecha = [
