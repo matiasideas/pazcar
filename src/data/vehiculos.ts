@@ -551,6 +551,7 @@ export interface Vehiculo {
   categoria: string;
   destacado?: boolean;
   moneda?: 'USD' | 'ARS';
+  descripcion?: string | null;
 }
 
 const ramImagenes = [

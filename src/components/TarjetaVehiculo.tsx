@@ -210,6 +210,7 @@ const TarjetaVehiculo = ({ vehiculo }: TarjetaVehiculoProps) => {
         abierto={galeriaAbierta}
         onCerrar={() => setGaleriaAbierta(false)}
         titulo={`${vehiculo.marca} ${vehiculo.modelo}`}
+        descripcion={vehiculo.descripcion}
       />
       </Card>
     </div>

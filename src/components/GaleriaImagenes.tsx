@@ -9,6 +9,7 @@ interface GaleriaImagenesProps {
   abierto: boolean;
   onCerrar: () => void;
   titulo?: string;
+  descripcion?: string | null;
 }
 
 const GaleriaImagenes = ({ 
@@ -16,7 +17,8 @@ const GaleriaImagenes = ({
   imagenInicial, 
   abierto, 
   onCerrar,
-  titulo 
+  titulo,
+  descripcion
 }: GaleriaImagenesProps) => {
   const [imagenActual, setImagenActual] = useState(imagenInicial);
 
@@ -89,9 +91,10 @@ const GaleriaImagenes = ({
             </div>
           )}
 
+          <div className={cn("w-full h-full flex flex-col", descripcion && "lg:flex-row")}>
           {/* Main image container */}
           <div 
-            className="relative w-full h-full flex items-center justify-center p-4 pb-24"
+            className={cn("relative w-full flex-1 min-h-0 flex items-center justify-center p-4 pt-20", tieneMultiplesImagenes ? "pb-24" : "pb-4")}
             onClick={(e) => e.stopPropagation()}
           >
             <img
@@ -120,11 +123,10 @@ const GaleriaImagenes = ({
                 </button>
               </>
             )}
-          </div>
 
           {/* Thumbnails */}
           {tieneMultiplesImagenes && (
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 p-2 rounded-lg bg-white/10 backdrop-blur-sm max-w-[90vw] overflow-x-auto">
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 p-2 rounded-lg bg-white/10 backdrop-blur-sm max-w-[90%] overflow-x-auto">
               {imagenes.map((imagen, index) => (
                 <button
                   key={index}
@@ -152,6 +154,15 @@ const GaleriaImagenes = ({
           {/* Image counter */}
           <div className="absolute bottom-4 right-4 px-3 py-1.5 rounded-lg bg-white/10 backdrop-blur-sm text-white text-sm">
             {imagenActual + 1} / {imagenes.length}
+          </div>
+          </div>
+
+          {descripcion && (
+            <aside className="w-full lg:w-96 max-h-[35vh] lg:max-h-none overflow-y-auto bg-card text-card-foreground border-t lg:border-t-0 lg:border-l border-border p-6 lg:pt-20">
+              <h3 className="font-display text-lg font-semibold mb-3">Descripción</h3>
+              <p className="text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{descripcion}</p>
+            </aside>
+          )}
           </div>
         </DialogPrimitive.Content>
       </DialogPrimitive.Portal>

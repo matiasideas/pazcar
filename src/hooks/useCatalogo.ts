@@ -17,6 +17,7 @@ interface VehiculoRow {
   pausado: boolean;
   imagen_url: string | null;
   imagenes_urls: string[] | null;
+  descripcion: string | null;
 }
 
 // Normaliza las categorías de la base a las categorías de la web
@@ -36,7 +37,7 @@ export const useCatalogo = () => {
     const cargar = async () => {
       const { data, error } = await supabase
         .from('vehiculos')
-        .select('id, marca, modelo, año, kilometraje, combustible, precio, moneda, categoria, destacado, pausado, imagen_url, imagenes_urls')
+        .select('id, marca, modelo, año, kilometraje, combustible, precio, moneda, categoria, destacado, pausado, imagen_url, imagenes_urls, descripcion')
         .eq('pausado', false)
         .order('destacado', { ascending: false })
         .order('created_at', { ascending: false });
@@ -61,6 +62,7 @@ export const useCatalogo = () => {
             categoria: normalizarCategoria(f.categoria),
             destacado: f.destacado,
             moneda: f.moneda === 'ARS' ? 'ARS' : 'USD',
+            descripcion: f.descripcion,
           }))
         );
       }
