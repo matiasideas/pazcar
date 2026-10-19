@@ -8,6 +8,7 @@ import QuienesSomos from '@/components/QuienesSomos';
 import PiePagina from '@/components/PiePagina';
 import BotonWhatsApp from '@/components/BotonWhatsApp';
 import VendeTuAuto from '@/components/VendeTuAuto';
+import AsesorAutos from '@/components/AsesorAutos';
 
 const videos = [
   '/videos/video-a.mp4',
@@ -91,6 +92,7 @@ const Index = () => {
       <div id="destacados">
         <VehiculosDestacados />
       </div>
+      <AsesorAutos />
       <CatalogoVehiculos />
       <VendeTuAuto />
       <QuienesSomos />
