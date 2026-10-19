@@ -42,7 +42,9 @@ Deno.serve(async (req) => {
       fetch: runIdFetch.fetch,
     });
 
+    let errorStream: unknown = null;
     const result = streamText({
+      onError: ({ error }) => { errorStream = error; },
       model: provider.responses("openai/gpt-6-astra"),
       system:
         "Sos un asesor de una concesionaria de autos usados en Argentina (PazCar). Recomendá hasta 4 autos SOLO del catálogo dado que mejor se ajusten a lo que pide el comprador (presupuesto, uso, tamaño, combustible, año, km). Respondé ÚNICAMENTE con un JSON válido con esta forma: {\"resumen\": string, \"recomendaciones\": [{\"id\": string, \"motivo\": string}]}. Escribí en español rioplatense, breve y claro. 'motivo' en 1-2 oraciones. Si nada encaja, devolvé recomendaciones vacías y explicá en resumen.",
@@ -63,7 +65,7 @@ Deno.serve(async (req) => {
     try {
       texto = await result.text;
     } catch (e) {
-      const status = (e as { statusCode?: number })?.statusCode;
+      const status = ((errorStream ?? e) as { statusCode?: number })?.statusCode;
       if (status === 429) return json({ error: "Hay muchas consultas en este momento. Probá de nuevo en un rato." }, 429);
       if (status === 402) return json({ error: "El recomendador no está disponible por ahora." }, 402);
       if (status === 403) return json({ error: "El recomendador no está disponible por ahora." }, 403);
