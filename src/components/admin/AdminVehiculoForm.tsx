@@ -189,7 +189,7 @@ const AdminVehiculoForm = ({ vehiculo, onSave, onCancel, uploadImage }: Props) =
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="space-y-2">
             <Label>Descripción</Label>
-            <Textarea value={form.descripcion} onChange={e => handleChange('descripcion', e.target.value)} placeholder="Descripción del vehículo..." rows={3} />
+            <Textarea value={form.descripcion} onChange={e => handleChange('descripcion', e.target.value)} placeholder="Descripción del vehículo (se muestra al abrir las fotos)..." rows={6} />
           </div>
           <div className="space-y-2">
             <Label>Equipamiento</Label>
