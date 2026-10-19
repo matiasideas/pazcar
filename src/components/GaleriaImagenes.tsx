@@ -9,6 +9,7 @@ interface GaleriaImagenesProps {
   abierto: boolean;
   onCerrar: () => void;
   titulo?: string;
+  descripcion?: string | null;
 }
 
 const GaleriaImagenes = ({ 
@@ -16,7 +17,8 @@ const GaleriaImagenes = ({
   imagenInicial, 
   abierto, 
   onCerrar,
-  titulo 
+  titulo,
+  descripcion
 }: GaleriaImagenesProps) => {
   const [imagenActual, setImagenActual] = useState(imagenInicial);
 
